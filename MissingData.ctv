@@ -9,30 +9,30 @@
       Missing data are very frequently found in datasets. Base R provides a few options to handle them using computations that involve only observed data (<code>na.rm = TRUE</code> in functions <code>mean</code>, <code>var</code>, ... or <code>use = complete.obs|na.or.complete|pairwise.complete.obs</code> in functions <code>cov</code>, <code>cor</code>, ...). The base package stats also contains the generic function <code>na.action</code> that extracts information of the <code>NA</code> action used to create an object.
     </p>
     <p>
-      These basic options are complemented by many packages on CRAN, we first structure into four main topics. If you think that we missed some important packages in this list, please contact the maintainer.
+      These basic options are complemented by many packages on CRAN, which we  structure into four main topics: Exploration and visualization of missing values pattern and mechanism; Likelihood based approaches (EM, Bayesian methods and alike); Simple imputation; and Multiple imputation. If you think that we missed some important packages in this list, please contact the maintainer.
     </p>
-    <p><strong>Exploration and visualization of missing values pattern and mechanism</strong></p>
+    <p><strong>Exploration and visualization of missing value patterns and mechanisms</strong></p>
     <ul>
-      <li><i>Identification of missing data patterns</i> is provided by the output of the function <code>missing_data.frame</code> in <pkg>mi</pkg>.</li>
-      <li><i>Plots that describe missing data distribution and patterns</i> are implemented in <pkg>VIM</pkg> (that comes with a Graphical User Interface in <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (that abides to <a href="https://tidyverse.org">tidyverse</a> principles).</li>
-      <li><pkg>mi</pkg> and <pkg>VIM</pkg> also contain diagnostic plots to evaluate the quality of the imputation.</li>
-      <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> of <pkg>BaylorEdPsych</pkg> (Little's test) and in <pkg>MissMech</pkg> (non parametric test).</li>
+      <li><i>Missing data patterns</i> are identified using the function <code>missing_data.frame</code> from <pkg>mi</pkg>.</li>
+      <li><i>Graphics that describe distributions and patterns of missing data </i>are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
+      <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provides diagnostic plots to evaluate imputation quality.</li>
+      <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
       <li><i>Computation of weights</i> for observed data to account for unobserved data by <i>Inverse Probability Weighting (IPW)</i> is implemented in <pkg>ipw</pkg>.</li>
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
-      <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg> for handling missing data in structural equation modeling.</li>
-      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data) and in <pkg>Amelia</pkg> (for various models). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>, and contains bootstrap approaches for estimating the uncertainty on parameters due to missing data in EM algorithm.
+      <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, for handling missing data in structural equation modeling.</li>
+      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data) and in <pkg>Amelia</pkg> (for various models). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>, and contains bootstrap approaches for estimating the uncertainty on parameters due to missing data in EM algorithm.
     </li>
     </ul>
-    <p><strong>Simple imputation</strong></p>
+    <p><strong>Single imputation</strong></p>
     <ul>
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
       <li><i>Other regression based imputations</i> are implemented in VIM (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets), in <pkg>missForest</pkg> (imputation based on a random forest, <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.</li>
       <li><bioc>pcaMethods</bioc> (among other PCA based imputation methods) and in <pkg>mixOmics</pkg>. Different <i>imputation methods for numerical or categorical datasets based on Singular Value Decomposition</i> (PCA, MFA, ...) are implemented in the package <pkg>missMDA</pkg>.</li>
-      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>.</li>
+      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
     </ul>
     <p><strong>Multiple imputation</strong></p>
     <p>Some of the abovementionned packages can handle multiple imputations:</p>
@@ -42,7 +42,7 @@
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
       <li><pkg>missMDA</pkg> implements PCA based multiple imputation and imputation based on similar SVD methods.</li>
     </ul>
-    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg> and <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p> 
+    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg> and <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
   </info>
   <packagelist>
     <pkg>ade4</pkg>
