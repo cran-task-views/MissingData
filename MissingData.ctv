@@ -13,9 +13,9 @@
     </p>
     <p><strong>Exploration and visualization of missing value patterns and mechanisms</strong></p>
     <ul>
-      <li><i>Missing data patterns</i> are identified using the function <code>missing_data.frame</code> from <pkg>mi</pkg>.</li>
-      <li><i>Graphics that describe distributions and patterns of missing data </i>are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
-      <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provides diagnostic plots to evaluate imputation quality.</li>
+      <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
+      <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to evaluate imputation quality.</li>
+      <li><i>Missing data patterns</i> are identified using the functions <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss</code> from <pkg>DescTools</pkg> in package <pkg>dlookr.</pkg></li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
     </ul>
     <p><strong>Weighting methods</strong></p>
@@ -24,7 +24,6 @@
       <li><i>Weights based on a (spatial) distance</i> are used to impute genetic distances with an <i>Inverse Distance Weighting Interpolation</i> between spatially located samples in the function <code>intgen.idw</code> of the R package <pkg>phylin</pkg>.</li>
       <li><i>Doubly Robust Inverse Probability Weighted Augmented GEE
 Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.</li>
-  
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
@@ -32,53 +31,63 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated.</li>
       <li><i>Missing values in Mixed-Effects models</i> are supported in the package <pkg>PSM</pkg> that uses stochastic differential equation for linear and non-linear model fitting</li>
       <li><i>Epidemiology</i>: <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses.</li>
+      <li><i>In genetics and genomics</i>: <pkg>FamEvent</pkg> implements imputation of missing genotypes with an EM algorithm.</li>
+      <li><i>In philogeny</i>: <pkg>Rphylopars</pkg> can perform ancestral state reconstruction and missing data imputation on the estimated evolutionary mode in philogeny (traits/species) datasets.</li>
       <li><i>Missing values in preference models</i> are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
        <li><i>MNAR values in response variable</i> for<i>logistic regression</i> are handle with EM algorithm in <pkg>brlrmr</pkg>.</li>
-     
     </ul>
     <p><strong>Single imputation</strong></p>
     <ul>
-      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
-      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
-      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
-      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.</li>
+      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
+      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
+      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
+      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.  
+      <pkg>FastImputation</pkg> imputes assuming a gaussian distribution and can be used to impute a test data.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg></li>
-      <li><i>Based on copula </i> in <pkg>CoImp</pkg></li>
-      <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation.</li>
+       <li><i>Based on copula </i> in <pkg>CoImp</pkg></li>
+      <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg>, <pkg>filling</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data and <pkg>ROptSpace</pkg> proposes a matrix completion method under low-rank assumption.</li>
       <li><i>NIPALS</i> is implemented in the package <pkg>mixOmics</pkg> (for PCA and PLS) and in <pkg>plsRglm</pkg> (for generalized model PLS).</li>
-      <li><i>Collective matrix factorization</i> for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson) is implemented in the package <pkg>CMF</pkg>. Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in imputeMFA</li>
-      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
-      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
-      <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD.</li>
-     <li><i>Imputation in genetics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses.</li>
-   
-    
+      <li><i>Collective matrix factorization</i> for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson) is implemented in the package <pkg>CMF</pkg>. Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in the function <code>imputeMFA</code></li>
+      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). Imputation of Time Series Based on Dynamic Time Warping is implemented in <pkg>DTWBI</pkg> for univariate time series and in <pkg>DTWUMI</pkg> for multivariate ones. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
+      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. The package <pkg>gapfill</pkg> is dedicated to satellite data. </li>
+      <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD. Similarly, the package <pkg>reddPrec</pkg> impute missing values in daily precipitation time series accross different locations.</li>
+      <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg>dils</pkg> to impute missing edges.</li>
+      <li><i>Imputation for compositional data (CODA)</i> is implemented in the package <pkg>robCompositions</pkg> (based on kNN or EM approaches).</li>
+      <li><i>Imputation in genetics and genomics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in the packages <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>.</li>
+      <li><i>Imputation for non-parametric regression by wavelet shrinkage</i> is implemented in the package <pkg>CVThresh</pkg> using solely maximization of the h-likelihood.</li>
+      <li><i>Imputation for diffusion processes</i> is implemented in the package <pkg>DiffusionRimp.pdf</pkg> by imputing missing sample paths with Brownian bridges.</li>
     </ul>
     <p><strong>Multiple imputation</strong></p>
-    <p>Some of the abovementionned packages can handle multiple imputations:</p>
+    <p>Some of the abovementionned packages can also handle multiple imputations:</p>
     <ul>
-      <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>. </li>
-      <li> <pkg>mice</pkg> implement multiple imputation by Chained Equations.</li>
-      <li> <pkg>mi</pkg> implement multiple imputation by Chained Equations.</li>
+      <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>.</li>
+      <li><pkg>mi</pkg> and <pkg>mice</pkg> implement multiple imputation by Chained Equations.</li>
       <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) and <pkg>NPBayesImpute</pkg> (for categorical datasets) suggest multiple imputation based on Bayesian nonparametrics methods.</li>
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
-      <li><pkg>accelmissing</pkg>multiple imputation with the zero-inflated Poisson lognormal model for missing count values in accelerometer data.  </li>
+      <li><pkg>Qtools</pkg> implements multiple imputation based on quantile regression.</li>
+      <li><pkg>accelmissing</pkg>multiple imputation with the zero-inflated Poisson lognormal model for  missing count values in accelerometer data.  </li>
       <li><pkg>CALIBERrfimpute </pkg> multiple imputation based on random forest, also available in <pkg>mice</pkg>.</li>
       <li><pkg>BaBooN</pkg>Bayesian Bootstrap Predictive Mean Matching for Discrete Data.</li>
+      <li><pkg>dejaVu</pkg>for recurrent event data sets. Imputations of the counts in the periods after subjects dropout are generated, under MAR, the jump to reference and copy reference MNAR assumptions.</li>
     </ul>
-    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg>and  <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
-  
+    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg> and <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
+    <p><strong>Record Linkage</strong></p>
+    <ul>
+      <li><pkg>fastLink</pkg> Fellegi-Sunter probabilistic record linkage.</li>
+    </ul>
     <p><strong>Spectific methods with missing values</strong></p>
-     <ul>
-      <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings. </li>
-      <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets. </li>
-      <li><pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm</li>
+    <ul>
+      <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets.</li>
+      <li><pkg>experiment</pkg> handles missing values in experimental design such as Randomized Experiments
+With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outcome.</li>
+      <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings.</li>
+      <li><pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data.</li>
+      <li><pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm.</li>
+      <li><pkg>robustrao</pkg> computes the Rao-Stirling diversity index (a well-established bibliometric indicator to measure the interdisciplinarity of scientific publications) with data containing uncategorized references.</li>
       <li><pkg>PST</pkg> provides a framework for analyzing Probabilistic Suffix Trees, including functions for learning and optimizing VLMC (variable length Markov chains) models from sets of individual sequences possibly containing missing values.</li>
-   </ul>
-  
-  
-  
+      <li><pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
+    </ul>
   </info>
   <packagelist>
     <pkg>accelmissing</pkg>
@@ -95,9 +104,26 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
     <pkg>cobalt</pkg>
     <pkg>CoImp</pkg>
     <pkg>CRTgeeDR</pkg>
+    <pkg>CVThresh</pkg>
     <pkg>DMwR</pkg>
+    <pkg>dejaVu</pkg>
+    <pkg>DescTools</pkg>
+    <pkg>DiffusionRimp.pdf</pkg>
+    <pkg>dlookr</pkg>
+    <pkg>DrImpute</pkg>
+    <pkg>DTWBI</pkg>
+    <pkg>DTWUMI</pkg>
+    <pkg>eigenmodel</pkg>
+    <pkg>experiment</pkg>
+    <pkg>FamEvent</pkg>
+    <pkg>FastImputation</pkg>
+    <pkg>fastLink</pkg>
+    <pkg>FHDI</pkg>
+    <pkg>filling</pkg>
     <pkg>forecast</pkg>
     <pkg>ForImp</pkg>
+    <pkg>gapfill</pkg>
+    <pkg>GenForImp</pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
     <pkg>HotDeckImputation</pkg>
@@ -128,6 +154,14 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
     <pkg>PSM</pkg>
     <pkg>PST</pkg>
     <pkg>QTLRel</pkg>
+    <pkg>Qtools</pkg>
+    <pkg>reddPrec</pkg>
+    <pkg>Rmagic</pkg>
+    <pkg>ROptSpace</pkg>
+    <pkg>RNAseqNet</pkg>
+    <pkg>robCompositions</pkg>
+    <pkg>robustrao</pkg>
+    <pkg>Rphylopars</pkg>
     <pkg>spacetime</pkg>
     <pkg>timeSeries</pkg>
     <pkg priority="core">VIM</pkg>
