@@ -22,7 +22,7 @@
 
     <p><a name="exploration"><strong>Exploration of missing data</strong></a></p>
     <ul>
-      <li><i>Manipulation of missing data</i> is implemented in the packages <pkg>sjmisc</pkg> and <pkg>sjlabelled</pkg>.</li> <pkg>memisc</pkg> also provides defineable missing values, along with infrastruture for the management of survey data and variable labels.
+      <li><i>Manipulation of missing data</i> is implemented in the packages <pkg>sjmisc</pkg> and <pkg>sjlabelled</pkg>. <pkg>memisc</pkg> also provides defineable missing values, along with infrastruture for the management of survey data and variable labels.</li>
       <li><i>Missing data patterns</i> can be identified and explored using the packages <pkg>mi</pkg>, <pkg>dlookr</pkg>, <pkg>wrangle</pkg>, <pkg>DescTools</pkg> and <pkg>naniar</pkg>.</li> 
       <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles). <pkg>tabplot</pkg> also contains functions to visualize missing data with large datasets.</li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
