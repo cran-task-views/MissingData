@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2018-10-30</version>
+  <version>2018-11-20</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -56,7 +56,7 @@
     <p><a name="multiple"><strong>Multiple imputation</strong></a></p>
     <p>Some of the above mentionned packages can also handle multiple imputations.</p>
     <ul>
-      <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>.</li>
+      <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>. <pkg>NPBayesImputeCat</pkg> also implements multiple imputation by joint modelling for categorical variables with a Bayesian approach.</li>
       <li><pkg>mi</pkg>, <pkg>mice</pkg> and <pkg>smcfcs</pkg> implement multiple imputation by Chained Equations. <pkg>smcfcs</pkg> extends the models covered by the two previous packages. <pkg>miceFast</pkg> provides an alternative implementation of mice imputation methods using object oriented style programming and c++. <pkg>miceMNAR</pkg> imputes MNAR responses under Heckman selection model for use with <pkg>mice</pkg>.</li>
       <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) suggests multiple imputation based on Bayesian nonparametrics methods.</li>
@@ -182,6 +182,7 @@
     <pkg>nipals</pkg>
     <pkg>NNLM</pkg>
     <pkg>norm</pkg>
+    <pkg>NPBayesImputeCat</pkg>
     <pkg>OpenMx</pkg>
     <pkg>padr</pkg>
     <pkg>pan</pkg>
