@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2018-11-20</version>
+  <version>2019-01-17</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -119,6 +119,7 @@
     <pkg>CRTgeeDR</pkg>
     <pkg>CVThresh</pkg>
     <pkg>cutoffR</pkg>
+    <pkg>ddsPLS</pkg>
     <pkg>DMwR</pkg>
     <pkg>dejaVu</pkg>
     <pkg>denoiseR</pkg>
@@ -250,6 +251,8 @@
     <bioc>mixOmics</bioc>
     <bioc>snpStats</bioc>
     <bioc priority="core">pcaMethods</bioc>
+    <bioc>mixOmics</bioc>
     <a href="https://gking.harvard.edu/amelia">Amelia II: A Program for Missing Data</a>
+    <a href="https://rmisstastic.netlify.com/">A resource website on missing data</a>
   </links>
 </CRANTaskView>
