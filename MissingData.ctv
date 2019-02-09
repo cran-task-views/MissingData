@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-01-31</version>
+  <version>2019-02-09</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -45,7 +45,7 @@
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable. This method and other simple imputation methods are also available in <pkg>tidyimpute</pkg> that works after the tidyverse approach.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, including a CCA based imputation). <pkg>wNNSel</pkg> implements a kNN based method for imputation in large dimensional datasets.</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
-      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> that is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>FastImputation</pkg> imputes assuming a gaussian distribution and can be used to impute a test data. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions.</li>
+      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> that is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg>.</li>
       <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation). The last one supports multiple imputation.</li>
       <li><i>PCA/Singular Value Decomposition/matrix completion</i> is implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data. <pkg>softImpute</pkg> contains several methods for iterative matrix completion, as well as <pkg>filling</pkg> and <pkg>denoiseR</pkg> for numerical variables, or <pkg>mimi</pkg> that uses low rank assumption to impute mixed datasets. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data. <i>NIPALS</i> (based on SVD computation) is implemented in the packages <bioc>mixOmics</bioc> (for PCA and PLS), <pkg>ade4</pkg>, <pkg>nipals</pkg> and <pkg>plsRglm</pkg> (for generalized model PLS). <pkg>ddsPLS</pkg> implements a multi-block imputation method based on PLS in a supervise framework. <pkg>NNLM</pkg> implements a non-negative matrix factorization imputation. <pkg>ROptSpace</pkg> and <pkg>CMF</pkg> proposes a matrix completion method under low-rank assumption and collective matrix factorization for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson). Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in the function <code>imputeMFA</code>.</li>
@@ -135,7 +135,6 @@
     <pkg>extracat</pkg>
     <pkg>experiment</pkg>
     <pkg>FamEvent</pkg>
-    <pkg>FastImputation</pkg>
     <pkg>fastLink</pkg>
     <pkg>FHDI</pkg>
     <pkg>filling</pkg>
