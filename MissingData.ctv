@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-04-23</version>
+  <version>2019-05-11</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -18,6 +18,7 @@
       <li><a href="#data">Specific types of data</a></li>
       <li><a href="#applications">Specific application fields</a></li>
     </ul>
+    <p>In addition to the present task view, this <a href="https://rmisstastic.netlify.com/">reference website on missing data</a> might also be helpful.</p>
 <p>If you think that we missed some important packages in this list, please contact the maintainer.</p>
 
     <p><a name="exploration"><strong>Exploration of missing data</strong></a></p>
