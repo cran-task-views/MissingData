@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-05-11</version>
+  <version>2019-07-02</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -36,7 +36,7 @@
       <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, <pkg>OpenMx</pkg> and <pkg>rsem</pkg>, for handling missing data in structural equation modeling.</li>
       <li><i>Bayesian approaches</i> for handling missing values in model based clustering with variable selection is available in <pkg>VarSelLCM</pkg>. The package also provides imputation using the posterior mean.</li>
       <li><i>Missing values in mixed-effect models and generalized linear models</i> are supported in the packages <pkg>PSM</pkg>, <pkg>mdmb</pkg>, <pkg>icdGLM</pkg> and <pkg>JointAI</pkg>, the last one being based on a Bayesian approach. <pkg>brlrmr</pkg> also handles MNAR values in response variable for logistic regression using an EM approach.</li>
-      <li><i>Missing data in item response models</i> is implemented in <pkg>TAM</pkg>, <pkg>mirt</pkg> and <pkg>ltm</pkg> and in <pkg>idealstan</pkg>.</li>
+      <li><i>Missing data in item response models</i> is implemented in <pkg>TAM</pkg>, <pkg>mirt</pkg> and <pkg>ltm</pkg>.</li>
       <li><i>Variable selection</i> under ignorable and non ignorable missing data mechanisms is implemented in <pkg>TVsMiss</pkg>.</li>
       <li><i>Robust covariance estimation</i> is implemented in the package <pkg>GSE</pkg>.</li>
     </ul>
@@ -151,7 +151,6 @@
     <pkg>HotDeckImputation</pkg>
     <pkg>icdGLM</pkg>
     <pkg>icenReg</pkg>
-    <pkg>idealstan</pkg>
     <pkg>idem</pkg>
     <pkg>imputePSF</pkg>
     <pkg>imputeTestbench</pkg>
