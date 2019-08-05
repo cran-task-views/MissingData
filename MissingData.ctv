@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-07-02</version>
+  <version>2019-08-05</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -49,7 +49,7 @@
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> that is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg>.</li>
       <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation). The last one supports multiple imputation.</li>
-      <li><i>PCA/Singular Value Decomposition/matrix completion</i> is implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data. <pkg>softImpute</pkg> contains several methods for iterative matrix completion, as well as <pkg>filling</pkg> and <pkg>denoiseR</pkg> for numerical variables, or <pkg>mimi</pkg> that uses low rank assumption to impute mixed datasets. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data. <i>NIPALS</i> (based on SVD computation) is implemented in the packages <bioc>mixOmics</bioc> (for PCA and PLS), <pkg>ade4</pkg>, <pkg>nipals</pkg> and <pkg>plsRglm</pkg> (for generalized model PLS). <pkg>ddsPLS</pkg> implements a multi-block imputation method based on PLS in a supervise framework. <pkg>ROptSpace</pkg> and <pkg>CMF</pkg> proposes a matrix completion method under low-rank assumption and collective matrix factorization for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson). Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in the function <code>imputeMFA</code>.</li>
+      <li><i>PCA/Singular Value Decomposition/matrix completion</i> is implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data. Heterogeneous missingness in a high-dimensional PCA is also addressed in <pkg>primePCA</pkg>. <pkg>softImpute</pkg> contains several methods for iterative matrix completion, as well as <pkg>filling</pkg> and <pkg>denoiseR</pkg> for numerical variables, or <pkg>mimi</pkg> that uses low rank assumption to impute mixed datasets. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data. <i>NIPALS</i> (based on SVD computation) is implemented in the packages <bioc>mixOmics</bioc> (for PCA and PLS), <pkg>ade4</pkg>, <pkg>nipals</pkg> and <pkg>plsRglm</pkg> (for generalized model PLS). <pkg>ddsPLS</pkg> implements a multi-block imputation method based on PLS in a supervise framework. <pkg>ROptSpace</pkg> and <pkg>CMF</pkg> proposes a matrix completion method under low-rank assumption and collective matrix factorization for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson). Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in the function <code>imputeMFA</code>.</li>
       <li><i>Imputation for non-parametric regression by wavelet shrinkage</i> is implemented in <pkg>CVThresh</pkg> using solely maximization of the h-likelihood.</li>
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to <i>evaluate the quality of imputation</i>.</li>
     </ul>
@@ -189,6 +189,7 @@
     <pkg>plsRglm</pkg>
     <pkg>powerlmm</pkg>
     <pkg>prefmod</pkg>
+    <pkg>primePCA</pkg>
     <pkg>prophet</pkg>
     <pkg>pseval</pkg>
     <pkg>PSIMEX</pkg>
