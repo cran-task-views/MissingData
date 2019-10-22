@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-10-17</version>
+  <version>2019-10-21</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -35,7 +35,7 @@
       <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. In addition, <pkg>TestDataImputation</pkg> implements imputation based on EM estimation (and other simpler imputation methods) that are well suited for for dichotomous and polytomous test with item responses.</li>
       <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, <pkg>OpenMx</pkg> and <pkg>rsem</pkg>, for handling missing data in structural equation modeling.</li>
       <li><i>Bayesian approaches</i> for handling missing values in model based clustering with variable selection is available in <pkg>VarSelLCM</pkg>. The package also provides imputation using the posterior mean.</li>
-      <li><i>Missing values in mixed-effect models and generalized linear models</i> are supported in the packages <pkg>PSM</pkg>, <pkg>mdmb</pkg>, <pkg>icdGLM</pkg> and <pkg>JointAI</pkg>, the last one being based on a Bayesian approach. <pkg>brlrmr</pkg> also handles MNAR values in response variable for logistic regression using an EM approach.</li>
+      <li><i>Missing values in mixed-effect models and generalized linear models</i> are supported in the packages <pkg>mdmb</pkg>, <pkg>icdGLM</pkg> and <pkg>JointAI</pkg>, the last one being based on a Bayesian approach. <pkg>brlrmr</pkg> also handles MNAR values in response variable for logistic regression using an EM approach.</li>
       <li><i>Missing data in item response models</i> is implemented in <pkg>TAM</pkg>, <pkg>mirt</pkg> and <pkg>ltm</pkg>.</li>
       <li><i>Variable selection</i> under ignorable and non ignorable missing data mechanisms is implemented in <pkg>TVsMiss</pkg>.</li>
       <li><i>Robust covariance estimation</i> is implemented in the package <pkg>GSE</pkg>.</li>
@@ -190,7 +190,6 @@
     <pkg>prophet</pkg>
     <pkg>pseval</pkg>
     <pkg>PSIMEX</pkg>
-    <pkg>PSM</pkg>
     <pkg>PST</pkg>
     <pkg>QTLRel</pkg>
     <pkg>Qtools</pkg>
