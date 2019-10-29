@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-10-21</version>
+  <version>2019-10-29</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -223,8 +223,6 @@
     <pkg>tidyimpute</pkg>
     <pkg>timeSeries</pkg>
     <pkg>TippingPoint</pkg>
-    <pkg>TreePar</pkg>
-    <pkg>TreeSim</pkg>
     <pkg>tsibble</pkg>
     <pkg>TVsMiss</pkg>
     <pkg>VarSelLCM</pkg>
