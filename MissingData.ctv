@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2019-10-29</version>
+  <version>2019-11-05</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -45,7 +45,7 @@
     <ul>
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable. This method and other simple imputation methods are also available in <pkg>tidyimpute</pkg> that works after the tidyverse approach.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, including a CCA based imputation). <pkg>wNNSel</pkg> implements a kNN based method for imputation in large dimensional datasets.</li>
-      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
+      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>). <pkg>StatMatch</pkg> uses hot deck imputation to impute surveys from an external dataset.</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> that is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg>.</li>
       <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation). The last one supports multiple imputation.</li>
@@ -61,7 +61,7 @@
       <li><pkg>mi</pkg>, <pkg>mice</pkg> and <pkg>smcfcs</pkg> implement multiple imputation by Chained Equations. <pkg>smcfcs</pkg> extends the models covered by the two previous packages. <pkg>miceFast</pkg> provides an alternative implementation of mice imputation methods using object oriented style programming and c++. <pkg>miceMNAR</pkg> imputes MNAR responses under Heckman selection model for use with <pkg>mice</pkg>.</li>
       <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) suggests multiple imputation based on Bayesian nonparametrics methods.</li>
-      <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation and <pkg>StatMatch</pkg> uses multiple hot deck imputation to impute surveys from an external dataset.</li>
+      <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
       <li><i>Multilevel imputation</i>: Multilevel multiple imputation is implemented in <pkg>hmi</pkg>, <pkg>jomo</pkg>, <pkg>mice</pkg>, <pkg>miceadds</pkg>, <pkg>micemd</pkg>, <pkg>mitml</pkg> and <pkg>pan</pkg>.</li>
       <li><pkg>Qtools</pkg> implements multiple imputation based on quantile regression.</li>
       <li>Tree based multiple imputation is available in <pkg>CALIBERrfimpute</pkg>, which performs multiple imputation based on random forest (also available in <pkg>mice</pkg>).</li>
@@ -94,7 +94,7 @@
       <li><i>Genetics</i>: <pkg>SNPassoc</pkg> provides function to visualize missing data in the case of SNP studies (genetics). Analyses of Case-Parent Triad and/or Case-Control Data with SNP haplotypes is implemented in <pkg>Haplin</pkg>, where missing genotypic data are handled with an EM algorithm. <pkg>FamEvent</pkg> and <bioc>snpStats</bioc> implement imputation of missing genotypes, respectively with an EM algorithm and a nearest neighbor approach. Imputation for genotype and haplotype is implemented in <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Tools for Hardy-Weinberg equilibrium for bi- and multi-allelic genetic marker data are implemented in <pkg>HardyWeinberg</pkg>, where genotypes are imputed with a multinomial logit model. <pkg>StAMPP</pkg> computes genomic relationship when SNP genotype datasets contain missing data and <pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm.</li>
       <li><i>Genomics</i>: Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>. <pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
       <li><i>Epidemiology</i>: <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses. <pkg>idem</pkg>	provides missing data imputation with a sensitivity analysis strategy to handle the unobserved functional outcomes not due to death.</li>
-      <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <i>Sensitivity analysis</i> to help diagnose missing data and imputation is implemented in <pkg>TippingPoint</pkg>. In addition, sensitivity analysis of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data.</li>
+      <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <pkg>MatchThem</pkg> matches multiply imputed datasets using several matching methods, and provides users with the tools to estimate causal effects in each imputed datasets. <i>Sensitivity analysis</i> to help diagnose missing data and imputation is implemented in <pkg>TippingPoint</pkg>. In addition, sensitivity analysis of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data.</li>
       <li><i>Scoring</i>: Basic methods (mean, median, mode, ...) for imputing missing data in scoring datasets are proposed in <pkg>scorecardModelUtils</pkg>.</li>
       <li><i>Preference models</i>: Missing data in preference models are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
       <li><i>Administrative records</i>: <pkg>fastLink</pkg> provides a Fellegi-Sunter probabilistic record linkage that allows for missing data and the inclusion of auxiliary information.</li>
@@ -159,6 +159,7 @@
     <pkg>lavaan</pkg>
     <pkg>lori</pkg>
     <pkg>ltm</pkg>
+    <pkg>MatchThem</pkg>
     <pkg>mdmb</pkg>
     <pkg>memisc</pkg>
     <pkg>mi</pkg>
