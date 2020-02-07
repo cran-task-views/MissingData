@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2020-01-12</version>
+  <version>2020-02-07</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -25,7 +25,7 @@
     <ul>
       <li><i>Manipulation of missing data</i> is implemented in the packages <pkg>sjmisc</pkg> and <pkg>sjlabelled</pkg>. <pkg>memisc</pkg> also provides defineable missing values, along with infrastruture for the management of survey data and variable labels.</li>
       <li><i>Missing data patterns</i> can be identified and explored using the packages <pkg>mi</pkg>, <pkg>dlookr</pkg>, <pkg>wrangle</pkg>, <pkg>DescTools</pkg>, and <pkg>naniar</pkg>.</li> 
-      <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
+      <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, VIMGUI, currently archived on CRAN) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
       <li><i>Evaluation with simulations</i> can be performed using the function <code>ampute</code> of <pkg>mice</pkg>.</li>
     </ul>
@@ -223,7 +223,6 @@
     <pkg>TVsMiss</pkg>
     <pkg>VarSelLCM</pkg>
     <pkg priority="core">VIM</pkg>
-    <pkg>VIMGUI</pkg>
     <pkg>WaverR</pkg>
     <pkg>wNNSel</pkg>
     <pkg>wrangle</pkg>
