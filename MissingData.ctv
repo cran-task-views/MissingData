@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2020-02-07</version>
+  <version>2020-02-20</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -37,7 +37,6 @@
       <li><i>Bayesian approaches</i> for handling missing values in model based clustering with variable selection is available in <pkg>VarSelLCM</pkg>. The package also provides imputation using the posterior mean.</li>
       <li><i>Missing values in mixed-effect models and generalized linear models</i> are supported in the packages <pkg>mdmb</pkg>, <pkg>icdGLM</pkg> and <pkg>JointAI</pkg>, the last one being based on a Bayesian approach. <pkg>brlrmr</pkg> also handles MNAR values in response variable for logistic regression using an EM approach.</li>
       <li><i>Missing data in item response models</i> is implemented in <pkg>TAM</pkg>, <pkg>mirt</pkg> and <pkg>ltm</pkg>.</li>
-      <li><i>Variable selection</i> under ignorable and non ignorable missing data mechanisms is implemented in <pkg>TVsMiss</pkg>.</li>
       <li><i>Robust covariance estimation</i> is implemented in the package <pkg>GSE</pkg>.</li>
     </ul>
     
@@ -219,7 +218,6 @@
     <pkg>tidyimpute</pkg>
     <pkg>timeSeries</pkg>
     <pkg>tsibble</pkg>
-    <pkg>TVsMiss</pkg>
     <pkg>VarSelLCM</pkg>
     <pkg priority="core">VIM</pkg>
     <pkg>WaverR</pkg>
