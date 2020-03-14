@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2020-03-09</version>
+  <version>2020-03-14</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -44,7 +44,7 @@
     <ul>
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, including a CCA based imputation). <pkg>wNNSel</pkg> implements a kNN based method for imputation in large dimensional datasets.</li>
-      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>). <pkg>StatMatch</pkg> uses hot deck imputation to impute surveys from an external dataset.</li>
+      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>). <pkg>StatMatch</pkg> uses hot deck imputation to impute surveys from an external dataset.</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> that is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg>.</li>
       <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation). The last one supports multiple imputation.</li>
@@ -141,7 +141,6 @@
     <pkg>hmi</pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
-    <pkg>HotDeckImputation</pkg>
     <pkg>icdGLM</pkg>
     <pkg>icenReg</pkg>
     <pkg>idem</pkg>
