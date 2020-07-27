@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2020-06-09</version>
+  <version>2020-07-27</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -27,7 +27,7 @@
       <li><i>Missing data patterns</i> can be identified and explored using the packages <pkg>mi</pkg>, <pkg>dlookr</pkg>, <pkg>wrangle</pkg>, <pkg>DescTools</pkg>, and <pkg>naniar</pkg>.</li>
       <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, VIMGUI, currently archived on CRAN) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in <pkg>MissMech</pkg> (a non parametric test). <pkg>RBtest</pkg> proposes a regression based approach to test the missing data mechanism.</li>
-      <li><i>Evaluation</i> with simulations can be performed using the function <code>ampute</code> of <pkg>mice</pkg>. The package <pkg>missCompare</pkg> provides a complete framework for evaluating different imputation strategies.</li>
+      <li><i>Evaluation</i> with simulations can be performed using the function <code>ampute</code> of <pkg>mice</pkg>.</li>
     </ul>
 
     <p><a name="likelihood"><strong>Likelihood based approaches</strong></a></p>
@@ -188,7 +188,6 @@
     <pkg>mimi</pkg>
     <pkg>mipred</pkg>
     <pkg>misaem</pkg>
-    <pkg>missCompare</pkg>
     <pkg>missForest</pkg>
     <pkg>missingHE</pkg>
     <pkg priority="core">missMDA</pkg>
