@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2020-08-28</version>
+  <version>2020-07-27</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -91,6 +91,7 @@
 
     <p><a name="applications"><strong>Specific application fields</strong></a></p>
     <ul>
+      <li><i>Genetics</i>: <pkg>SNPassoc</pkg> provides functions to visualize missing data in the case of SNP studies (genetics). Analyses of Case-Parent Triad and/or Case-Control Data with SNP haplotypes is implemented in <pkg>Haplin</pkg>, where missing genotypic data are handled with an EM algorithm. <pkg>FamEvent</pkg> and <bioc>snpStats</bioc> implement imputation of missing genotypes, respectively with an EM algorithm and a nearest neighbor approach. Imputation for genotype and haplotype is implemented in <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases; imputation of missing genotypes is also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Tools for Hardy-Weinberg equilibrium for bi- and multi-allelic genetic marker data are implemented in <pkg>HardyWeinberg</pkg>, where genotypes are imputed with a multinomial logit model. <pkg>StAMPP</pkg> computes genomic relationship when SNP genotype datasets contain missing data and <pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm.</li>
       <li><i>Genomics</i>: Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>. <pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
       <li><i>Epidemiology</i>: <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses. <pkg>idem</pkg>	provides missing data imputation with a sensitivity analysis strategy to handle the unobserved functional outcomes not due to death. <pkg>sievePH</pkg> implements continuous, possibly multivariate, mark-specific hazard ratio with missing values in multivariate marks using an IPW approach.</li>
       <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <pkg>MatchThem</pkg> matches multiply imputed datasets using several matching methods, and provides users with the tools to estimate causal effects in each imputed datasets.</li>
@@ -239,6 +240,7 @@
     <pkg>sjlabelled</pkg>
     <pkg>sjmisc</pkg>
     <pkg>smcfcs</pkg>
+    <pkg>SNPassoc</pkg>
     <pkg priority="core">softImpute</pkg>
     <pkg>spacetime</pkg>
     <pkg>StAMPP</pkg>
