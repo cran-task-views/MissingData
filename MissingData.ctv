@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-02-11</version>
+  <version>2021-02-17</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -24,16 +24,16 @@
     <p><a name="exploration"><strong>Exploration of missing data</strong></a></p>
     <ul>
       <li><i>Manipulation of missing data</i> is implemented in the packages <pkg>sjmisc</pkg> and <pkg>sjlabelled</pkg>. <pkg>memisc</pkg> also provides defineable missing values, along with infrastruture for the management of survey data and variable labels.</li>
-      <li><i>Missing data patterns</i> can be identified and explored using the packages <pkg>mi</pkg>, <pkg>wrangle</pkg>, <pkg>DescTools</pkg>, and <pkg>naniar</pkg>.</li>
+      <li><i>Missing data patterns</i> can be identified and explored using the packages <pkg>mi</pkg>, <pkg>wrangle</pkg>, <pkg>DescTools</pkg>, <pkg>dlookr</pkg> and <pkg>naniar</pkg>.</li>
       <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, VIMGUI, currently archived on CRAN) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
-      <li><i>Tests of the MAR assumption (versus the MCAR assumption):</i> <pkg>RBtest</pkg> proposes a regression based approach to test the missing data mechanism.</li>
+      <li><i>Tests of the MAR assumption (versus the MCAR assumption):</i> <pkg>RBtest</pkg> proposes a regression based approach to test the missing data mechanism and <pkg>samon</pkg> performs sensitivity analysis in clinical trials to check the relevance of the MAR assumption.</li>
       <li><i>Evaluation</i> with simulations can be performed using the function <code>ampute</code> of <pkg>mice</pkg>.</li>
     </ul>
 
     <p><a name="likelihood"><strong>Likelihood based approaches</strong></a></p>
     <ul>
-      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. <pkg>imputeR</pkg> is a Multivariate Expectation-Maximization (EM) based imputation framework that offers several different algorithms, including Lasso, tree-based models or PCA. In addition, <pkg>TestDataImputation</pkg> implements imputation based on EM estimation (and other simpler imputation methods) that are well suited for dichotomous and polytomous tests with item responses.</li>
-      <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, <pkg>OpenMx</pkg> and <pkg>rsem</pkg>, for handling missing data in structural equation modeling.</li>
+      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), <pkg>norm2</pkg> (using the function <code>emNorm</code>), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. <pkg>imputeR</pkg> is a Multivariate Expectation-Maximization (EM) based imputation framework that offers several different algorithms, including Lasso, tree-based models or PCA. In addition, <pkg>TestDataImputation</pkg> implements imputation based on EM estimation (and other simpler imputation methods) that are well suited for dichotomous and polytomous tests with item responses.</li>
+      <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg> (and in its extension <pkg>semTools</pkg>), <pkg>OpenMx</pkg> and <pkg>rsem</pkg>, for handling missing data in structural equation modeling.</li>
       <li><i>Bayesian approaches</i> for handling missing values in model based clustering with variable selection is available in <pkg>VarSelLCM</pkg>. The package also provides imputation using the posterior mean.</li>
       <li><i>Missing values in mixed-effect models and generalized linear models</i> are supported in the packages <pkg>mdmb</pkg>, <pkg>icdGLM</pkg> and <pkg>JointAI</pkg>, the last one being based on a Bayesian approach. <pkg>brlrmr</pkg> also handles MNAR values in response variable for logistic regression using an EM approach. <pkg>ui</pkg> implements uncertainty intervals for linear and probit regressions when the outcome is missing not at random.</li>
       <li><i>Missing data in item response models</i> is implemented in <pkg>TAM</pkg>, <pkg>mirt</pkg> and <pkg>ltm</pkg>.</li>
@@ -87,20 +87,21 @@
       <li><i>Imputation for meta-analyses</i> of binary outcomes is provided in <pkg>metasens</pkg>.</li>
       <li><pkg>experiment</pkg> handles missing values in experimental design such as randomized experiments with missing covariate and outcome data, matched-pairs design with missing outcome.</li>
       <li><pkg>cdparcoord</pkg> provides tools to handle missing values in parallel coordinates settings.</li>
+      <li><pkg>dejaVu</pkg> performs multiple imputation of recurrent event data based on a negative binomial regression model.</li>
     </ul>
 
     <p><a name="applications"><strong>Specific application fields</strong></a></p>
     <ul>
       <li><i>Genetics</i>: <pkg>SNPassoc</pkg> provides functions to visualize missing data in the case of SNP studies (genetics). Analyses of Case-Parent Triad and/or Case-Control Data with SNP haplotypes is implemented in <pkg>Haplin</pkg>, where missing genotypic data are handled with an EM algorithm. <pkg>FamEvent</pkg> and <bioc>snpStats</bioc> implement imputation of missing genotypes, respectively with an EM algorithm and a nearest neighbor approach. Imputation for genotype and haplotype is implemented in <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases; imputation of missing genotypes is also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Tools for Hardy-Weinberg equilibrium for bi- and multi-allelic genetic marker data are implemented in <pkg>HardyWeinberg</pkg>, where genotypes are imputed with a multinomial logit model. <pkg>StAMPP</pkg> computes genomic relationship when SNP genotype datasets contain missing data and <pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm.</li>
       <li><i>Genomics</i>: Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>. <pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
-      <li><i>Epidemiology</i>: <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses. <pkg>sievePH</pkg> implements continuous, possibly multivariate, mark-specific hazard ratio with missing values in multivariate marks using an IPW approach.</li>
+      <li><i>Epidemiology</i>: <pkg>idem</pkg> implements a procedure for comparing treatments in clinical trials with missed visits or premature withdrawal. <pkg>InformativeCensoring</pkg> implements multiple imputation for informative censoring. <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses. <pkg>sievePH</pkg> implements continuous, possibly multivariate, mark-specific hazard ratio with missing values in multivariate marks using an IPW approach.</li>
       <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <pkg>MatchThem</pkg> matches multiply imputed datasets using several matching methods, and provides users with the tools to estimate causal effects in each imputed datasets.</li>
       <li><i>Scoring</i>: Basic methods (mean, median, mode, ...) for imputing missing data in scoring datasets are proposed in <pkg>scorecardModelUtils</pkg>.</li>
       <li><i>Preference models</i>: Missing data in preference models are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
       <li><i>Health economy</i>: <pkg>missingHE</pkg> implements models for health economic evaluations with missing outcome data.</li>
       <li><i>Administrative records / Surveys</i>: <pkg>fastLink</pkg> provides a Fellegi-Sunter probabilistic record linkage that allows for missing data and the inclusion of auxiliary information. <pkg>EditImputeCont</pkg> provides imputation methods for continuous microdata under linear constraints with a Bayesian approach.</li>
-      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors for random forest. <pkg>mipred</pkg> handles prediction in generalized linear models and Cox prediction models with multiple imputation of predictors. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors.</li>
-      <li><i>Clustering</i> <pkg>biclustermd</pkg> handles missing data in biclustering. <pkg>RMixtComp</pkg> fits various mixture models in the presence of missing data.</li>
+      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg>, <pkg>grf</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors in various random forest based methods. <pkg>mipred</pkg> handles prediction in generalized linear models and Cox prediction models with multiple imputation of predictors. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors. <pkg>lqr</pkg> provides quantile regression estimates based on various distributions in the presence of missing values and censored data.</li>
+      <li><i>Clustering</i> <pkg>biclustermd</pkg> handles missing data in biclustering. <pkg>RMixtComp</pkg> and <pkg>mixture</pkg> fit various mixture models in the presence of missing data.</li>
       <li><i>Tests</i> for two-sample paired missing data are implemented in <pkg>robustrank</pkg>.</li>
       <li><pkg>robustrao</pkg> computes the Rao-Stirling diversity index (a well-established bibliometric indicator to measure the interdisciplinarity of scientific publications) with data containing uncategorized references.</li>
     </ul>
@@ -126,11 +127,13 @@
     <pkg>CVThresh</pkg>
     <pkg>cutoffR</pkg>
     <pkg>ddsPLS</pkg>
+    <pkg>dejaVu</pkg>
     <pkg>DMwR</pkg>
     <pkg>denoiseR</pkg>
     <pkg>DescTools</pkg>
     <pkg>DiffusionRimp</pkg>
     <pkg>dils</pkg>
+    <pkg>dlookr</pkg>
     <pkg>DrImpute</pkg>
     <pkg>DTWBI</pkg>
     <pkg>DTWUMI</pkg>
@@ -147,6 +150,7 @@
     <pkg>FSMUMI</pkg>
     <pkg>gapfill</pkg>
     <pkg>GenForImp</pkg>
+    <pkg>grf</pkg>
     <pkg>GSE</pkg>
     <pkg>gsynth</pkg>
     <pkg>Haplin</pkg>
@@ -157,12 +161,14 @@
     <pkg>iai</pkg>
     <pkg>icdGLM</pkg>
     <pkg>icenReg</pkg>
+    <pkg>idem</pkg>
     <pkg>impimp</pkg>
     <pkg>imputeFin</pkg>
     <pkg>imputePSF</pkg>
     <pkg>imputeR</pkg>
     <pkg>imputeTestbench</pkg>
     <pkg priority="core">imputeTS</pkg>
+    <pkg>InformativeCensoring</pkg>
     <pkg>ipw</pkg>
     <pkg>IPWboxplot</pkg>
     <pkg>isotree</pkg>
@@ -171,6 +177,7 @@
     <pkg>lavaan</pkg>
     <pkg>lodi</pkg>
     <pkg>lori</pkg>
+    <pkg>lqr</pkg>
     <pkg>ltm</pkg>
     <pkg>MatchThem</pkg>
     <pkg>mdmb</pkg>
@@ -195,10 +202,12 @@
     <pkg>mitools</pkg>
     <pkg>miWQS</pkg>
     <pkg>mix</pkg>
+    <pkg>mixture</pkg>
     <pkg>naivebayes</pkg>
     <pkg priority="core">naniar</pkg>
     <pkg>nipals</pkg>
     <pkg>norm</pkg>
+    <pkg>norm2</pkg>
     <pkg>NPBayesImputeCat</pkg>
     <pkg>OpenMx</pkg>
     <pkg>padr</pkg>
@@ -230,8 +239,10 @@
     <pkg>rsem</pkg>
     <pkg>rsparse</pkg>
     <pkg>rtop</pkg>
+    <pkg>samon</pkg>
     <pkg>sbgcop</pkg>
     <pkg>scorecardModelUtils</pkg>
+    <pkg>semTools</pkg>
     <pkg>sievePH</pkg>
     <pkg>simputation</pkg>
     <pkg>sjlabelled</pkg>
