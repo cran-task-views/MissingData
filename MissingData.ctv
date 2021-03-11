@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-02-17</version>
+  <version>2021-03-11</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -48,7 +48,7 @@
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions. <pkg>iai</pkg> tunes optimal imputation based on knn, tree or SVM.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg> with a faster version in <pkg>missRanger</pkg>.</li>
       <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation). The latter supports multiple imputation.</li>
-      <li><i>PCA/Singular Value Decomposition/matrix completion</i> is implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data. Heterogeneous missingness in a high-dimensional PCA is also addressed in <pkg>primePCA</pkg>. <pkg>softImpute</pkg> contains several methods for iterative matrix completion, as well as <pkg>filling</pkg>, <pkg>rsparse</pkg> and <pkg>denoiseR</pkg> for numerical variables, <pkg>mimi</pkg> that uses low rank assumptions to impute mixed datasets, and <pkg>ECLRMC</pkg> performs ensemble correlation based low rank matrix completion that accounts for correlation among samples. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data. <i>NIPALS</i> (based on SVD computation) is implemented in the packages <bioc>mixOmics</bioc> (for PCA and PLS), <pkg>ade4</pkg>, <pkg>nipals</pkg> and <pkg>plsRglm</pkg> (for generalized model PLS). As a generalization, <pkg>tensorBF</pkg> implements imputation in 3-way tensor data. <pkg>ddsPLS</pkg> implements a multi-block imputation method based on PLS in a supervised framework. <pkg>ROptSpace</pkg> proposes a matrix completion method under low-rank assumption and collective matrix factorization for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, Poisson). Imputation for groups is also available in <pkg>missMDA</pkg> in the function <code>imputeMFA</code>.</li>
+      <li><i>PCA/Singular Value Decomposition/matrix completion</i> is implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data. Heterogeneous missingness in a high-dimensional PCA is also addressed in <pkg>primePCA</pkg>. <pkg>softImpute</pkg> contains several methods for iterative matrix completion, as well as <pkg>filling</pkg>, <pkg>rsparse</pkg> and <pkg>denoiseR</pkg> for numerical variables, <pkg>mimi</pkg> that uses low rank assumptions to impute mixed datasets, and <pkg>ECLRMC</pkg> performs ensemble correlation based low rank matrix completion that accounts for correlation among samples. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation of PCA with missing data. <i>NIPALS</i> (based on SVD computation) is implemented in the packages <bioc>mixOmics</bioc> (for PCA and PLS), <pkg>ade4</pkg>, <pkg>nipals</pkg> and <pkg>plsRglm</pkg> (for generalized model PLS). As a generalization, <pkg>tensorBF</pkg> implements imputation in 3-way tensor data. <pkg>ROptSpace</pkg> proposes a matrix completion method under low-rank assumption and collective matrix factorization for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, Poisson). Imputation for groups is also available in <pkg>missMDA</pkg> in the function <code>imputeMFA</code>.</li>
       <li><i>Imputation of clustered data</i> using k-means is implemented in <pkg>ClustImpute</pkg>.</li>
       <li><i>Imputation for non-parametric regression by wavelet shrinkage</i> is implemented in <pkg>CVThresh</pkg> using solely maximization of the h-likelihood.</li>
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to <i>evaluate the quality of imputation.</i></li>
@@ -126,7 +126,6 @@
     <pkg>CRTgeeDR</pkg>
     <pkg>CVThresh</pkg>
     <pkg>cutoffR</pkg>
-    <pkg>ddsPLS</pkg>
     <pkg>dejaVu</pkg>
     <pkg>DMwR</pkg>
     <pkg>denoiseR</pkg>
