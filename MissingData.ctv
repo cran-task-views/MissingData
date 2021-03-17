@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-03-11</version>
+  <version>2021-03-17</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -43,7 +43,7 @@
     <p><a name="single"><strong>Single imputation</strong></a></p>
     <ul>
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg> that contain various proposals for imputing with the same value all missing instances of a variable.</li>
-      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, including a CCA based imputation). <pkg>wNNSel</pkg> implements a kNN based method for imputation in large dimensional datasets. <pkg>isotree</pkg> uses a similar approach that is based on similarities between samples to impute missing data with isolation forests.</li>
+      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, including a CCA based imputation). <pkg>wNNSel</pkg> implements a kNN based method for imputation in large dimensional datasets. <pkg>isotree</pkg> uses a similar approach that is based on similarities between samples to impute missing data with isolation forests.</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>). <pkg>StatMatch</pkg> uses hot-deck imputation to impute surveys from an external dataset. <pkg>impimp</pkg> also uses the notion of "donor" to impute a set of possible values, termed "imprecise imputation".</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>). In addition, <pkg>simputation</pkg> is a general package for imputation by any prediction method that can be combined with various regression methods, and works well with the tidyverse. <pkg>WaverR</pkg> imputes data using a weighted average of several regressions. <pkg>iai</pkg> tunes optimal imputation based on knn, tree or SVM.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg> with a faster version in <pkg>missRanger</pkg>.</li>
@@ -127,7 +127,6 @@
     <pkg>CVThresh</pkg>
     <pkg>cutoffR</pkg>
     <pkg>dejaVu</pkg>
-    <pkg>DMwR</pkg>
     <pkg>denoiseR</pkg>
     <pkg>DescTools</pkg>
     <pkg>DiffusionRimp</pkg>
