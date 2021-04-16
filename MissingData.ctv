@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-03-17</version>
+  <version>2021-04-16</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -67,7 +67,7 @@
       <li><pkg>BaBooN</pkg> implements a Bayesian bootstrap approach for discrete data imputation that is based on Predictive Mean Matching (PMM).</li>
       <li><pkg>accelmissing</pkg> provides multiple imputation with the zero-inflated Poisson lognormal model for missing count values in accelerometer data.</li>
     </ul>
-    <p>In addition, <pkg>mitools</pkg> provides a generic approach to handle multiple imputation in combination with any imputation method.</p>
+    <p>In addition, <pkg>mitools</pkg> provides a generic approach to handle multiple imputation in combination with any imputation method. And <pkg>NADIA</pkg> provides a uniform interface to compare the performances of several imputation algorithms.</p>
 
     <p><a  name="weights"><strong>Weighting methods</strong></a></p>
     <ul>
@@ -95,12 +95,12 @@
       <li><i>Genetics</i>: <pkg>SNPassoc</pkg> provides functions to visualize missing data in the case of SNP studies (genetics). Analyses of Case-Parent Triad and/or Case-Control Data with SNP haplotypes is implemented in <pkg>Haplin</pkg>, where missing genotypic data are handled with an EM algorithm. <pkg>FamEvent</pkg> and <bioc>snpStats</bioc> implement imputation of missing genotypes, respectively with an EM algorithm and a nearest neighbor approach. Imputation for genotype and haplotype is implemented in <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases; imputation of missing genotypes is also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Tools for Hardy-Weinberg equilibrium for bi- and multi-allelic genetic marker data are implemented in <pkg>HardyWeinberg</pkg>, where genotypes are imputed with a multinomial logit model. <pkg>StAMPP</pkg> computes genomic relationship when SNP genotype datasets contain missing data and <pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm.</li>
       <li><i>Genomics</i>: Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>. <pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
       <li><i>Epidemiology</i>: <pkg>idem</pkg> implements a procedure for comparing treatments in clinical trials with missed visits or premature withdrawal. <pkg>InformativeCensoring</pkg> implements multiple imputation for informative censoring. <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses. <pkg>sievePH</pkg> implements continuous, possibly multivariate, mark-specific hazard ratio with missing values in multivariate marks using an IPW approach.</li>
-      <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <pkg>MatchThem</pkg> matches multiply imputed datasets using several matching methods, and provides users with the tools to estimate causal effects in each imputed datasets.</li>
+      <li><i>Causal inference</i>: Causal inference with interactive fixed-effect models is available in <pkg>gsynth</pkg> with missing values handled by matrix completion. <pkg>MatchThem</pkg> matches multiply imputed datasets using several matching methods, and provides users with the tools to estimate causal effects in each imputed datasets. <pkg>grf</pkg> offers treatment effect estimation with incomplete confounders and covariates under modified unconfoundedness assumptions.</li>
       <li><i>Scoring</i>: Basic methods (mean, median, mode, ...) for imputing missing data in scoring datasets are proposed in <pkg>scorecardModelUtils</pkg>.</li>
       <li><i>Preference models</i>: Missing data in preference models are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
       <li><i>Health economy</i>: <pkg>missingHE</pkg> implements models for health economic evaluations with missing outcome data.</li>
       <li><i>Administrative records / Surveys</i>: <pkg>fastLink</pkg> provides a Fellegi-Sunter probabilistic record linkage that allows for missing data and the inclusion of auxiliary information. <pkg>EditImputeCont</pkg> provides imputation methods for continuous microdata under linear constraints with a Bayesian approach.</li>
-      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg>, <pkg>grf</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors in various random forest based methods. <pkg>mipred</pkg> handles prediction in generalized linear models and Cox prediction models with multiple imputation of predictors. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors. <pkg>lqr</pkg> provides quantile regression estimates based on various distributions in the presence of missing values and censored data.</li>
+      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg>, <pkg>grf</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors in various random forest based methods. <pkg>mipred</pkg> handles prediction in generalized linear models and Cox prediction models with multiple imputation of predictors. <pkg>misaem</pkg> handles missing data in linear and logistic regression and allows for model selection. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors. <pkg>lqr</pkg> provides quantile regression estimates based on various distributions in the presence of missing values and censored data.</li>
       <li><i>Clustering</i> <pkg>biclustermd</pkg> handles missing data in biclustering. <pkg>RMixtComp</pkg> and <pkg>mixture</pkg> fit various mixture models in the presence of missing data.</li>
       <li><i>Tests</i> for two-sample paired missing data are implemented in <pkg>robustrank</pkg>.</li>
       <li><pkg>robustrao</pkg> computes the Rao-Stirling diversity index (a well-established bibliometric indicator to measure the interdisciplinarity of scientific publications) with data containing uncategorized references.</li>
@@ -190,6 +190,7 @@
     <pkg>miceRanger</pkg>
     <pkg>mimi</pkg>
     <pkg>mipred</pkg>
+    <pkg>misaem</pkg>
     <pkg>missForest</pkg>
     <pkg>missingHE</pkg>
     <pkg priority="core">missMDA</pkg>
@@ -201,6 +202,7 @@
     <pkg>miWQS</pkg>
     <pkg>mix</pkg>
     <pkg>mixture</pkg>
+    <pkg>NADIA</pkg>
     <pkg>naivebayes</pkg>
     <pkg priority="core">naniar</pkg>
     <pkg>nipals</pkg>
