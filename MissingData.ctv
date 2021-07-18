@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-06-09</version>
+  <version>2021-07-18</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -81,7 +81,7 @@
       <li><i>Spatio-temporal data</i>: Imputation for spatio-temporal data is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD and in <pkg>CircSpaceTime</pkg> for circular data using kriging. Similarly, <pkg>reddPrec</pkg> imputes missing values in daily precipitation time series accross different locations.</li>
       <li><i>Graphs/networks</i>: Imputation for graphs/networks is implemented in the package <pkg>dils</pkg> to impute missing edges. <pkg>PST</pkg> provides a framework for analyzing Probabilistic Suffix Trees, including functions for learning and optimizing VLMC (variable length Markov chains) models from sets of individual sequences possibly containing missing values. <pkg>missSBM</pkg> imputes missing edges in Stochastic Block models and <pkg>cassandRa</pkg> predicts possible missing links with different stochastic network models.</li>
       <li><i>Imputation for contingency tables</i> is implemented in <pkg>lori</pkg> that can also be used for the analysis of contingency tables with missing data.</li>
-      <li><i>Imputation for compositional data (CODA)</i> is implemented in <pkg>robCompositions</pkg> (based on kNN or EM approaches) and in <pkg>zCompositions</pkg> (various imputation methods for zeros, left-censored and missing data).</li>
+      <li><i>Imputation for compositional data (CODA)</i> is implemented in in <pkg>zCompositions</pkg> (various imputation methods for zeros, left-censored and missing data).</li>
       <li><i>Imputation for diffusion processes</i> is implemented in <pkg>DiffusionRimp</pkg> by imputing missing sample paths with Brownian bridges.</li>
       <li><i>Imputation for meta-analyses</i> of binary outcomes is provided in <pkg>metasens</pkg>.</li>
       <li><pkg>experiment</pkg> handles missing values in experimental design such as randomized experiments with missing covariate and outcome data, matched-pairs design with missing outcome.</li>
@@ -229,7 +229,6 @@
     <pkg>RMixtComp</pkg>
     <pkg>ROptSpace</pkg>
     <pkg>RNAseqNet</pkg>
-    <pkg>robCompositions</pkg>
     <pkg>robustrank</pkg>
     <pkg>robustrao</pkg>
     <pkg>rrcovNA</pkg>
