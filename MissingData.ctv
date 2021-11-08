@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-07-20</version>
+  <version>2021-11-08</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -57,7 +57,7 @@
     <p>Some of the above mentioned packages can also handle multiple imputations.</p>
     <ul>
       <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>. <pkg>NPBayesImputeCat</pkg> also implements multiple imputation by joint modelling for categorical variables with a Bayesian approach.</li>
-      <li><pkg>mi</pkg>, <pkg>mice</pkg> and <pkg>smcfcs</pkg> implement multiple imputation by Chained Equations. <pkg>smcfcs</pkg> extends the models covered by the two previous packages. <pkg>miceFast</pkg> provides an alternative implementation of mice imputation methods using object oriented style programming and C++. <pkg>miceMNAR</pkg> imputes MNAR responses under Heckman selection model for use with <pkg>mice</pkg>. <pkg>bootImpute</pkg> performs bootstrap based imputations and analyses of these imputations to use with <pkg>mice</pkg> or <pkg>smcfcs</pkg>. <pkg>miceRanger</pkg> performs multiple imputation by chained equations using random forests.</li>
+      <li><pkg>mi</pkg>, <pkg>mice</pkg> and <pkg>smcfcs</pkg> implement multiple imputation by Chained Equations. <pkg>smcfcs</pkg> extends the models covered by the two previous packages. <pkg>miceFast</pkg> provides an alternative implementation of mice imputation methods using object oriented style programming and C++. <pkg>bootImpute</pkg> performs bootstrap based imputations and analyses of these imputations to use with <pkg>mice</pkg> or <pkg>smcfcs</pkg>. <pkg>miceRanger</pkg> performs multiple imputation by chained equations using random forests.</li>
       <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>hot.deck</pkg> implements hot-deck based multiple imputation.</li>
       <li><i>Multilevel imputation</i>: Multilevel multiple imputation is implemented in <pkg>hmi</pkg>, <pkg>jomo</pkg>, <pkg>mice</pkg>, <pkg>miceadds</pkg>, <pkg>micemd</pkg>, <pkg>mitml</pkg>, and <pkg>pan</pkg>.</li>
@@ -183,7 +183,6 @@
     <pkg>miceadds</pkg>
     <pkg>miceFast</pkg>
     <pkg>micemd</pkg>
-    <pkg>miceMNAR</pkg>
     <pkg>miceRanger</pkg>
     <pkg>mimi</pkg>
     <pkg>mipred</pkg>
