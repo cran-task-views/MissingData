@@ -242,7 +242,6 @@
     <pkg>sjlabelled</pkg>
     <pkg>sjmisc</pkg>
     <pkg>smcfcs</pkg>
-    <pkg>SNPassoc</pkg>
     <pkg priority="core">softImpute</pkg>
     <pkg>spacetime</pkg>
     <pkg>StAMPP</pkg>
