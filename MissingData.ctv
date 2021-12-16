@@ -2,7 +2,7 @@
   <name>MissingData</name>
   <topic>Missing Data</topic>
   <maintainer email="r-miss-tastic@clementine.wf">Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)</maintainer>
-  <version>2021-12-04</version>
+  <version>2021-12-16</version>
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
@@ -99,7 +99,7 @@
       <li><i>Preference models</i>: Missing data in preference models are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
       <li><i>Health economy</i>: <pkg>missingHE</pkg> implements models for health economic evaluations with missing outcome data.</li>
       <li><i>Administrative records / Surveys</i>: <pkg>fastLink</pkg> provides a Fellegi-Sunter probabilistic record linkage that allows for missing data and the inclusion of auxiliary information.</li>
-      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg>, <pkg>grf</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors in various random forest based methods. <pkg>mipred</pkg> handles prediction in generalized linear models and Cox prediction models with multiple imputation of predictors. <pkg>misaem</pkg> handles missing data in linear and logistic regression and allows for model selection. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors. <pkg>lqr</pkg> provides quantile regression estimates based on various distributions in the presence of missing values and censored data.</li>
+      <li><i>Regression and classification</i>: <pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. <pkg>randomForest</pkg>, <pkg>grf</pkg> and <pkg>StratifiedRF</pkg> handle missing values in predictors in various random forest based methods. <pkg>misaem</pkg> handles missing data in linear and logistic regression and allows for model selection. <pkg>psfmi</pkg> provides a framework for model selection for various linear models in multiply imputed datasets. <pkg>naivebayes</pkg> provides an efficient implementation of the naive Bayes classifier in the presence of missing data. <pkg>plsRbeta</pkg> implements PLS for beta regression models with missing data in the predictors. <pkg>lqr</pkg> provides quantile regression estimates based on various distributions in the presence of missing values and censored data.</li>
       <li><i>Clustering</i> <pkg>biclustermd</pkg> handles missing data in biclustering. <pkg>RMixtComp</pkg>, <pkg>MGMM</pkg> and <pkg>mixture</pkg> fit various mixture models in the presence of missing data.</li>
       <li><i>Tests</i> for two-sample paired missing data are implemented in <pkg>robustrank</pkg>.</li>
       <li><pkg>robustrao</pkg> computes the Rao-Stirling diversity index (a well-established bibliometric indicator to measure the interdisciplinarity of scientific publications) with data containing uncategorized references.</li>
@@ -192,7 +192,6 @@
     <pkg>micemd</pkg>
     <pkg>miceRanger</pkg>
     <pkg>mimi</pkg>
-    <pkg>mipred</pkg>
     <pkg>misaem</pkg>
     <pkg>missForest</pkg>
     <pkg>missingHE</pkg>
