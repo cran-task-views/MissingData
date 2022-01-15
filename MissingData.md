@@ -8,15 +8,15 @@ source: https://github.com/cran-task-views/MissingData/
 ---
 
 
-Missing data are very frequently found in datasets. Base R provides a
-few options to handle them using computations that involve only observed
-data ( `na.rm = TRUE` in functions `mean`, `var`, ... or
-`use = complete.obs|na.or.complete|pairwise.complete.obs` in functions
-`cov`, `cor`, ...). The base package stats also contains the generic
-function `na.action` that extracts information of the `NA` action used
-to create an object.
+Missing data are very frequently found in datasets. Base R provides a few 
+options to handle them using computations that involve only observed data 
+(`na.rm = TRUE` in functions `mean`, `var`, ... or 
+`use = complete.obs|na.or.complete|pairwise.complete.obs` in functions `cov`, 
+`cor`, ...). The base package `stats` also contains the generic function 
+`na.action` that extracts information of the `NA` action used to create an 
+object.
 
-These basic options are complemented by many packages on CRAN, which we
+These basic options are complemented by many packages on CRAN, which we 
 structure into main topics:
 
 -   [Exploration of missing data](#exploration)
@@ -225,9 +225,6 @@ imputations.
 -   `r pkg("BaBooN")` implements a Bayesian bootstrap approach
     for discrete data imputation that is based on Predictive Mean
     Matching (PMM).
--   `r pkg("accelmissing")` provides multiple imputation with
-    the zero-inflated Poisson lognormal model for missing count values
-    in accelerometer data.
 
 In addition, `r pkg("mitools")` provides a generic approach to
 handle multiple imputation in combination with any imputation method.
@@ -329,24 +326,14 @@ the performances of several imputation algorithms.
 
 [**Specific application fields**]{#applications}
 
--   *Genetics*: Analyses of Case-Parent Triad and/or Case-Control Data
-    with SNP haplotypes is implemented in `r pkg("Haplin")`,
-    where missing genotypic data are handled with an EM algorithm.
-    `r pkg("FamEvent")` and `r bioc("snpStats")`
-    implement imputation of missing genotypes, respectively with an EM
-    algorithm and a nearest neighbor approach. Imputation for genotype
-    and haplotype is implemented in `r pkg("alleHap")` using
-    solely deterministic techniques on pedigree databases; imputation of
-    missing genotypes is also implemented in `r pkg("QTLRel")`
-    that contains tools for QTL analyses. Tools for Hardy-Weinberg
-    equilibrium for bi- and multi-allelic genetic marker data are
-    implemented in `r pkg("HardyWeinberg")`, where genotypes
-    are imputed with a multinomial logit model.
-    `r pkg("StAMPP")` computes genomic relationship when SNP
-    genotype datasets contain missing data and
-    `r pkg("PSIMEX")` computes inbreeding depression or
-    heritability on pedigree structures affected by missing paternities
-    with a variant of the SIMEX algorithm.
+-   *Genetics*: Imputation of SNP data is implemented in `r pkg("alleHap")`
+    (using solely deterministic techniques based on pedigree data), in
+    `r pkg("QTLRel")` (using information on flanking SNPs), in 
+    `r bioc("snpStats")` (using a nearest neighbor approach), in 
+    `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
+    model based on allele intensities and/or flanking SNPs).\
+    EM algorithm is used to compute genetic statistics for population in the
+    presence of missing SNP in `r pkg("StAMPP")`.
 -   *Genomics*: Imputation for dropout events ( *i.e.* , under-sampling
     of mRNA molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")` and `r pkg("Rmagic")`.
@@ -375,8 +362,10 @@ the performances of several imputation algorithms.
 -   *Preference models*: Missing data in preference models are handled
     with a *Composite Link* approach that allows for MCAR and MNAR
     patterns to be taken into account in `r pkg("prefmod")`.
--   *Health economy*: `r pkg("missingHE")` implements models
-    for health economic evaluations with missing outcome data.
+-   *Health*: `r pkg("missingHE")` implements models for health economic 
+    evaluations with missing outcome data. `r pkg("accelmissing")` provides 
+    multiple imputation with the zero-inflated Poisson lognormal model for
+    missing count values in accelerometer data.
 -   *Administrative records / Surveys*: `r pkg("fastLink")`
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
