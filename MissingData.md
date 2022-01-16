@@ -29,8 +29,8 @@ structure into main topics:
 
 In addition to the present task view, this [reference website on missing
 data](https://rmisstastic.netlify.com/) might also be helpful. Complementary
-information might also be found in `r view("TimeSeries")` and 
-`r view("SpatioTemporal")`.
+information might also be found in `r view("TimeSeries")`,
+`r view("SpatioTemporal")`, and `r view("OfficialStatistics")`.
 
 If you think that we missed some important packages in this list, please
 e-mail the maintainers or submit an issue or pull request in the GitHub
@@ -93,14 +93,9 @@ repository linked above.
     clustering with variable selection is available in
     `r pkg("VarSelLCM")`. The package also provides imputation
     using the posterior mean.
--   *Missing values in mixed-effect models and generalized linear
-    models* are supported in the packages `r pkg("mdmb")`,
-    `r pkg("icdGLM")` and `r pkg("JointAI")`, the
-    last one being based on a Bayesian approach.
-    `r pkg("brlrmr")` also handles MNAR values in response
-    variable for logistic regression using an EM approach.
-    `r pkg("ui")` implements uncertainty intervals for linear
-    and probit regressions when the outcome is missing not at random.
+-   *Missing values in generalized linear models* is provided in package 
+    `r pkg("mdmb")` for various families. `r pkg("JointAI")` implements 
+    Bayesian approaches for generalized linear mixed models.
 -   *Missing data in item response models* is implemented in
     `r pkg("TAM")`, `r pkg("mirt")` and
     `r pkg("ltm")`.
@@ -143,12 +138,11 @@ repository linked above.
     `r pkg("WaverR")` imputes data using a weighted average of
     several regressions. `r pkg("iai")` tunes optimal
     imputation based on knn, tree or SVM.
--   *Based on random forest* in `r pkg("missForest")` with a
-    faster version in `r pkg("missRanger")`.
--   *Based on copula* in `r pkg("CoImp")`, in
-    `r pkg("mdgc")` (mixed type data), and in
-    `r pkg("sbgcop")` (semi-parametric Bayesian copula
-    imputation). The latter supports multiple imputation.
+-   Imputation *based on random forest* is implemented in `r pkg("missForest")` 
+    with a faster version in `r pkg("missRanger")`.
+-   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
+    semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
+    copula for mixed data types.
 -   *PCA/Singular Value Decomposition/matrix completion* is implemented
     in the package `r pkg("missMDA", priority = "core")` for
     numerical, categorical and mixed data. Heterogeneous missingness in
@@ -176,9 +170,6 @@ repository linked above.
     imputation based on matrix factorization. Finally, imputation for
     groups is also available in `r pkg("missMDA")` in the
     function `imputeMFA`.
--   *Imputation for non-parametric regression by wavelet shrinkage* is
-    implemented in `r pkg("CVThresh")` using solely
-    maximization of the h-likelihood.
 -   `r pkg("mi")` and `r pkg("VIM")` also provide
     diagnostic plots to *evaluate the quality of imputation.*
 
@@ -238,8 +229,7 @@ the performances of several imputation algorithms.
     `r pkg("ipw")`. IPW is also used for quantile estimations
     and boxplots in `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
-    with missing outcome* is implemented in
-    `r pkg("CRTgeeDR")`.
+    with missing outcome* is implemented in `r pkg("CRTgeeDR")`.
 
 [**Specific types of data**]{#data}
 
@@ -277,33 +267,22 @@ the performances of several imputation algorithms.
     AR models or random walk.
 -   *Spatial data*: Imputation for spatial data is implemented in
     `r pkg("phylin")` using interpolation with spatial
-    distance weights or kriging. `r pkg("gapfill")` is
-    dedicated to satellite data. Geostatistical interpolation of data
+    distance weights or kriging. Geostatistical interpolation of data
     with irregular spatial support is implemented in
     `r pkg("rtop")` and in `r pkg("areal")` that
     estimates values for overlapping but incongruent polygon features.
 -   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation 
-    for spatio-temporal data is implemented in the package `r pkg("cutoffR")` 
-    using different methods as knn and SVD and in `r pkg("CircSpaceTime")` for 
-    circular data using kriging. 
-    Similarly, `r pkg("reddPrec")` imputes missing values in daily precipitation
-    time series accross different locations. 
-    Estimation and prediction for spatio-temporal data with missing values is 
-    implemented in `r pkg("StempCens")` with a SAEM approach that approximates 
-    EM when the E-step does not have an analytic form.
--   *Graphs/networks*: Imputation for graphs/networks is implemented in
-    the package `r pkg("dils")` to impute missing edges.
-    `r pkg("PST")` provides a framework for analyzing
-    Probabilistic Suffix Trees, including functions for learning and
-    optimizing VLMC (variable length Markov chains) models from sets of
-    individual sequences possibly containing missing values.
-    `r pkg("missSBM")` imputes missing edges in Stochastic
-    Block models and `r pkg("cassandRa")` predicts possible
-    missing links with different stochastic network models.
-    `r pkg("cglasso")` implements an extension of the
-    Graphical Lasso with censored and missing values and
-    `r pkg("mgm")` implements estimation of time-varying
-    k-order mixed graphical models.
+    for spatio-temporal data is implemented in the packages `r pkg("cutoffR")` 
+    (using different methods as knn and SVD) and in in `r pkg("StempCens")` 
+    with a SAEM approach that approximates EM when the E-step does not have an 
+    analytic form.\
+    `r pkg("gapfill")` is dedicated to imputation of satellite data observed at
+    equally-spaced points in time and `r pkg("momentuHMM")` to the analysis of
+    telemetry data using generalized hidden Markov models (including multiple 
+    imputation for missing data). 
+-   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
+    Block models and `r pkg("cglasso")` implements an extension of the
+    Graphical Lasso inference from censored and missing value measurements.
 -   *Imputation for contingency tables* is implemented in
     `r pkg("lori")` that can also be used for the analysis of
     contingency tables with missing data.
@@ -319,8 +298,6 @@ the performances of several imputation algorithms.
     experimental design such as randomized experiments with missing
     covariate and outcome data, matched-pairs design with missing
     outcome.
--   `r pkg("cdparcoord")` provides tools to handle missing
-    values in parallel coordinates settings.
 -   `r pkg("dejaVu")` performs multiple imputation of
     recurrent event data based on a negative binomial regression model.
 
