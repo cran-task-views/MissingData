@@ -233,23 +233,20 @@ the performances of several imputation algorithms.
 
 [**Specific types of data**]{#data}
 
--   *Longitudinal data / time series and censored data*: Imputation for
-    time series is implemented in
-    `r pkg("imputeTS", priority = "core")` and
-    `r pkg("imputePSF")`. Other packages, such as
-    `r pkg("forecast")`, `r pkg("spacetime")`,
-    `r pkg("timeSeries")`, `r pkg("xts")`,
-    `r pkg("prophet")`, `r pkg("stlplus")` or
-    `r pkg("zoo")`, are dedicated to time series but also
-    contain some (often basic) methods to handle missing data (see also
-    `r view("TimeSeries")`). To help fill down missing values
+-   *Longitudinal data / time series and censored data*: Imputation for time 
+    series is implemented in `r pkg("imputeTS", priority = "core")` and
+    `r pkg("imputePSF")`. Other packages, such as `r pkg("forecast")`, 
+    `r pkg("spacetime")`, `r pkg("timeSeries")`, `r pkg("xts")`, 
+    `r pkg("prophet")`, `r pkg("stlplus")` or `r pkg("zoo")`, are dedicated to 
+    time series but also contain some (often basic) methods to handle missing 
+    data (see also `r view("TimeSeries")`).\
+    To help fill down missing values
     for time series, the `r pkg("padr")` and
     `r pkg("tsibble")` packages provide methods for imputing
     implicit missing values. Imputation of time series based on Dynamic
-    Time Warping is implemented in `r pkg("DTWBI")` for
-    univariate time series and in `r pkg("DTWUMI")` or in
-    `r pkg("FSMUMI")` for multivariate ones.
-    `r pkg("naniar")` also imputes data below the range for
+    Time Warping is implemented in the family of packages `r pkg("DTWBI")`, 
+    `r pkg("DTWUMI")`, `r pkg("FSMUMI")` for univariate and multivariate time
+    series. `r pkg("naniar")` also imputes data below the range for
     exploratory graphical analysis with the function `impute_below`.
     `r pkg("TAR")` implements an estimation of the
     autoregressive threshold models with Gaussian noise and of
@@ -289,9 +286,6 @@ the performances of several imputation algorithms.
 -   *Imputation for compositional data (CODA)* is implemented in in
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
--   *Imputation for diffusion processes* is implemented in
-    `r pkg("DiffusionRimp")` by imputing missing sample paths
-    with Brownian bridges.
 -   *Imputation for meta-analyses* of binary outcomes is provided in
     `r pkg("metasens")`.
 -   `r pkg("experiment")` handles missing values in
@@ -311,11 +305,14 @@ the performances of several imputation algorithms.
     model based on allele intensities and/or flanking SNPs).\
     EM algorithm is used to compute genetic statistics for population in the
     presence of missing SNP in `r pkg("StAMPP")`.
--   *Genomics*: Imputation for dropout events ( *i.e.* , under-sampling
-    of mRNA molecules) in single-cell RNA-Sequencing data is implemented
-    in `r pkg("DrImpute")` and `r pkg("Rmagic")`.
-    `r pkg("RNAseqNet")` uses hot-deck imputation to improve
-    RNA-seq network inference with an auxiliary dataset.
+-   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
+    molecules) in single-cell RNA-Sequencing data is implemented
+    in `r pkg("DrImpute")`, `r pkg("Rmagic")`, and `r pkg("SAVER")` and ,
+    based, respectively, on clustering of cells, Markov affinity graph, and an
+    empirical Bayes approach. These packages are used and combined in
+    `r bioc("scRecover")` and `r bioc("ADImpute")`\
+    `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network 
+    inference with an auxiliary dataset.
 -   *Epidemiology*: `r pkg("idem")` implements a procedure
     for comparing treatments in clinical trials with missed visits or
     premature withdrawal. `r pkg("InformativeCensoring")`
