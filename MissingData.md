@@ -111,17 +111,17 @@ repository linked above.
     packages among which `r pkg("ForImp")` and
     `r pkg("Hmisc")` that contain various proposals for
     imputing with the same value all missing instances of a variable.
--   *k-nearest neighbors* is a popular method for missing data
-    imputation that is available in many packages including
-    `r bioc("impute")`, `r pkg("VIM")`,
-    `r pkg("GenForImp")` and
-    `r pkg("yaImpute", priority = "core")` (with many different
-    methods for kNN imputation, including a CCA based imputation).
-    `r pkg("wNNSel")` implements a kNN based method for
-    imputation in large dimensional datasets.
-    `r pkg("isotree")` uses a similar approach that is based
-    on similarities between samples to impute missing data with
-    isolation forests.
+-   *Generic packages*: The packages `r pkg("VIM")` and `r pkg("filling")` 
+    contain several popular methods for missing value imputation (including some
+    listed in the sections dedicated to specific methods as listed below).
+-   *k-nearest neighbors* is a popular method for missing data imputation that 
+    is available in many packages including the main packages
+    `r pkg("yaImpute", priority = "core")` (with many different methods for 
+    kNN imputation, including a CCA based imputation) and `r pkg("VIM")`. It
+    is also available in `r bioc("impute")` (where it is oriented toward 
+    microarray imputation).\
+    `r pkg("isotree")` uses a similar approach to impute missing value, which is
+    based on similarities between samples and isolation forests.
 -   *hot-deck* imputation is implemented in
     `r pkg("hot.deck", priority = "core")`,
     `r pkg("FHDI")` and `r pkg("VIM")` (function
@@ -143,35 +143,27 @@ repository linked above.
 -   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
--   *PCA/Singular Value Decomposition/matrix completion* is implemented
-    in the package `r pkg("missMDA", priority = "core")` for
-    numerical, categorical and mixed data. Heterogeneous missingness in
-    a high-dimensional PCA is also addressed in
-    `r pkg("primePCA")`.
-    `r pkg("softImpute", priority = "core")` contains several
-    methods for iterative matrix completion, as well as
-    `r pkg("filling")`, `r pkg("rsparse")` and
-    `r pkg("denoiseR")` for numerical variables,
-    `r pkg("mimi")` that uses low rank assumptions to impute
-    mixed datasets, and `r pkg("ECLRMC")` performs ensemble
-    correlation based low rank matrix completion that accounts for
-    correlation among samples. The package
-    `r bioc("pcaMethods")` offers some Bayesian implementation
-    of PCA with missing data. *NIPALS* (based on SVD computation) is
-    implemented in the packages `r bioc("mixOmics")` (for PCA
-    and PLS), `r pkg("ade4")`, `r pkg("nipals")` and
-    `r pkg("plsRglm")` (for generalized model PLS). As a
-    generalization, `r pkg("tensorBF")` implements imputation
-    in 3-way tensor data. `r pkg("ROptSpace")` proposes a
-    matrix completion method under low-rank assumption and collective
-    matrix factorization for imputation using Bayesian matrix completion
-    for groups of variables (binary, quantitative, Poisson). Similarly,
-    `r pkg("cmfrec")` proposes different version of matrix
-    imputation based on matrix factorization. Finally, imputation for
-    groups is also available in `r pkg("missMDA")` in the
-    function `imputeMFA`.
--   `r pkg("mi")` and `r pkg("VIM")` also provide
-    diagnostic plots to *evaluate the quality of imputation.*
+-   *Matrix completion* is implemented with iterative PCA/*SVD*-decomposition in
+    the package `r pkg("missMDA", priority = "core")` for numerical, categorical 
+    and mixed data (including imputation of groups). *NIPALS* (also based on SVD
+    computation) is implemented in the packages `r bioc("mixOmics")` (for PCA 
+    and PLS), `r pkg("ade4")`, `r pkg("nipals")` and `r pkg("plsRglm")` (for 
+    generalized model PLS). `r pkg("cmfrec")` is also a large package dedicated
+    to matrix factorization (for recommender systems), which includes
+    imputation. Other PCA/factor based imputations are available in 
+    `r bioc("pcaMethods")` (with a Bayesian implementation of PCA), in 
+    `r pkg("primePCA")` (for heterogeneous missingness in high-dimensional PCA)
+    and `r pkg("tensorBF")` (for 3-way tensor data).\
+    *Low rank based imputation* is provided in 
+    `r pkg("softImpute", priority = "core")`, which contains several
+    methods for iterative matrix completion. This method is also available in
+    the very general package `r pkg("rsparse")`, which contains various tools
+    for sparse matrices. Variants based on low rank assumptions are available
+    in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` (for
+    ensemble matrix completion), and in `r pkg("ROptSpace")` (with a 
+    computationally efficient approach).
+-   `r pkg("mi")` and `r pkg("VIM")` also provide diagnostic plots to *evaluate 
+     the quality of imputation.*
 
 [**Multiple imputation**]{#multiple}
 
@@ -343,21 +335,20 @@ the performances of several imputation algorithms.
 -   *Administrative records / Surveys*: `r pkg("fastLink")`
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
--   *Regression and classification*: `r pkg("eigenmodel")`
-    handles missing values in regression models for symmetric relational
-    data. `r pkg("randomForest")`, `r pkg("grf")`
-    and `r pkg("StratifiedRF")` handle missing values in
-    predictors in various random forest based methods.
-    `r pkg("misaem")` handles missing data in linear and
-    logistic regression and allows for model selection.
-    `r pkg("psfmi")` provides a framework for model selection
-    for various linear models in multiply imputed datasets.
-    `r pkg("naivebayes")` provides an efficient implementation
-    of the naive Bayes classifier in the presence of missing data.
-    `r pkg("plsRbeta")` implements PLS for beta regression
-    models with missing data in the predictors. `r pkg("lqr")`
-    provides quantile regression estimates based on various
-    distributions in the presence of missing values and censored data.
+-   *Regression and classification*: many different supervised methods can
+    accommodate the presence of missing values. `r pkg("randomForest")`, 
+    `r pkg("grf")`, and `r pkg("StratifiedRF")` handle missing values in 
+    predictors in various random forest based methods. `r pkg("misaem")` 
+    handles missing data in linear and logistic regression and allows for model 
+    selection. `r pkg("psfmi")` also provides a framework for model selection
+    for various linear models in multiply imputed datasets. 
+    `r pkg("naivebayes")` provides an efficient implementation of the naive 
+    Bayes classifier in the presence of missing data. `r pkg("plsRbeta")` 
+    implements PLS for beta regression models with missing data in the 
+    predictors. `r pkg("lqr")` provides quantile regression estimates based on 
+    various distributions in the presence of missing values and censored data.
+    `r pkg("eigenmodel")` handles missing values in regression models for 
+    symmetric relational data.
 -   *Clustering*: `r pkg("biclustermd")` handles missing data
     in biclustering. `r pkg("RMixtComp")`,
     `r pkg("MGMM")` and `r pkg("mixture")` fit
