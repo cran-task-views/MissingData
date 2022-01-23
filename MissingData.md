@@ -25,6 +25,7 @@ structure into main topics:
 -   [Multiple imputation](#multiple)
 -   [Weighting methods](#weights)
 -   [Specific types of data](#data)
+-   [Specific tasks](#tasks)
 -   [Specific application fields](#applications)
 
 In addition to the present task view, this [reference website on missing
@@ -58,9 +59,11 @@ repository linked above.
     performs sensitivity analysis in clinical trials to check the
     relevance of the MAR assumption.
 -   *Evaluation* of the quality of imputation can be performed using the
-    function `ampute` of `r pkg("mice", priority = "core")`
-    through with simulations or with the `r pkg("Iscores")`
-    with a KL-based scoring rule.
+    function `ampute` of `r pkg("mice", priority = "core")` through simulations,
+    with the `r pkg("Iscores")` with a KL-based scoring rule, or with the 
+    benchmark available in `r pkg("imputeTestbench")` (for univariate time
+    series imputation). In addition, `r pkg("mi")` and `r pkg("VIM")` also 
+    provide diagnostic plots to evaluate the quality of imputation.
 
 [**Likelihood based approaches**]{#likelihood}
 
@@ -99,10 +102,6 @@ repository linked above.
 -   *Missing data in item response models* is implemented in
     `r pkg("TAM")`, `r pkg("mirt")` and
     `r pkg("ltm")`.
--   *Robust* covariance estimation is implemented in the package
-    `r pkg("GSE")`. Robust location and scatter estimation and
-    robust multivariate analysis with missing data are implemented in
-    `r pkg("rrcovNA")`.
 
 [**Single imputation**]{#single}
 
@@ -113,7 +112,10 @@ repository linked above.
     imputing with the same value all missing instances of a variable.
 -   *Generic packages*: The packages `r pkg("VIM")` and `r pkg("filling")` 
     contain several popular methods for missing value imputation (including some
-    listed in the sections dedicated to specific methods as listed below).
+    listed in the sections dedicated to specific methods as listed below). 
+    In addition, `r pkg("simputation")` is a general package for imputation
+    by any prediction method that can be combined with various regression 
+    methods, and works well with the tidyverse.
 -   *k-nearest neighbors* is a popular method for missing data imputation that 
     is available in many packages including the main packages
     `r pkg("yaImpute", priority = "core")` (with many different methods for 
@@ -122,27 +124,21 @@ repository linked above.
     microarray imputation).\
     `r pkg("isotree")` uses a similar approach to impute missing value, which is
     based on similarities between samples and isolation forests.
--   *hot-deck* imputation is implemented in
-    `r pkg("hot.deck", priority = "core")`,
-    `r pkg("FHDI")` and `r pkg("VIM")` (function
-    `hotdeck`). `r pkg("StatMatch")` uses hot-deck imputation
-    to impute surveys from an external dataset.
-    `r pkg("impimp")` also uses the notion of "donor" to
-    impute a set of possible values, termed "imprecise imputation".
--   *Other regression based imputations* are implemented in
-    `r pkg("VIM")` (linear regression based imputation in the
-    function `regressionImp`). In addition,
-    `r pkg("simputation")` is a general package for imputation
-    by any prediction method that can be combined with various
-    regression methods, and works well with the tidyverse.
-    `r pkg("WaverR")` imputes data using a weighted average of
-    several regressions. `r pkg("iai")` tunes optimal
-    imputation based on knn, tree or SVM.
+-   *hot-deck* imputation is implemented in the package 
+    `r pkg("hot.deck", priority = "core")`, with various possible settings 
+    (including multiple imputation). It is also available in `r pkg("VIM")` 
+    (function `hotdeck`) and a fractional version (using weights) is provided
+    in `r pkg("FHDI")`. `r pkg("StatMatch")` also uses hot-deck imputation
+    to impute surveys from an external dataset.\
+    Similarly, `r pkg("impimp")` uses the notion of "donor" to impute a set of 
+    possible values, termed "imprecise imputation".
 -   Imputation *based on random forest* is implemented in `r pkg("missForest")` 
     with a faster version in `r pkg("missRanger")`.
--   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
-    semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
-    copula for mixed data types.
+-   *Other regression based imputations* are implemented in `r pkg("VIM")` 
+    (linear regression based imputation in the function `regressionImp`). 
+    `r pkg("WaverR")` imputes data using a weighted average of several 
+    regressions. `r pkg("iai")` tunes optimal imputation based on knn, tree or 
+    SVM.
 -   *Matrix completion* is implemented with iterative PCA/*SVD*-decomposition in
     the package `r pkg("missMDA", priority = "core")` for numerical, categorical 
     and mixed data (including imputation of groups). *NIPALS* (also based on SVD
@@ -162,8 +158,9 @@ repository linked above.
     in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` (for
     ensemble matrix completion), and in `r pkg("ROptSpace")` (with a 
     computationally efficient approach).
--   `r pkg("mi")` and `r pkg("VIM")` also provide diagnostic plots to *evaluate 
-     the quality of imputation.*
+-   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
+    semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
+    copula for mixed data types.
 
 [**Multiple imputation**]{#multiple}
 
@@ -218,22 +215,21 @@ the performances of several imputation algorithms.
 
 -   *Computation of weights* for observed data to account for unobserved
     data by *Inverse Probability Weighting (IPW)* is implemented in
-    `r pkg("ipw")`. IPW is also used for quantile estimations
-    and boxplots in `r pkg("IPWboxplot")`.
+    `r pkg("ipw")`. IPW is also used for quantile estimations and boxplots in 
+    `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
     with missing outcome* is implemented in `r pkg("CRTgeeDR")`.
 
 [**Specific types of data**]{#data}
 
 -   *Longitudinal data / time series and censored data*: Imputation for time 
-    series is implemented in `r pkg("imputeTS", priority = "core")` and
-    `r pkg("imputePSF")`. Other packages, such as `r pkg("forecast")`, 
-    `r pkg("spacetime")`, `r pkg("timeSeries")`, `r pkg("xts")`, 
-    `r pkg("prophet")`, `r pkg("stlplus")` or `r pkg("zoo")`, are dedicated to 
-    time series but also contain some (often basic) methods to handle missing 
-    data (see also `r view("TimeSeries")`).\
-    To help fill down missing values
-    for time series, the `r pkg("padr")` and
+    series is implemented in `r pkg("imputeTS", priority = "core")`. Other 
+    packages, such as `r pkg("forecast")`, `r pkg("spacetime")`, 
+    `r pkg("timeSeries")`, `r pkg("xts")`, `r pkg("prophet")`, 
+    `r pkg("stlplus")` or `r pkg("zoo")`, are dedicated to time series but also 
+    contain some (often basic) methods to handle missing data (see also 
+    `r view("TimeSeries")`).\
+    To help fill down missing values for time series, the `r pkg("padr")` and
     `r pkg("tsibble")` packages provide methods for imputing
     implicit missing values. Imputation of time series based on Dynamic
     Time Warping is implemented in the family of packages `r pkg("DTWBI")`, 
@@ -249,11 +245,11 @@ the performances of several imputation algorithms.
     method for longitudinal data with missing observations and
     measurement error in covariates based on SIMEX.
     `r pkg("icenReg")` performs imputation for censored
-    responses for interval data. `r pkg("imputeTestbench")`
-    proposes tools to benchmark missing data imputation in univariate
-    time series. On a related topic, `r pkg("imputeFin")`
+    responses for interval data. On a related topic, `r pkg("imputeFin")`
     handles imputation of missing values in financial time series using
-    AR models or random walk.
+    AR models or random walk.\
+    `r pkg("imputeTestbench")` proposes tools to benchmark missing data 
+    imputation in univariate time series.
 -   *Spatial data*: Imputation for spatial data is implemented in
     `r pkg("phylin")` using interpolation with spatial
     distance weights or kriging. Geostatistical interpolation of data
@@ -280,12 +276,36 @@ the performances of several imputation algorithms.
     zeros, left-censored and missing data).
 -   *Imputation for meta-analyses* of binary outcomes is provided in
     `r pkg("metasens")`.
--   `r pkg("experiment")` handles missing values in
-    experimental design such as randomized experiments with missing
-    covariate and outcome data, matched-pairs design with missing
-    outcome.
--   `r pkg("dejaVu")` performs multiple imputation of
+-   *Experimental design*: `r pkg("experiment")` handles missing values in
+    experimental design such as randomized experiments with missing covariate 
+    and outcome data, matched-pairs design with missing outcome.
+-   *Recurrent eventq*: `r pkg("dejaVu")` performs multiple imputation of
     recurrent event data based on a negative binomial regression model.
+    
+[**Specific tasks**]{#tasks}
+
+-   *Regression and classification*: many different supervised methods can
+    accommodate the presence of missing values. `r pkg("randomForest")`, 
+    `r pkg("grf")`, and `r pkg("StratifiedRF")` handle missing values in 
+    predictors in various random forest based methods. `r pkg("misaem")` 
+    handles missing data in linear and logistic regression and allows for model 
+    selection. `r pkg("psfmi")` also provides a framework for model selection
+    for various linear models in multiply imputed datasets. 
+    `r pkg("naivebayes")` provides an efficient implementation of the naive 
+    Bayes classifier in the presence of missing data. `r pkg("plsRbeta")` 
+    implements PLS for beta regression models with missing data in the 
+    predictors. `r pkg("lqr")` provides quantile regression estimates based on 
+    various distributions in the presence of missing values and censored data.
+    `r pkg("eigenmodel")` handles missing values in regression models for 
+    symmetric relational data.
+-   *Clustering*: `r pkg("biclustermd")` handles missing data
+    in biclustering. `r pkg("RMixtComp")`,
+    `r pkg("MGMM")` and `r pkg("mixture")` fit
+    various mixture models in the presence of missing data.
+-   *Tests* for two-sample paired missing data are implemented in
+    `r pkg("robustrank")`.
+-   *Outlier detection* (and robust analysis) in the presence of missing values
+    is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`
 
 [**Specific application fields**]{#applications}
 
@@ -335,26 +355,6 @@ the performances of several imputation algorithms.
 -   *Administrative records / Surveys*: `r pkg("fastLink")`
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
--   *Regression and classification*: many different supervised methods can
-    accommodate the presence of missing values. `r pkg("randomForest")`, 
-    `r pkg("grf")`, and `r pkg("StratifiedRF")` handle missing values in 
-    predictors in various random forest based methods. `r pkg("misaem")` 
-    handles missing data in linear and logistic regression and allows for model 
-    selection. `r pkg("psfmi")` also provides a framework for model selection
-    for various linear models in multiply imputed datasets. 
-    `r pkg("naivebayes")` provides an efficient implementation of the naive 
-    Bayes classifier in the presence of missing data. `r pkg("plsRbeta")` 
-    implements PLS for beta regression models with missing data in the 
-    predictors. `r pkg("lqr")` provides quantile regression estimates based on 
-    various distributions in the presence of missing values and censored data.
-    `r pkg("eigenmodel")` handles missing values in regression models for 
-    symmetric relational data.
--   *Clustering*: `r pkg("biclustermd")` handles missing data
-    in biclustering. `r pkg("RMixtComp")`,
-    `r pkg("MGMM")` and `r pkg("mixture")` fit
-    various mixture models in the presence of missing data.
--   *Tests* for two-sample paired missing data are implemented in
-    `r pkg("robustrank")`.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
