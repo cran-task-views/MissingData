@@ -7,7 +7,6 @@ version: 2021-12-29
 source: https://github.com/cran-task-views/MissingData/
 ---
 
-
 Missing data are very frequently found in datasets. Base R provides a few 
 options to handle them using computations that involve only observed data 
 (`na.rm = TRUE` in functions `mean`, `var`, ... or 
@@ -16,8 +15,10 @@ options to handle them using computations that involve only observed data
 `na.action` that extracts information of the `NA` action used to create an 
 object.
 
-These basic options are complemented by many packages on CRAN, which we 
-structure into main topics:
+These basic options are complemented by many packages on CRAN. In this task 
+view, we focused on the most important ones, which have been published more than
+one year ago and are regularly updated. The task view is structured into main 
+topics:
 
 -   [Exploration of missing data](#exploration)
 -   [Likelihood based approaches](#likelihood)
@@ -136,9 +137,7 @@ repository linked above.
     with a faster version in `r pkg("missRanger")`.
 -   *Other regression based imputations* are implemented in `r pkg("VIM")` 
     (linear regression based imputation in the function `regressionImp`). 
-    `r pkg("WaverR")` imputes data using a weighted average of several 
-    regressions. `r pkg("iai")` tunes optimal imputation based on knn, tree or 
-    SVM.
+    `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM.
 -   *Matrix completion* is implemented with iterative PCA/*SVD*-decomposition in
     the package `r pkg("missMDA", priority = "core")` for numerical, categorical 
     and mixed data (including imputation of groups). *NIPALS* (also based on SVD
@@ -228,34 +227,23 @@ the performances of several imputation algorithms.
     `r pkg("timeSeries")`, `r pkg("xts")`, `r pkg("prophet")`, 
     `r pkg("stlplus")` or `r pkg("zoo")`, are dedicated to time series but also 
     contain some (often basic) methods to handle missing data (see also 
-    `r view("TimeSeries")`).\
-    To help fill down missing values for time series, the `r pkg("padr")` and
-    `r pkg("tsibble")` packages provide methods for imputing
-    implicit missing values. Imputation of time series based on Dynamic
-    Time Warping is implemented in the family of packages `r pkg("DTWBI")`, 
-    `r pkg("DTWUMI")`, `r pkg("FSMUMI")` for univariate and multivariate time
-    series. `r pkg("naniar")` also imputes data below the range for
-    exploratory graphical analysis with the function `impute_below`.
-    `r pkg("TAR")` implements an estimation of the
-    autoregressive threshold models with Gaussian noise and of
-    positive-valued time series with a Bayesian approach in the presence
-    of missing data and `r pkg("BMTAR")` has a similar
-    approach for multivariate time series. `r pkg("swgee")`
-    implements a probability weighted generalized estimating equations
-    method for longitudinal data with missing observations and
-    measurement error in covariates based on SIMEX.
-    `r pkg("icenReg")` performs imputation for censored
-    responses for interval data. On a related topic, `r pkg("imputeFin")`
-    handles imputation of missing values in financial time series using
-    AR models or random walk.\
-    `r pkg("imputeTestbench")` proposes tools to benchmark missing data 
-    imputation in univariate time series.
--   *Spatial data*: Imputation for spatial data is implemented in
-    `r pkg("phylin")` using interpolation with spatial
-    distance weights or kriging. Geostatistical interpolation of data
-    with irregular spatial support is implemented in
-    `r pkg("rtop")` and in `r pkg("areal")` that
-    estimates values for overlapping but incongruent polygon features.
+    `r view("TimeSeries")`). Based on tidy principle, the `r pkg("padr")` and
+    `r pkg("tsibble")` also provide methods for imputing missing values in
+    time series.\
+    More specific methods are implemented in other packages: imputation of time 
+    series based on Dynamic Time Warping is implemented in the family of 
+    packages `r pkg("DTWBI")`, `r pkg("DTWUMI")`, and `r pkg("FSMUMI")` for 
+    univariate and multivariate time series. `r pkg("BMTAR")` provides an
+    an estimation of the autoregressive threshold models with Gaussian noise 
+    using a Bayesian approach in the presence of missing data in multivariate 
+    time series. `r pkg("swgee")` implements an IPW approach for longitudinal 
+    data with missing observations.
+-   *Spatial data*: Imputation for spatial data is implemented in the package
+    `r pkg("rtop")`, which performs geostatistical interpolation of irregular
+    areal data, and in `r pkg("areal")`, which performs areal weighted 
+    interpolation using a tidyverse data management.\
+    Interpolation of spatial data based on genetic distances is also 
+    available in `r pkg("phylin")`. 
 -   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation 
     for spatio-temporal data is implemented in the packages `r pkg("cutoffR")` 
     (using different methods as knn and SVD) and in in `r pkg("StempCens")` 
@@ -268,9 +256,9 @@ the performances of several imputation algorithms.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
     Block models and `r pkg("cglasso")` implements an extension of the
     Graphical Lasso inference from censored and missing value measurements.
--   *Imputation for contingency tables* is implemented in
+-   *Imputation for contingency   les* is implemented in
     `r pkg("lori")` that can also be used for the analysis of
-    contingency tables with missing data.
+    contingency   les with missing data.
 -   *Imputation for compositional data (CODA)* is implemented in in
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
@@ -279,7 +267,7 @@ the performances of several imputation algorithms.
 -   *Experimental design*: `r pkg("experiment")` handles missing values in
     experimental design such as randomized experiments with missing covariate 
     and outcome data, matched-pairs design with missing outcome.
--   *Recurrent eventq*: `r pkg("dejaVu")` performs multiple imputation of
+-   *Recurrent events*: `r pkg("dejaVu")` performs multiple imputation of
     recurrent event data based on a negative binomial regression model.
     
 [**Specific tasks**]{#tasks}
@@ -325,15 +313,15 @@ the performances of several imputation algorithms.
     `r bioc("scRecover")` and `r bioc("ADImpute")`\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network 
     inference with an auxiliary dataset.
--   *Epidemiology*: `r pkg("idem")` implements a procedure
-    for comparing treatments in clinical trials with missed visits or
-    premature withdrawal. `r pkg("InformativeCensoring")`
-    implements multiple imputation for informative censoring.
-    `r pkg("pseval")` evaluates principal surrogates in a
-    single clinical trial in the presence of missing counterfactual
-    surrogate responses. `r pkg("sievePH")` implements
-    continuous, possibly multivariate, mark-specific hazard ratio with
-    missing values in multivariate marks using an IPW approach.
+-   *Epidemiology*: `r pkg("idem")` implements a procedure for comparing
+    treatments in clinical trials with missed visits or premature withdrawal. 
+    `r pkg("InformativeCensoring")` implements multiple imputation for 
+    informative censoring. `r pkg("pseval")` evaluates principal surrogates in
+    a single clinical trial in the presence of missing counterfactual surrogate 
+    responses. `r pkg("sievePH")` implements continuous, possibly multivariate, 
+    mark-specific hazard ratio with missing values in multivariate marks using 
+    an IPW approach. `r pkg("icenReg")` performs imputation for censored
+    responses for interval data. 
 -   *Causal inference*: Causal inference with interactive fixed-effect
     models is available in `r pkg("gsynth")` with missing
     values handled by matrix completion. `r pkg("MatchThem")`
@@ -342,12 +330,14 @@ the performances of several imputation algorithms.
     imputed datasets. `r pkg("grf")` offers treatment effect
     estimation with incomplete confounders and covariates under modified
     unconfoundedness assumptions.
+-   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in 
+    financial time series using AR models or random walk.
 -   *Scoring*: Basic methods (mean, median, mode, \...) for imputing
     missing data in scoring datasets are proposed in
     `r pkg("scorecardModelUtils")`.
 -   *Preference models*: Missing data in preference models are handled
-    with a *Composite Link* approach that allows for MCAR and MNAR
-    patterns to be taken into account in `r pkg("prefmod")`.
+    with a composite link approach that allows for MCAR and MNAR patterns to be 
+    accounted for in `r pkg("prefmod")`.
 -   *Health*: `r pkg("missingHE")` implements models for health economic 
     evaluations with missing outcome data. `r pkg("accelmissing")` provides 
     multiple imputation with the zero-inflated Poisson lognormal model for
@@ -356,7 +346,7 @@ the performances of several imputation algorithms.
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
-    index (a well-established bibliometric indicator to measure the
+    index (a well-es  lished bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
     uncategorized references.
 
