@@ -72,9 +72,9 @@ repository linked above.
     categorical data), in `r pkg("mix")` (function `em.mix`
     for multivariate mixed categorical and continuous data). These
     packages also implement *Bayesian approaches* (with Imputation and
-    Posterior steps) for the same models (functions `da.` XXX for
+    Posterior steps) for the same models (functions `da.`XXX for
     `norm`, `cat` and `mix`) and can be used to obtain imputed complete
-    datasets or multiple imputations (functions `imp.` XXX for `norm`,
+    datasets or multiple imputations (functions `imp.`XXX for `norm`,
     `cat` and `mix`), once the model parameters have been estimated.
     `r pkg("imputeR")` is a Multivariate
     Expectation-Maximization (EM) based imputation framework that offers
