@@ -170,8 +170,8 @@ imputations.
     multiple imputation using EM to estimate the parameters, for
     quantitative data it imputes assuming a Multivariate Gaussian
     distribution. In addition, AmeliaView is a GUI for
-    `r pkg("Amelia")`, available from the [Amelia web
-    page](https://gking.harvard.edu/amelia).
+    `r pkg("Amelia")`, available from the 
+    [Amelia web page](https://gking.harvard.edu/amelia).
     `r pkg("NPBayesImputeCat")` also implements multiple
     imputation by joint modelling for categorical variables with a
     Bayesian approach.
@@ -256,9 +256,9 @@ the performances of several imputation algorithms.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
     Block models and `r pkg("cglasso")` implements an extension of the
     Graphical Lasso inference from censored and missing value measurements.
--   *Imputation for contingency   les* is implemented in
+-   *Imputation for contingency tables* is implemented in
     `r pkg("lori")` that can also be used for the analysis of
-    contingency   les with missing data.
+    contingency tables with missing data.
 -   *Imputation for compositional data (CODA)* is implemented in in
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
@@ -346,7 +346,7 @@ the performances of several imputation algorithms.
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
-    index (a well-es  lished bibliometric indicator to measure the
+    index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
     uncategorized references.
 
