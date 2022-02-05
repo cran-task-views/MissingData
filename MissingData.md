@@ -322,6 +322,14 @@ the performances of several imputation algorithms.
     mark-specific hazard ratio with missing values in multivariate marks using 
     an IPW approach. `r pkg("icenReg")` performs imputation for censored
     responses for interval data. 
+-   *Proteomics*: Imputation of missing data in LC-MS/MS spectra for protein
+    quantification is available in `r pkg("aLFQ")`.
+-   *Health*: `r pkg("missingHE")` implements models for health economic 
+    evaluations with missing outcome data. `r pkg("accelmissing")` provides 
+    multiple imputation with the zero-inflated Poisson lognormal model for
+    missing count values in accelerometer data.
+-   *Environement*: `r pkg("AeRobiology")` imputes missing data in 
+    aerobiological datasets imported from aerobiological public databases.
 -   *Causal inference*: Causal inference with interactive fixed-effect
     models is available in `r pkg("gsynth")` with missing
     values handled by matrix completion. `r pkg("MatchThem")`
@@ -338,10 +346,6 @@ the performances of several imputation algorithms.
 -   *Preference models*: Missing data in preference models are handled
     with a composite link approach that allows for MCAR and MNAR patterns to be 
     accounted for in `r pkg("prefmod")`.
--   *Health*: `r pkg("missingHE")` implements models for health economic 
-    evaluations with missing outcome data. `r pkg("accelmissing")` provides 
-    multiple imputation with the zero-inflated Poisson lognormal model for
-    missing count values in accelerometer data.
 -   *Administrative records / Surveys*: `r pkg("fastLink")`
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
