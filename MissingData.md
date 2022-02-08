@@ -254,14 +254,18 @@ the performances of several imputation algorithms.
     telemetry data using generalized hidden Markov models (including multiple 
     imputation for missing data). 
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
-    Block models and `r pkg("cglasso")` implements an extension of the
-    Graphical Lasso inference from censored and missing value measurements.
+    Block models, `r pkg("cglasso")` implements an extension of the Graphical 
+    Lasso inference from censored and missing value measurements, and 
+    `r pkg("bnstruct")` provides an extension of various methods for Bayesian
+    network inference from data with missing values.
 -   *Imputation for contingency tables* is implemented in
     `r pkg("lori")` that can also be used for the analysis of
     contingency tables with missing data.
 -   *Imputation for compositional data (CODA)* is implemented in in
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
+-   *Rank models* with partially missing rankings are handled in 
+    `r pkg("BayesMallows")` with Bayesian methods.
 -   *Imputation for meta-analyses* of binary outcomes is provided in
     `r pkg("metasens")`.
 -   *Experimental design*: `r pkg("experiment")` handles missing values in
@@ -287,13 +291,17 @@ the performances of several imputation algorithms.
     `r pkg("eigenmodel")` handles missing values in regression models for 
     symmetric relational data.
 -   *Clustering*: `r pkg("biclustermd")` handles missing data
-    in biclustering. `r pkg("RMixtComp")`,
-    `r pkg("MGMM")` and `r pkg("mixture")` fit
-    various mixture models in the presence of missing data.
+    in biclustering. `r pkg("RMixtComp")`, `r pkg("MGMM")`, and 
+    `r pkg("mixture")` fit various mixture models in the presence of missing 
+    data.
 -   *Tests* for two-sample paired missing data are implemented in
-    `r pkg("robustrank")`.
+    `r pkg("robustrank")`, and reliability of tests for data with missing values
+    is assessed with a Bayesian approach in `r pkg("brxx")`.
 -   *Outlier detection* (and robust analysis) in the presence of missing values
-    is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`
+    is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`.
+-   *ROC estimation* in the presence of missing values is available in
+    `r pkg("bcROCsurface")` for ROC surface and in `r pkg("BLOQ")` for left
+    censored data.
 
 [**Specific application fields**]{#applications}
 
@@ -313,7 +321,12 @@ the performances of several imputation algorithms.
     `r bioc("scRecover")` and `r bioc("ADImpute")`\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network 
     inference with an auxiliary dataset.
--   *Epidemiology*: `r pkg("idem")` implements a procedure for comparing
+-   *Proteomics*: Imputation of missing data in LC-MS/MS spectra for protein
+    quantification is available in `r pkg("aLFQ")`.
+-   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
+    and analysis of clinical trials in a Bayesian framework that allows for 
+    handling and imputation of missing data.\
+    More specifically, `r pkg("idem")` implements a procedure for comparing 
     treatments in clinical trials with missed visits or premature withdrawal. 
     `r pkg("InformativeCensoring")` implements multiple imputation for 
     informative censoring. `r pkg("pseval")` evaluates principal surrogates in
@@ -322,8 +335,6 @@ the performances of several imputation algorithms.
     mark-specific hazard ratio with missing values in multivariate marks using 
     an IPW approach. `r pkg("icenReg")` performs imputation for censored
     responses for interval data. 
--   *Proteomics*: Imputation of missing data in LC-MS/MS spectra for protein
-    quantification is available in `r pkg("aLFQ")`.
 -   *Health*: `r pkg("missingHE")` implements models for health economic 
     evaluations with missing outcome data. `r pkg("accelmissing")` provides 
     multiple imputation with the zero-inflated Poisson lognormal model for
@@ -346,9 +357,11 @@ the performances of several imputation algorithms.
 -   *Preference models*: Missing data in preference models are handled
     with a composite link approach that allows for MCAR and MNAR patterns to be 
     accounted for in `r pkg("prefmod")`.
--   *Administrative records / Surveys*: `r pkg("fastLink")`
-    provides a Fellegi-Sunter probabilistic record linkage that allows
-    for missing data and the inclusion of auxiliary information.
+-   *Administrative records / Surveys*: `r pkg("BIFIEsurvey")` is a very general
+    package that contains tools for survey statistics and that can handle 
+    multiply imputed datasets. More specifically, `r pkg("fastLink")` provides 
+    a Fellegi-Sunter probabilistic record linkage that allows for missing data 
+    and the inclusion of auxiliary information.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
