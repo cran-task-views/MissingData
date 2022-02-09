@@ -69,24 +69,22 @@ repository linked above.
 [**Likelihood based approaches**]{#likelihood}
 
 -   *Methods based on the Expectation Maximization (EM) algorithm* are
-    implemented in `r pkg("norm")` (using the function
-    `em.norm` for multivariate Gaussian data),
-    `r pkg("norm2")` (using the function `emNorm`), in
-    `r pkg("cat")` (function `em.cat` for multivariate
-    categorical data), in `r pkg("mix")` (function `em.mix`
-    for multivariate mixed categorical and continuous data). These
-    packages also implement *Bayesian approaches* (with Imputation and
-    Posterior steps) for the same models (functions `da.`XXX for
+    implemented in `r pkg("norm")` (using the function `em.norm` for
+    multivariate Gaussian data), `r pkg("norm2")` (using the function `emNorm`),
+    in `r pkg("cat")` (function `em.cat` for multivariate categorical data), in 
+    `r pkg("mix")` (function `em.mix` for multivariate mixed categorical and 
+    continuous data). These packages also implement *Bayesian approaches* (with
+    Imputation and Posterior steps) for the same models (functions `da.`XXX for
     `norm`, `cat` and `mix`) and can be used to obtain imputed complete
     datasets or multiple imputations (functions `imp.`XXX for `norm`,
-    `cat` and `mix`), once the model parameters have been estimated.
-    `r pkg("imputeR")` is a Multivariate
-    Expectation-Maximization (EM) based imputation framework that offers
-    several different algorithms, including Lasso, tree-based models or
-    PCA. In addition, `r pkg("TestDataImputation")` implements
-    imputation based on EM estimation (and other simpler imputation
-    methods) that are well suited for dichotomous and polytomous tests
-    with item responses.
+    `cat` and `mix`), once the model parameters have been estimated. 
+    `pkg("CensMFM")` extends these methods by using an EM approach to fit 
+    different mixtures of multivariate missing data.\
+    `r pkg("imputeR")` is also using an EM based imputation framework that 
+    offers several different algorithms, including Lasso, tree-based models or 
+    PCA. In addition, `r pkg("TestDataImputation")` implements imputation based 
+    on EM estimation (and other simpler imputation methods) that are well suited 
+    for dichotomous and polytomous tests with item responses.
 -   *Full Information Maximum Likelihood* (also known as "direct
     maximum likelihood" or "raw maximum likelihood") is available in
     `r pkg("lavaan")` (and in its extension
@@ -154,9 +152,9 @@ repository linked above.
     methods for iterative matrix completion. This method is also available in
     the very general package `r pkg("rsparse")`, which contains various tools
     for sparse matrices. Variants based on low rank assumptions are available
-    in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` (for
-    ensemble matrix completion), and in `r pkg("ROptSpace")` (with a 
-    computationally efficient approach).
+    in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` and 
+    `r pkg("CMF")` (for ensemble matrix completion), and in `r pkg("ROptSpace")` 
+    (with a computationally efficient approach).
 -   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
@@ -166,30 +164,24 @@ repository linked above.
 Some of the above mentioned packages can also handle multiple
 imputations.
 
--   `r pkg("Amelia", priority = "core")` implements Bootstrap
-    multiple imputation using EM to estimate the parameters, for
-    quantitative data it imputes assuming a Multivariate Gaussian
-    distribution. In addition, AmeliaView is a GUI for
-    `r pkg("Amelia")`, available from the 
-    [Amelia web page](https://gking.harvard.edu/amelia).
-    `r pkg("NPBayesImputeCat")` also implements multiple
-    imputation by joint modelling for categorical variables with a
-    Bayesian approach.
--   `r pkg("mi")`, `r pkg("mice")` and
-    `r pkg("smcfcs")` implement multiple imputation by Chained
-    Equations. `r pkg("smcfcs")` extends the models covered by
-    the two previous packages. `r pkg("miceFast")` provides an
+-   `r pkg("Amelia", priority = "core")` implements Bootstrap multiple 
+    imputation using EM to estimate the parameters, for quantitative data it 
+    imputes assuming a Multivariate Gaussian distribution. In addition, 
+    [AmeliaView](https://cran.r-project.org/web/packages/Amelia/vignettes/ameliaview.html)
+    is a GUI for `r pkg("Amelia")`, available from the 
+    [Amelia web page](https://gking.harvard.edu/amelia).\
+    `r pkg("NPBayesImputeCat")` also implements multiple imputation by joint 
+    modelling for categorical variables but using a Bayesian approach.
+-   `r pkg("mi")`, `r pkg("mice")`, and `r pkg("smcfcs")` implement multiple 
+    imputation by Chained Equations. Other packages are based on or extends 
+    `r pkg("mice")`, like `r pkg("miceFast")`, which provides an
     alternative implementation of mice imputation methods using object
-    oriented style programming and C++. `r pkg("bootImpute")`
-    performs bootstrap based imputations and analyses of these
-    imputations to use with `r pkg("mice")` or
-    `r pkg("smcfcs")`. `r pkg("miceRanger")`
-    performs multiple imputation by chained equations using random
-    forests.
--   `r pkg("missMDA")` implements multiple imputation based on
-    SVD methods.
--   `r pkg("hot.deck")` implements hot-deck based multiple
-    imputation.
+    oriented style programming and C++, `r pkg("bootImpute")`, which performs 
+    bootstrap based imputations and analyses of these imputations, and 
+    `r pkg("miceRanger")` and `r pkg("CALIBERrfimpute")`, which both perform 
+    multiple imputation by chained equations using random forests.
+-   `r pkg("missMDA")` implements multiple imputation based on SVD methods.
+-   `r pkg("hot.deck")` implements hot-deck based multiple imputation.
 -   *Multilevel imputation*: Multilevel multiple imputation is
     implemented in `r pkg("hmi")`,
     `r pkg("jomo", priority = "core")`,
@@ -205,10 +197,11 @@ imputations.
     for discrete data imputation that is based on Predictive Mean
     Matching (PMM).
 
-In addition, `r pkg("mitools")` provides a generic approach to
-handle multiple imputation in combination with any imputation method.
-And `r pkg("NADIA")` provides a uniform interface to compare
-the performances of several imputation algorithms.
+In addition, `r pkg("mitools")` provides a generic approach to handle multiple 
+imputation in combination with any imputation method, `r pkg("NADIA")` 
+provides a uniform interface to compare the performances of several imputation 
+algorithms, and `r pkg("cobalt")` computes balance tables and plots for multiply
+imputed datasets.
 
 [**Weighting methods**]{#weights}
 
@@ -237,7 +230,8 @@ the performances of several imputation algorithms.
     an estimation of the autoregressive threshold models with Gaussian noise 
     using a Bayesian approach in the presence of missing data in multivariate 
     time series. `r pkg("swgee")` implements an IPW approach for longitudinal 
-    data with missing observations.
+    data with missing observations. `r pkg("cold")` fits longitudinal count
+    data models from data with missing values.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted 
@@ -293,12 +287,13 @@ the performances of several imputation algorithms.
 -   *Clustering*: `r pkg("biclustermd")` handles missing data
     in biclustering. `r pkg("RMixtComp")`, `r pkg("MGMM")`, and 
     `r pkg("mixture")` fit various mixture models in the presence of missing 
-    data.
+    data. `r pkg("ClustImpute")` deals with missing values in k-means 
+    clustering.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")`, and reliability of tests for data with missing values
     is assessed with a Bayesian approach in `r pkg("brxx")`.
 -   *Outlier detection* (and robust analysis) in the presence of missing values
-    is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`.
+    is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`. 
 -   *ROC estimation* in the presence of missing values is available in
     `r pkg("bcROCsurface")` for ROC surface and in `r pkg("BLOQ")` for left
     censored data.
@@ -339,7 +334,7 @@ the performances of several imputation algorithms.
     evaluations with missing outcome data. `r pkg("accelmissing")` provides 
     multiple imputation with the zero-inflated Poisson lognormal model for
     missing count values in accelerometer data.
--   *Environement*: `r pkg("AeRobiology")` imputes missing data in 
+-   *Environment*: `r pkg("AeRobiology")` imputes missing data in 
     aerobiological datasets imported from aerobiological public databases.
 -   *Causal inference*: Causal inference with interactive fixed-effect
     models is available in `r pkg("gsynth")` with missing
@@ -351,9 +346,8 @@ the performances of several imputation algorithms.
     unconfoundedness assumptions.
 -   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in 
     financial time series using AR models or random walk.
--   *Scoring*: Basic methods (mean, median, mode, \...) for imputing
-    missing data in scoring datasets are proposed in
-    `r pkg("scorecardModelUtils")`.
+-   *Scoring*: Basic methods (mean, median, mode, \...) for imputing missing 
+    data in scoring datasets are proposed in `r pkg("scorecardModelUtils")`.
 -   *Preference models*: Missing data in preference models are handled
     with a composite link approach that allows for MCAR and MNAR patterns to be 
     accounted for in `r pkg("prefmod")`.
@@ -361,7 +355,9 @@ the performances of several imputation algorithms.
     package that contains tools for survey statistics and that can handle 
     multiply imputed datasets. More specifically, `r pkg("fastLink")` provides 
     a Fellegi-Sunter probabilistic record linkage that allows for missing data 
-    and the inclusion of auxiliary information.
+    and the inclusion of auxiliary information.\
+    `r pkg("convergEU")` can process data from Eurostat data and impute missing
+    values to monitor convergence between EU countries.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
