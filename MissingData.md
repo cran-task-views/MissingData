@@ -98,9 +98,9 @@ repository linked above.
 -   *Missing values in generalized linear models* is provided in package 
     `r pkg("mdmb")` for various families. `r pkg("JointAI")` implements 
     Bayesian approaches for generalized linear mixed models.
--   *Missing data in item response models* is implemented in
-    `r pkg("TAM")`, `r pkg("mirt")` and
-    `r pkg("ltm")`.
+-   *Missing data in item response models* (including Rasch models and 
+    extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`, 
+    `r pkg("eRm")`, and `r pkg("ltm")` for univariate or multivariate responses.
 
 [**Single imputation**]{#single}
 
@@ -146,7 +146,7 @@ repository linked above.
     imputation. Other PCA/factor based imputations are available in 
     `r bioc("pcaMethods")` (with a Bayesian implementation of PCA), in 
     `r pkg("primePCA")` (for heterogeneous missingness in high-dimensional PCA)
-    and `r pkg("tensorBF")` (for 3-way tensor data).\
+    and `r pkg("tensorBF")` (for 3-way tensor data).
     *Low rank based imputation* is provided in 
     `r pkg("softImpute", priority = "core")`, which contains several
     methods for iterative matrix completion. This method is also available in
@@ -222,7 +222,9 @@ imputed datasets.
     contain some (often basic) methods to handle missing data (see also 
     `r view("TimeSeries")`). Based on tidy principle, the `r pkg("padr")` and
     `r pkg("tsibble")` also provide methods for imputing missing values in
-    time series.\
+    time series. Similarly, `r pkg("DTSg")` offers basic functionality for 
+    missing value description and imputation in time series based on the fast 
+    `data.table` framework.\
     More specific methods are implemented in other packages: imputation of time 
     series based on Dynamic Time Warping is implemented in the family of 
     packages `r pkg("DTWBI")`, `r pkg("DTWUMI")`, and `r pkg("FSMUMI")` for 
@@ -247,14 +249,17 @@ imputed datasets.
     equally-spaced points in time and `r pkg("momentuHMM")` to the analysis of
     telemetry data using generalized hidden Markov models (including multiple 
     imputation for missing data). 
+-   *Distance matrices*: Imputation for Euclidean distance matrix is implemented
+    in `r pkg("edmcr")`, using different optimization approaches.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
     Block models, `r pkg("cglasso")` implements an extension of the Graphical 
     Lasso inference from censored and missing value measurements, and 
     `r pkg("bnstruct")` provides an extension of various methods for Bayesian
-    network inference from data with missing values.
--   *Imputation for contingency tables* is implemented in
-    `r pkg("lori")` that can also be used for the analysis of
-    contingency tables with missing data.
+    network inference from data with missing values. Oriented toward inference 
+    of species community networks, `r pkg("eicm")` uses an extension of 
+    binomial GLM that handles missing values.
+-   *Imputation for contingency tables* is implemented in `r pkg("lori")` that 
+    can also be used for the analysis of contingency tables with missing data.
 -   *Imputation for compositional data (CODA)* is implemented in in
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
@@ -337,12 +342,12 @@ imputed datasets.
 -   *Environment*: `r pkg("AeRobiology")` imputes missing data in 
     aerobiological datasets imported from aerobiological public databases.
 -   *Causal inference*: Causal inference with interactive fixed-effect
-    models is available in `r pkg("gsynth")` with missing
-    values handled by matrix completion. `r pkg("MatchThem")`
-    matches multiply imputed datasets using several matching methods,
-    and provides users with the tools to estimate causal effects in each
-    imputed datasets. `r pkg("grf")` offers treatment effect
-    estimation with incomplete confounders and covariates under modified
+    models is available in `r pkg("gsynth")`, with missing values handled by 
+    matrix completion, and in `r pkg("dosearch")`, via extension of do-calculus
+    to missing data. `r pkg("MatchThem")` matches multiply imputed datasets 
+    using several matching methods, and provides users with tools to estimate 
+    causal effects in each imputed datasets. `r pkg("grf")` offers treatment
+    effect estimation with incomplete confounders and covariates under modified
     unconfoundedness assumptions.
 -   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in 
     financial time series using AR models or random walk.
@@ -357,7 +362,8 @@ imputed datasets.
     a Fellegi-Sunter probabilistic record linkage that allows for missing data 
     and the inclusion of auxiliary information.\
     `r pkg("convergEU")` can process data from Eurostat data and impute missing
-    values to monitor convergence between EU countries.
+    values to monitor convergence between EU countries. `r pkg("eechidna")` has
+    similar feature for Australian election and census public datasets.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
