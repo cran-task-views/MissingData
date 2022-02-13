@@ -245,10 +245,12 @@ imputed datasets.
     (using different methods as knn and SVD) and in in `r pkg("StempCens")` 
     with a SAEM approach that approximates EM when the E-step does not have an 
     analytic form.\
-    `r pkg("gapfill")` is dedicated to imputation of satellite data observed at
-    equally-spaced points in time and `r pkg("momentuHMM")` to the analysis of
-    telemetry data using generalized hidden Markov models (including multiple 
-    imputation for missing data). 
+    From an application point of view, `r pkg("gapfill")` is dedicated to the
+    imputation of satellite data observed at equally-spaced points in time and 
+    `r pkg("foster")` to the imputation of satellite data based on observed 
+    predictors. `r pkg("momentuHMM")` is dedicated to the analysis of telemetry 
+    data using generalized hidden Markov models (including multiple imputation 
+    for missing data). 
 -   *Distance matrices*: Imputation for Euclidean distance matrix is implemented
     in `r pkg("edmcr")`, using different optimization approaches.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
@@ -312,7 +314,9 @@ imputed datasets.
     `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
     model based on allele intensities and/or flanking SNPs).\
     EM algorithm is used to compute genetic statistics for population in the
-    presence of missing SNP in `r pkg("StAMPP")`.
+    presence of missing SNP in `r pkg("StAMPP")`.\
+    Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
+    individuals and missing values. 
 -   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
     molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")`, `r pkg("Rmagic")`, and `r pkg("SAVER")` and ,
