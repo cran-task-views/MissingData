@@ -13,7 +13,9 @@ options to handle them using computations that involve only observed data
 `use = complete.obs|na.or.complete|pairwise.complete.obs` in functions `cov`, 
 `cor`, ...). The base package `stats` also contains the generic function 
 `na.action` that extracts information of the `NA` action used to create an 
-object.
+object. In addition, the package `r pkg("ie2misc")` contains a dyadic operator
+`+` that behaves differently than the original `+` operator regarding missing
+data.
 
 These basic options are complemented by many packages on CRAN. In this task 
 view, we focused on the most important ones, which have been published more than
@@ -32,7 +34,10 @@ topics:
 In addition to the present task view, this [reference website on missing
 data](https://rmisstastic.netlify.com/) might also be helpful. Complementary
 information might also be found in `r view("TimeSeries")`,
-`r view("SpatioTemporal")`, and `r view("OfficialStatistics")`.
+`r view("SpatioTemporal")`, `r view("Survival")`, and 
+`r view("OfficialStatistics")`. Note that most packages covering temporal, and
+spatio-temporal interpolation and censored data are not covered by the Missing
+Data task view.
 
 If you think that we missed some important packages in this list, please
 e-mail the maintainers or submit an issue or pull request in the GitHub
@@ -41,24 +46,22 @@ repository linked above.
 [**Exploration of missing data**]{#exploration}
 
 -   *Manipulation of missing data* is implemented in the packages
-    `r pkg("sjmisc")` and `r pkg("sjlabelled")`.
-    `r pkg("memisc")` also provides defineable missing
-    values, along with infrastructure for the management of survey data
-    and variable labels.
+    `r pkg("sjmisc")` and `r pkg("sjlabelled")`. `r pkg("memisc")` also provides
+    defineable missing values, along with infrastructure for the management of 
+    survey data and variable labels.
 -   *Missing data patterns* can be identified and explored using the
-    packages `r pkg("mi")`, `r pkg("wrangle")`,
-    `r pkg("DescTools")`, `r pkg("dlookr")` and
-    `r pkg("naniar", priority = "core")`.
+    packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`, 
+    `r pkg("dlookr")` and `r pkg("naniar", priority = "core")`.
 -   *Graphics that describe distributions and patterns of missing data*
-    are implemented in `r pkg("VIM", priority = "core")` (which
-    has a Graphical User Interface, VIMGUI, currently archived on CRAN)
-    and `r pkg("naniar")` (which abides by
-    [tidyverse](https://tidyverse.org) principles).
--   *Tests of the MAR assumption (versus the MCAR assumption):*
-    `r pkg("RBtest")` proposes a regression based approach to
-    test the missing data mechanism and `r pkg("samon")`
-    performs sensitivity analysis in clinical trials to check the
-    relevance of the MAR assumption.
+    are implemented in `r pkg("VIM", priority = "core")` (which has a Graphical 
+    User Interface, VIMGUI, currently archived on CRAN) and `r pkg("naniar")` 
+    (which abides by [tidyverse](https://tidyverse.org) principles).
+-   *Tests of the MAR assumption (versus the MCAR assumption)*: 
+    `r pkg("RBtest")` proposes a regression based approach to test the missing 
+    data mechanism and `r pkg("samon")` performs sensitivity analysis in 
+    clinical trials to check the relevance of the MAR assumption. In addition,
+    `r pkg("isni")` tests the sensibility to the ignorability assumption by
+    computing the index of local sensitivity to nonignorability. 
 -   *Evaluation* of the quality of imputation can be performed using the
     function `ampute` of `r pkg("mice", priority = "core")` through simulations,
     with the `r pkg("Iscores")` with a KL-based scoring rule, or with the 
@@ -78,23 +81,21 @@ repository linked above.
     `norm`, `cat` and `mix`) and can be used to obtain imputed complete
     datasets or multiple imputations (functions `imp.`XXX for `norm`,
     `cat` and `mix`), once the model parameters have been estimated. 
-    `pkg("CensMFM")` extends these methods by using an EM approach to fit 
-    different mixtures of multivariate missing data.\
+    `r pkg("CensMFM")` and `r pkg("imputeMulti")` extend these methods by using 
+    an EM approach to fit different mixtures of multivariate missing data for,
+    respectively, continuous or categorical data.\
     `r pkg("imputeR")` is also using an EM based imputation framework that 
     offers several different algorithms, including Lasso, tree-based models or 
     PCA. In addition, `r pkg("TestDataImputation")` implements imputation based 
     on EM estimation (and other simpler imputation methods) that are well suited 
     for dichotomous and polytomous tests with item responses.
--   *Full Information Maximum Likelihood* (also known as "direct
-    maximum likelihood" or "raw maximum likelihood") is available in
-    `r pkg("lavaan")` (and in its extension
-    `r pkg("semTools")`), `r pkg("OpenMx")` and
-    `r pkg("rsem")`, for handling missing data in structural
-    equation modeling.
+-   *Full Information Maximum Likelihood* (also known as "direct maximum 
+    likelihood" or "raw maximum likelihood") is available in `r pkg("lavaan")` 
+    (and in its extension `r pkg("semTools")`), `r pkg("OpenMx")` and
+    `r pkg("rsem")`, for handling missing data in structural equation modeling.
 -   *Bayesian approaches* for handling missing values in model based
-    clustering with variable selection is available in
-    `r pkg("VarSelLCM")`. The package also provides imputation
-    using the posterior mean.
+    clustering with variable selection is available in `r pkg("VarSelLCM")`. 
+    The package also provides imputation using the posterior mean.
 -   *Missing values in generalized linear models* is provided in package 
     `r pkg("mdmb")` for various families. `r pkg("JointAI")` implements 
     Bayesian approaches for generalized linear mixed models.
@@ -104,10 +105,9 @@ repository linked above.
 
 [**Single imputation**]{#single}
 
--   The simplest method for missing data imputation is *imputation by
-    mean* (or median, mode, \...). This approach is available in many
-    packages among which `r pkg("ForImp")` and
-    `r pkg("Hmisc")` that contain various proposals for
+-   The simplest method for missing data imputation is *imputation by mean* (or 
+    median, mode, \...). This approach is available in many packages among which
+    `r pkg("ForImp")` and `r pkg("Hmisc")` that contain various proposals for
     imputing with the same value all missing instances of a variable.
 -   *Generic packages*: The packages `r pkg("VIM")` and `r pkg("filling")` 
     contain several popular methods for missing value imputation (including some
@@ -182,20 +182,16 @@ imputations.
     multiple imputation by chained equations using random forests.
 -   `r pkg("missMDA")` implements multiple imputation based on SVD methods.
 -   `r pkg("hot.deck")` implements hot-deck based multiple imputation.
--   *Multilevel imputation*: Multilevel multiple imputation is
-    implemented in `r pkg("hmi")`,
-    `r pkg("jomo", priority = "core")`,
-    `r pkg("mice")`, `r pkg("miceadds")`,
-    `r pkg("micemd")`, `r pkg("mitml")`, and
+-   *Multilevel imputation*: Multilevel multiple imputation is implemented in 
+    `r pkg("hmi")`, `r pkg("jomo", priority = "core")`, `r pkg("mice")`, 
+    `r pkg("miceadds")`, `r pkg("micemd")`, `r pkg("mitml")`, and 
     `r pkg("pan")`.
--   `r pkg("Qtools")` and `r pkg("miWQS")` implement
-    multiple imputation based on quantile regression.
--   `r pkg("lodi")` implements the imputation of observed
-    values below the limit of detection (LOD) via censored likelihood
-    multiple imputation (CLMI).
--   `r pkg("BaBooN")` implements a Bayesian bootstrap approach
-    for discrete data imputation that is based on Predictive Mean
-    Matching (PMM).
+-   `r pkg("Qtools")` and `r pkg("miWQS")` implement multiple imputation based 
+    on quantile regression.
+-   `r pkg("lodi")` implements the imputation of observed values below the 
+    limit of detection (LOD) via censored likelihood multiple imputation (CLMI).
+-   `r pkg("BaBooN")` implements a Bayesian bootstrap approach for discrete data
+    imputation that is based on Predictive Mean Matching (PMM).
 
 In addition, `r pkg("mitools")` provides a generic approach to handle multiple 
 imputation in combination with any imputation method, `r pkg("NADIA")` 
@@ -266,7 +262,8 @@ imputed datasets.
     `r pkg("zCompositions")` (various imputation methods for
     zeros, left-censored and missing data).
 -   *Rank models* with partially missing rankings are handled in 
-    `r pkg("BayesMallows")` with Bayesian methods.
+    `r pkg("BayesMallows")` with Bayesian methods and in `r pkg("irrNA")` to
+    compute iter-rater reliability and concordance.
 -   *Imputation for meta-analyses* of binary outcomes is provided in
     `r pkg("metasens")`.
 -   *Experimental design*: `r pkg("experiment")` handles missing values in
@@ -291,11 +288,10 @@ imputed datasets.
     various distributions in the presence of missing values and censored data.
     `r pkg("eigenmodel")` handles missing values in regression models for 
     symmetric relational data.
--   *Clustering*: `r pkg("biclustermd")` handles missing data
-    in biclustering. `r pkg("RMixtComp")`, `r pkg("MGMM")`, and 
-    `r pkg("mixture")` fit various mixture models in the presence of missing 
-    data. `r pkg("ClustImpute")` deals with missing values in k-means 
-    clustering.
+-   *Clustering*: `r pkg("biclustermd")` handles missing data in biclustering.
+    `r pkg("RMixtComp")`, `r pkg("MGMM")`, and `r pkg("mixture")` fit various 
+    mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
+    with missing values in k-means clustering.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")`, and reliability of tests for data with missing values
     is assessed with a Bayesian approach in `r pkg("brxx")`.
@@ -319,14 +315,17 @@ imputed datasets.
     individuals and missing values. 
 -   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
     molecules) in single-cell RNA-Sequencing data is implemented
-    in `r pkg("DrImpute")`, `r pkg("Rmagic")`, and `r pkg("SAVER")` and ,
-    based, respectively, on clustering of cells, Markov affinity graph, and an
-    empirical Bayes approach. These packages are used and combined in
-    `r bioc("scRecover")` and `r bioc("ADImpute")`\
+    in `r pkg("DrImpute")`, `r pkg("Rmagic")`, `r pkg("SAVER")`, and 
+    `r pkg("iCellR")`, and is based, respectively, on clustering of cells, 
+    Markov affinity graph, an empirical Bayes approach, and k-nearest neighbors. 
+    The first three packages are used and combined in `r bioc("scRecover")` and
+    `r bioc("ADImpute")` adn the last one can also handle other types of 
+    single-cell data, such as scATAC-Seq or CITE-Seq.\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network 
     inference with an auxiliary dataset.
--   *Proteomics*: Imputation of missing data in LC-MS/MS spectra for protein
-    quantification is available in `r pkg("aLFQ")`.
+-   *Proteomics*: Various functions to analyze the missing value mechanism and
+    impute missing values (using multiple imputation) in LC-MS/MS spectra is
+    available in `r pkg("imp4p")` for protein quantification. 
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
     and analysis of clinical trials in a Bayesian framework that allows for 
     handling and imputation of missing data.\
