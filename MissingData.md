@@ -102,6 +102,8 @@ repository linked above.
 -   *Missing data in item response models* (including Rasch models and 
     extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`, 
     `r pkg("eRm")`, and `r pkg("ltm")` for univariate or multivariate responses.
+    `r pkg("LNIRT")` also addresses these models but allows missing values to
+    be specified as "missing-by-design".
 
 [**Single imputation**]{#single}
 
@@ -210,17 +212,16 @@ imputed datasets.
 
 [**Specific types of data**]{#data}
 
--   *Longitudinal data / time series and censored data*: Imputation for time 
-    series is implemented in `r pkg("imputeTS", priority = "core")`. Other 
-    packages, such as `r pkg("forecast")`, `r pkg("spacetime")`, 
-    `r pkg("timeSeries")`, `r pkg("xts")`, `r pkg("prophet")`, 
-    `r pkg("stlplus")` or `r pkg("zoo")`, are dedicated to time series but also 
-    contain some (often basic) methods to handle missing data (see also 
-    `r view("TimeSeries")`). Based on tidy principle, the `r pkg("padr")` and
-    `r pkg("tsibble")` also provide methods for imputing missing values in
-    time series. Similarly, `r pkg("DTSg")` offers basic functionality for 
-    missing value description and imputation in time series based on the fast 
-    `data.table` framework.\
+-   *Longitudinal data / time series data*: Imputation for time series is 
+    implemented in `r pkg("imputeTS", priority = "core")`. Other packages, such 
+    as `r pkg("forecast")`, `r pkg("spacetime")`, `r pkg("timeSeries")`, 
+    `r pkg("xts")`, `r pkg("prophet")`, `r pkg("stlplus")` or `r pkg("zoo")`,
+    are dedicated to time series but also contain some (often basic) methods to 
+    handle missing data (see also `r view("TimeSeries")`). Based on tidy 
+    principle, the `r pkg("padr")` and `r pkg("tsibble")` also provide methods
+    for imputing missing values in time series. Similarly, `r pkg("DTSg")` 
+    offers basic functionality for missing value description and imputation in 
+    time series based on the fast `data.table` framework.\
     More specific methods are implemented in other packages: imputation of time 
     series based on Dynamic Time Warping is implemented in the family of 
     packages `r pkg("DTWBI")`, `r pkg("DTWUMI")`, and `r pkg("FSMUMI")` for 
@@ -247,6 +248,8 @@ imputed datasets.
     predictors. `r pkg("momentuHMM")` is dedicated to the analysis of telemetry 
     data using generalized hidden Markov models (including multiple imputation 
     for missing data). 
+-   *Survival data*: Multiple imputation for the estimation of cumulative
+    incidence functions is implemented in `r pkg("kmi")`.
 -   *Distance matrices*: Imputation for Euclidean distance matrix is implemented
     in `r pkg("edmcr")`, using different optimization approaches.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
@@ -342,6 +345,8 @@ imputed datasets.
     evaluations with missing outcome data. `r pkg("accelmissing")` provides 
     multiple imputation with the zero-inflated Poisson lognormal model for
     missing count values in accelerometer data.
+-   *Morphometry*:  `r pkg("LOST")` can be used to simulate missing morphometric
+    data randomly, with taxonomic bias and with anatomical biases.
 -   *Environment*: `r pkg("AeRobiology")` imputes missing data in 
     aerobiological datasets imported from aerobiological public databases.
 -   *Causal inference*: Causal inference with interactive fixed-effect
