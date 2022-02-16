@@ -46,9 +46,10 @@ repository linked above.
 [**Exploration of missing data**]{#exploration}
 
 -   *Manipulation of missing data* is implemented in the packages
-    `r pkg("sjmisc")` and `r pkg("sjlabelled")`. `r pkg("memisc")` also provides
-    defineable missing values, along with infrastructure for the management of 
-    survey data and variable labels.
+    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, and `r pkg("mde")` (the latter 
+    also providing basic function to explore missingness patterns). In
+    addition, `r pkg("memisc")` provides definable missing values, along with 
+    infrastructure for the management of survey data and variable labels.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`, 
     `r pkg("dlookr")` and `r pkg("naniar", priority = "core")`.
@@ -56,18 +57,24 @@ repository linked above.
     are implemented in `r pkg("VIM", priority = "core")` (which has a Graphical 
     User Interface, VIMGUI, currently archived on CRAN) and `r pkg("naniar")` 
     (which abides by [tidyverse](https://tidyverse.org) principles).
--   *Tests of the MAR assumption (versus the MCAR assumption)*: 
-    `r pkg("RBtest")` proposes a regression based approach to test the missing 
-    data mechanism and `r pkg("samon")` performs sensitivity analysis in 
-    clinical trials to check the relevance of the MAR assumption. In addition,
-    `r pkg("isni")` tests the sensibility to the ignorability assumption by
-    computing the index of local sensitivity to nonignorability. 
--   *Evaluation* of the quality of imputation can be performed using the
-    function `ampute` of `r pkg("mice", priority = "core")` through simulations,
-    with the `r pkg("Iscores")` with a KL-based scoring rule, or with the 
-    benchmark available in `r pkg("imputeTestbench")` (for univariate time
-    series imputation). In addition, `r pkg("mi")` and `r pkg("VIM")` also 
-    provide diagnostic plots to evaluate the quality of imputation.
+-   *Tests of the MAR assumption (versus the MCAR assumption)*: Little's test
+    for the MCAR assumption is implemented in `r pkg("misty")`. Other approaches
+    are also available elsewhere: `r pkg("RBtest")` proposes a regression based 
+    approach to test the missing data mechanism and `r pkg("samon")` performs 
+    sensitivity analysis in clinical trials to check the relevance of the MAR 
+    assumption. In addition, `r pkg("isni")` tests the sensibility to the 
+    ignorability assumption by computing the index of local sensitivity to 
+    nonignorability. 
+-   *Evaluation*: `r pkg("missCompare")` and `r pkg("missMethods")` offer an 
+    entire framework to compared different imputation strategies (with 
+    diagnostics and visualizations). The package `r pkg("Iscores")` can also be 
+    useful to evaluate imputation quality using a KL-based scoring rule.\
+    Simulations to evaluate imputation qualities can be performed using the
+    function `ampute` of `r pkg("mice", priority = "core")` and 
+    `r pkg("imputeTestbench")` provides a benchmark to evaluate univariate time
+    series imputation. \
+    In addition, `r pkg("mi")` and `r pkg("VIM")` also provide diagnostic plots 
+    that can help evaluate imputation quality.
 
 [**Likelihood based approaches**]{#likelihood}
 
@@ -81,14 +88,19 @@ repository linked above.
     `norm`, `cat` and `mix`) and can be used to obtain imputed complete
     datasets or multiple imputations (functions `imp.`XXX for `norm`,
     `cat` and `mix`), once the model parameters have been estimated. 
-    `r pkg("CensMFM")` and `r pkg("imputeMulti")` extend these methods by using 
-    an EM approach to fit different mixtures of multivariate missing data for,
-    respectively, continuous or categorical data.\
+    `r pkg("monomvn")` proposes similar methods for multivariate normal and 
+    Student distributions when the missingness pattern is monotone.\
+    `r pkg("CensMFM")`, `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend 
+    these methods by using an EM approach to fit different mixtures of
+    multivariate missing data for, respectively, continuous (first package) or 
+    categorical data (other two packages).\
     `r pkg("imputeR")` is also using an EM based imputation framework that 
     offers several different algorithms, including Lasso, tree-based models or 
     PCA. In addition, `r pkg("TestDataImputation")` implements imputation based 
     on EM estimation (and other simpler imputation methods) that are well suited 
     for dichotomous and polytomous tests with item responses.
+-   *Multiple imputation* is performed using Maximum Likelihood Multiple 
+    Imputation in `r pkg("mlmi")`.
 -   *Full Information Maximum Likelihood* (also known as "direct maximum 
     likelihood" or "raw maximum likelihood") is available in `r pkg("lavaan")` 
     (and in its extension `r pkg("semTools")`), `r pkg("OpenMx")` and
@@ -103,7 +115,8 @@ repository linked above.
     extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`, 
     `r pkg("eRm")`, and `r pkg("ltm")` for univariate or multivariate responses.
     `r pkg("LNIRT")` also addresses these models but allows missing values to
-    be specified as "missing-by-design".
+    be specified as "missing-by-design" and `r pkg("MLCIRTwithin")` includes
+    latent-class models.
 
 [**Single imputation**]{#single}
 
@@ -215,7 +228,7 @@ imputed datasets.
 -   *Longitudinal data / time series data*: Imputation for time series is 
     implemented in `r pkg("imputeTS", priority = "core")`. Other packages, such 
     as `r pkg("forecast")`, `r pkg("spacetime")`, `r pkg("timeSeries")`, 
-    `r pkg("xts")`, `r pkg("prophet")`, `r pkg("stlplus")` or `r pkg("zoo")`,
+    `r pkg("xts")`, `r pkg("prophet")`, `r pkg("stlplus")`, or `r pkg("zoo")`,
     are dedicated to time series but also contain some (often basic) methods to 
     handle missing data (see also `r view("TimeSeries")`). Based on tidy 
     principle, the `r pkg("padr")` and `r pkg("tsibble")` also provide methods
@@ -228,9 +241,10 @@ imputed datasets.
     univariate and multivariate time series. `r pkg("BMTAR")` provides an
     an estimation of the autoregressive threshold models with Gaussian noise 
     using a Bayesian approach in the presence of missing data in multivariate 
-    time series. `r pkg("swgee")` implements an IPW approach for longitudinal 
-    data with missing observations. `r pkg("cold")` fits longitudinal count
-    data models from data with missing values.
+    time series and `r pkg("MTS")` imputes missing values in multivariate time
+    series assuming known models. `r pkg("swgee")` implements an IPW approach 
+    for longitudinal data with missing observations. `r pkg("cold")` fits 
+    longitudinal count data models from data with missing values.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted 
@@ -296,8 +310,12 @@ imputed datasets.
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
     with missing values in k-means clustering.
 -   *Tests* for two-sample paired missing data are implemented in
-    `r pkg("robustrank")`, and reliability of tests for data with missing values
-    is assessed with a Bayesian approach in `r pkg("brxx")`.
+    `r pkg("robustrank")` and `r pkg("MKinfer")`, the latter based on multiple
+    imputed datasets. Reliability of tests for data with missing values is 
+    assessed with a Bayesian approach in `r pkg("brxx")`.
+-   *Meta-analysis*: `r pkg("metavcov")` offers a collection of functions, 
+    including multiple imputations for missing data, for multivariate 
+    meta-analyses.
 -   *Outlier detection* (and robust analysis) in the presence of missing values
     is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`. 
 -   *ROC estimation* in the presence of missing values is available in
@@ -375,7 +393,8 @@ imputed datasets.
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
-    uncategorized references.
+    uncategorized references. `r pkg("metagear")` provides hot-deck imputation
+    in bibliographic data for systematic reviews and meta-analysis.
 
 
 
