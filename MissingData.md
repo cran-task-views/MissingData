@@ -281,8 +281,6 @@ imputed datasets.
 -   *Rank models* with partially missing rankings are handled in 
     `r pkg("BayesMallows")` with Bayesian methods and in `r pkg("irrNA")` to
     compute iter-rater reliability and concordance.
--   *Imputation for meta-analyses* of binary outcomes is provided in
-    `r pkg("metasens")`.
 -   *Experimental design*: `r pkg("experiment")` handles missing values in
     experimental design such as randomized experiments with missing covariate 
     and outcome data, matched-pairs design with missing outcome.
@@ -315,7 +313,10 @@ imputed datasets.
     assessed with a Bayesian approach in `r pkg("brxx")`.
 -   *Meta-analysis*: `r pkg("metavcov")` offers a collection of functions, 
     including multiple imputations for missing data, for multivariate 
-    meta-analyses.
+    meta-analyses. More specifically, imputation for *meta-analyses* of binary 
+    outcomes is provided in `r pkg("metasens")` and `r pkg("NMADiagT")` provides
+    a Bayesian analysis using network meta-analysis of dose response studies
+    in which MNAR missing values are accounted for.
 -   *Outlier detection* (and robust analysis) in the presence of missing values
     is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`. 
 -   *ROC estimation* in the presence of missing values is available in
@@ -344,9 +345,11 @@ imputed datasets.
     single-cell data, such as scATAC-Seq or CITE-Seq.\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network 
     inference with an auxiliary dataset.
--   *Proteomics*: Various functions to analyze the missing value mechanism and
+-   *Chemometrics*: Various functions to analyze the missing value mechanism and
     impute missing values (using multiple imputation) in LC-MS/MS spectra is
-    available in `r pkg("imp4p")` for protein quantification. 
+    available in `r pkg("imp4p")` for protein quantification. \
+    Imputation of data under detection limit for NIR spectra is provided in 
+    `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
     and analysis of clinical trials in a Bayesian framework that allows for 
     handling and imputation of missing data.\
