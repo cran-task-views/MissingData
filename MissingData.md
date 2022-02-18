@@ -94,6 +94,10 @@ repository linked above.
     these methods by using an EM approach to fit different mixtures of
     multivariate missing data for, respectively, continuous (first package) or 
     categorical data (other two packages).\
+    Hierarchical Gaussian and probit models with missing covariate values are
+    implemented in `r pkg("ppmSuite")` and `r pkg("PReMiuM")` implements
+    Dirichlet process mixture models (regression models linking the response to
+    covariates through cluster membership) with missing covariate values.\
     `r pkg("imputeR")` is also using an EM based imputation framework that 
     offers several different algorithms, including Lasso, tree-based models or 
     PCA. In addition, `r pkg("TestDataImputation")` implements imputation based 
