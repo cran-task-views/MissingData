@@ -46,10 +46,11 @@ repository linked above.
 [**Exploration of missing data**]{#exploration}
 
 -   *Manipulation of missing data* is implemented in the packages
-    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, and `r pkg("mde")` (the latter 
-    also providing basic function to explore missingness patterns). In
-    addition, `r pkg("memisc")` provides definable missing values, along with 
-    infrastructure for the management of survey data and variable labels.
+    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`, and 
+    `r pkg("mde")` (the latter also providing basic function to explore 
+    missingness patterns). In addition, `r pkg("memisc")` provides definable 
+    missing values, along with infrastructure for the management of survey data 
+    and variable labels.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`, 
     `r pkg("dlookr")` and `r pkg("naniar", priority = "core")`.
@@ -93,7 +94,11 @@ repository linked above.
     `r pkg("CensMFM")`, `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend 
     these methods by using an EM approach to fit different mixtures of
     multivariate missing data for, respectively, continuous (first package) or 
-    categorical data (other two packages).\
+    categorical data (other two packages). `r pkg("RMixtCompIO")` is a very 
+    complete library of mixture models that handles missing data and is based
+    on the C++ library `MixtComp`. It can be used in combination with 
+    `r pkg("RMixtCompUtilities")` that provides various graphical, getter, and
+    utility functions.\
     Hierarchical Gaussian and probit models with missing covariate values are
     implemented in `r pkg("ppmSuite")` and `r pkg("PReMiuM")` implements
     Dirichlet process mixture models (regression models linking the response to
@@ -151,7 +156,8 @@ repository linked above.
     Similarly, `r pkg("impimp")` uses the notion of "donor" to impute a set of 
     possible values, termed "imprecise imputation".
 -   Imputation *based on random forest* is implemented in `r pkg("missForest")` 
-    with a faster version in `r pkg("missRanger")`.
+    with a faster version in `r pkg("missRanger")` and in 
+    `r pkg("randomForestSRC")` for variants of the original method.
 -   *Other regression based imputations* are implemented in `r pkg("VIM")` 
     (linear regression based imputation in the function `regressionImp`). 
     `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM.
@@ -183,34 +189,37 @@ repository linked above.
 Some of the above mentioned packages can also handle multiple
 imputations.
 
--   `r pkg("Amelia", priority = "core")` implements Bootstrap multiple 
-    imputation using EM to estimate the parameters, for quantitative data it 
+-   `r pkg("Amelia", priority = "core")` implements *Bootstrap multiple 
+    imputation using EM* to estimate the parameters, for quantitative data it 
     imputes assuming a Multivariate Gaussian distribution. In addition, 
     [AmeliaView](https://cran.r-project.org/web/packages/Amelia/vignettes/ameliaview.html)
     is a GUI for `r pkg("Amelia")`, available from the 
     [Amelia web page](https://gking.harvard.edu/amelia).\
     `r pkg("NPBayesImputeCat")` also implements multiple imputation by joint 
     modelling for categorical variables but using a Bayesian approach.
--   `r pkg("mi")`, `r pkg("mice")`, and `r pkg("smcfcs")` implement multiple 
-    imputation by Chained Equations. Other packages are based on or extends 
+-   `r pkg("mi")`, `r pkg("mice")`, and `r pkg("smcfcs")` implement *multiple 
+    imputation by Chained Equations*. Other packages are based on or extends 
     `r pkg("mice")`, like `r pkg("miceFast")`, which provides an
     alternative implementation of mice imputation methods using object
     oriented style programming and C++, `r pkg("bootImpute")`, which performs 
     bootstrap based imputations and analyses of these imputations, and 
     `r pkg("miceRanger")` and `r pkg("CALIBERrfimpute")`, which both perform 
     multiple imputation by chained equations using random forests.
--   `r pkg("missMDA")` implements multiple imputation based on SVD methods.
--   `r pkg("hot.deck")` implements hot-deck based multiple imputation.
+-   `r pkg("missMDA")` implements multiple imputation based on *SVD methods*.
+-   `r pkg("hot.deck")` implements *hot-deck* based multiple imputation.
+-   `r pkg("rMIDAS")` implements multiple imputation based on *denoising 
+    auto-encoders*.
 -   *Multilevel imputation*: Multilevel multiple imputation is implemented in 
     `r pkg("hmi")`, `r pkg("jomo", priority = "core")`, `r pkg("mice")`, 
     `r pkg("miceadds")`, `r pkg("micemd")`, `r pkg("mitml")`, and 
     `r pkg("pan")`.
 -   `r pkg("Qtools")` and `r pkg("miWQS")` implement multiple imputation based 
-    on quantile regression.
--   `r pkg("lodi")` implements the imputation of observed values below the 
-    limit of detection (LOD) via censored likelihood multiple imputation (CLMI).
--   `r pkg("BaBooN")` implements a Bayesian bootstrap approach for discrete data
-    imputation that is based on Predictive Mean Matching (PMM).
+    on *quantile regression*.
+-   `r pkg("lodi")` implements the *imputation of observed values below the 
+    limit of detection* (LOD) via censored likelihood multiple imputation 
+    (CLMI).
+-   `r pkg("BaBooN")` implements a Bayesian bootstrap approach for *discrete 
+    data* imputation that is based on Predictive Mean Matching (PMM).
 
 In addition, `r pkg("mitools")` provides a generic approach to handle multiple 
 imputation in combination with any imputation method, `r pkg("NADIA")` 
@@ -279,9 +288,9 @@ imputed datasets.
     binomial GLM that handles missing values.
 -   *Imputation for contingency tables* is implemented in `r pkg("lori")` that 
     can also be used for the analysis of contingency tables with missing data.
--   *Imputation for compositional data (CODA)* is implemented in in
-    `r pkg("zCompositions")` (various imputation methods for
-    zeros, left-censored and missing data).
+-   *Imputation for compositional data (CODA)* is implemented in 
+    `r pkg("robCompositions")` and `r pkg("zCompositions")` (various imputation 
+    methods for zeros, left-censored and missing data).
 -   *Rank models* with partially missing rankings are handled in 
     `r pkg("BayesMallows")` with Bayesian methods and in `r pkg("irrNA")` to
     compute iter-rater reliability and concordance.
@@ -335,10 +344,14 @@ imputed datasets.
     `r bioc("snpStats")` (using a nearest neighbor approach), in 
     `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
     model based on allele intensities and/or flanking SNPs).\
-    EM algorithm is used to compute genetic statistics for population in the
-    presence of missing SNP in `r pkg("StAMPP")`.\
+    `r pkg("qgtools")` includes linear mixed models and resampling techniques
+    for quantitative genetics analyses in the presence of missing data. In 
+    addition, EM algorithm is used to compute genetic statistics for population
+    in the presence of missing SNP in `r pkg("StAMPP")`. \
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values. 
+-   *Phylogeny*: Imputation of missing data phylogeny is implemented in 
+    `r pkg("Rphylopars")` with different evolutionary models.
 -   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
     molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")`, `r pkg("Rmagic")`, `r pkg("SAVER")`, and 
@@ -374,6 +387,8 @@ imputed datasets.
     data randomly, with taxonomic bias and with anatomical biases.
 -   *Environment*: `r pkg("AeRobiology")` imputes missing data in 
     aerobiological datasets imported from aerobiological public databases.
+    `r pkg("QUALYPSO")` can handle missing data and provides unbiased estimates
+    of climate change responses for incomplete ensembles of climate projections.
 -   *Causal inference*: Causal inference with interactive fixed-effect
     models is available in `r pkg("gsynth")`, with missing values handled by 
     matrix completion, and in `r pkg("dosearch")`, via extension of do-calculus
@@ -381,7 +396,9 @@ imputed datasets.
     using several matching methods, and provides users with tools to estimate 
     causal effects in each imputed datasets. `r pkg("grf")` offers treatment
     effect estimation with incomplete confounders and covariates under modified
-    unconfoundedness assumptions.
+    unconfoundedness assumptions and `r pkg("RCAL")` implements regularized
+    calibrated estimation for causal inference with missing values and high
+    dimension.
 -   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in 
     financial time series using AR models or random walk.
 -   *Scoring*: Basic methods (mean, median, mode, \...) for imputing missing 
