@@ -71,8 +71,11 @@ repository linked above.
     diagnostics and visualizations). The package `r pkg("Iscores")` can also be 
     useful to evaluate imputation quality using a KL-based scoring rule.\
     Simulations to evaluate imputation qualities can be performed using the
-    function `ampute` of `r pkg("mice", priority = "core")` and 
-    `r pkg("imputeTestbench")` provides a benchmark to evaluate univariate time
+    function `ampute` of `r pkg("mice", priority = "core")`, the package
+    `r pkg("simFrame")` that proposes a very general framework for simulations,
+    or the package `r pkg("simglm")` that simulates data and missing values in
+    simple and generalized linear regression models. Similarly, 
+    `r pkg("imputeTestbench")` provides a benchmark to evaluate univariate time 
     series imputation. \
     In addition, `r pkg("mi")` and `r pkg("VIM")` also provide diagnostic plots 
     that can help evaluate imputation quality.
@@ -112,8 +115,9 @@ repository linked above.
     Imputation in `r pkg("mlmi")`.
 -   *Full Information Maximum Likelihood* (also known as "direct maximum 
     likelihood" or "raw maximum likelihood") is available in `r pkg("lavaan")` 
-    (and in its extension `r pkg("semTools")`), `r pkg("OpenMx")` and
-    `r pkg("rsem")`, for handling missing data in structural equation modeling.
+    (and in its extension `r pkg("semTools")`), `r pkg("OpenMx")`,
+    `r pkg("rsem")`, and `r pkg("simsem")` for handling missing data in 
+    structural equation modeling.
 -   *Bayesian approaches* for handling missing values in model based
     clustering with variable selection is available in `r pkg("VarSelLCM")`. 
     The package also provides imputation using the posterior mean.
@@ -224,8 +228,9 @@ imputations.
 In addition, `r pkg("mitools")` provides a generic approach to handle multiple 
 imputation in combination with any imputation method, `r pkg("NADIA")` 
 provides a uniform interface to compare the performances of several imputation 
-algorithms, and `r pkg("cobalt")` computes balance tables and plots for multiply
-imputed datasets.
+algorithms, `r pkg("cobalt")` computes balance tables and plots for multiply
+imputed datasets, and `r pkg("SynthTools")` provides confidence intervals for
+multiple imputed datasets.
 
 [**Weighting methods**]{#weights}
 
@@ -345,13 +350,15 @@ imputed datasets.
     `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
     model based on allele intensities and/or flanking SNPs).\
     `r pkg("qgtools")` includes linear mixed models and resampling techniques
-    for quantitative genetics analyses in the presence of missing data. In 
-    addition, EM algorithm is used to compute genetic statistics for population
-    in the presence of missing SNP in `r pkg("StAMPP")`. \
+    for quantitative genetics analyses in the presence of missing data. EM 
+    algorithm is used to compute genetic statistics for population in the 
+    presence of missing SNP in `r pkg("StAMPP")`. `r pkg("SCAT")` implements a
+    conditional association test that adjusts for heterogeneity in SNP coverage
+    and thus for missing data in SNP values.\
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values. 
 -   *Phylogeny*: Imputation of missing data phylogeny is implemented in 
-    `r pkg("Rphylopars")` with different evolutionary models.
+    `r pkg("Rphylopars")` with different evolutionary models. 
 -   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
     molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")`, `r pkg("Rmagic")`, `r pkg("SAVER")`, and 
@@ -369,7 +376,9 @@ imputed datasets.
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
     and analysis of clinical trials in a Bayesian framework that allows for 
-    handling and imputation of missing data.\
+    handling and imputation of missing data. `r pkg("sanon")` implements a 
+    method for analysis of randomized clinical trials with strata that can 
+    handle MCAR data.\
     More specifically, `r pkg("idem")` implements a procedure for comparing 
     treatments in clinical trials with missed visits or premature withdrawal. 
     `r pkg("InformativeCensoring")` implements multiple imputation for 
