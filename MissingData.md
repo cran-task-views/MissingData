@@ -161,8 +161,7 @@ repository linked above.
     Similarly, `r pkg("impimp")` uses the notion of "donor" to impute a set of 
     possible values, termed "imprecise imputation".
 -   Imputation *based on random forest* is implemented in `r pkg("missForest")` 
-    with a faster version in `r pkg("missRanger")` and in 
-    `r pkg("randomForestSRC")` for variants of the original method.
+    with a faster version in `r pkg("missRanger")`.
 -   *Other regression based imputations* are implemented in `r pkg("VIM")` 
     (linear regression based imputation in the function `regressionImp`). 
     `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM.
