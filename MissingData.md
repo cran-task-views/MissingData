@@ -46,11 +46,12 @@ repository linked above.
 [**Exploration of missing data**]{#exploration}
 
 -   *Manipulation of missing data* is implemented in the packages
-    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`, and 
-    `r pkg("mde")` (the latter also providing basic function to explore 
-    missingness patterns). In addition, `r pkg("memisc")` provides definable 
-    missing values, along with infrastructure for the management of survey data 
-    and variable labels.
+    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`, 
+    `r pkg("mde")` (also providing basic function to explore missingness 
+    patterns), and `r pkg("tidyr")` (which abides by 
+    [tidyverse](https://tidyverse.org) principles). In addition, 
+    `r pkg("memisc")` provides definable missing values, along with 
+    infrastructure for the management of survey data and variable labels.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`, 
     `r pkg("dlookr")` and `r pkg("naniar", priority = "core")`.
@@ -261,8 +262,11 @@ multiple imputed datasets.
     using a Bayesian approach in the presence of missing data in multivariate 
     time series and `r pkg("MTS")` imputes missing values in multivariate time
     series assuming known models. `r pkg("swgee")` implements an IPW approach 
-    for longitudinal data with missing observations. `r pkg("cold")` fits 
-    longitudinal count data models from data with missing values.
+    for longitudinal data with missing observations. `r pkg("tsrobprep")` 
+    implements imputation of missing values using a robust decomposition the 
+    series.\
+    For more specific time series, `r pkg("cold")` fits longitudinal count  
+    models from data with missing values.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted 
@@ -358,7 +362,8 @@ multiple imputed datasets.
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values. 
 -   *Phylogeny*: Imputation of missing data phylogeny is implemented in 
-    `r pkg("Rphylopars")` with different evolutionary models. 
+    `r pkg("Rphylopars")` with different evolutionary models. Simulation of
+    incomplete phylogeny can be performed with `r pkg("TreeSim")`.
 -   *Genomics*: Imputation for dropout events (*i.e.* , under-sampling of mRNA 
     molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")`, `r pkg("Rmagic")`, `r pkg("SAVER")`, and 
@@ -371,7 +376,9 @@ multiple imputed datasets.
     inference with an auxiliary dataset.
 -   *Chemometrics*: Various functions to analyze the missing value mechanism and
     impute missing values (using multiple imputation) in LC-MS/MS spectra is
-    available in `r pkg("imp4p")` for protein quantification. \
+    available in `r pkg("imp4p")` for protein quantification. More specifically,
+    `r pkg("wrProteo")` provide multiple replacement of missing values by low
+    random values in quantitative proteomics data.\
     Imputation of data under detection limit for NIR spectra is provided in 
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
@@ -398,16 +405,17 @@ multiple imputed datasets.
     aerobiological datasets imported from aerobiological public databases.
     `r pkg("QUALYPSO")` can handle missing data and provides unbiased estimates
     of climate change responses for incomplete ensembles of climate projections.
--   *Causal inference*: Causal inference with interactive fixed-effect
-    models is available in `r pkg("gsynth")`, with missing values handled by 
-    matrix completion, and in `r pkg("dosearch")`, via extension of do-calculus
-    to missing data. `r pkg("MatchThem")` matches multiply imputed datasets 
-    using several matching methods, and provides users with tools to estimate 
-    causal effects in each imputed datasets. `r pkg("grf")` offers treatment
-    effect estimation with incomplete confounders and covariates under modified
-    unconfoundedness assumptions and `r pkg("RCAL")` implements regularized
-    calibrated estimation for causal inference with missing values and high
-    dimension.
+-   *Causal inference*: Various methods for causal inference with missing data
+    are implemented in `r pkg("targeted")`, using augmented IPW estimators. 
+    Causal inference with interactive fixed-effect models is available in 
+    `r pkg("gsynth")`, with missing values handled by matrix completion, and in
+    `r pkg("dosearch")`, via extension of do-calculus to missing data. 
+    `r pkg("MatchThem")` matches multiply imputed datasets using several 
+    matching methods, and provides users with tools to estimate causal effects 
+    in each imputed datasets. `r pkg("grf")` offers treatment effect estimation 
+    with incomplete confounders and covariates under modified unconfoundedness 
+    assumptions and `r pkg("RCAL")` implements regularized calibrated estimation
+    for causal inference with missing values and high dimension.
 -   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in 
     financial time series using AR models or random walk.
 -   *Scoring*: Basic methods (mean, median, mode, \...) for imputing missing 
