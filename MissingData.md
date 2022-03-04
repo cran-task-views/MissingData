@@ -39,7 +39,7 @@ information might also be found in `r view("TimeSeries")`,
 spatio-temporal interpolation and censored data are not covered by the Missing
 Data task view.
 
-If you think that we missed some important packages in this list, please
+If you think we have missed some important packages in this list, please
 e-mail the maintainers or submit an issue or pull request in the GitHub
 repository linked above.
 
@@ -62,9 +62,9 @@ repository linked above.
 -   *Tests of the MAR assumption (versus the MCAR assumption)*: Little's test
     for the MCAR assumption is implemented in `r pkg("misty")`. Other approaches
     are also available elsewhere: `r pkg("RBtest")` proposes a regression based
-    approach to test the missing data mechanism and `r pkg("samon")` performs
+    approach to test for missing data mechanisms and `r pkg("samon")` performs
     sensitivity analysis in clinical trials to check the relevance of the MAR
-    assumption. In addition, `r pkg("isni")` tests the sensitivity to the
+    assumption. In addition, `r pkg("isni")` tests sensitivity to the
     ignorability assumption by computing the index of local sensitivity to
     nonignorability.
 -   *Evaluation*: `r pkg("missCompare")` and `r pkg("missMethods")` offer an
@@ -73,8 +73,8 @@ repository linked above.
     useful to evaluate imputation quality using a KL-based scoring rule.\
     Simulations to evaluate imputation qualities can be performed using the
     function `ampute` of `r pkg("mice", priority = "core")`, the package
-    `r pkg("simFrame")` that proposes a very general framework for simulations,
-    or the package `r pkg("simglm")` that simulates data and missing values in
+    `r pkg("simFrame")`, which proposes a very general framework for simulations,
+    or the package `r pkg("simglm")`, which simulates data and missing values in
     simple and generalized linear regression models. Similarly,
     `r pkg("imputeTestbench")` provides a benchmark to evaluate univariate time
     series imputation. \
@@ -94,14 +94,14 @@ repository linked above.
     datasets or multiple imputations (functions `imp.`XXX for `norm`,
     `cat` and `mix`), once the model parameters have been estimated.
     `r pkg("monomvn")` proposes similar methods for multivariate normal and
-    Student distributions when the missingness pattern is monotone.\
+    Student distributions when the missingness pattern is monotonic.\
     `r pkg("CensMFM")`, `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend
     these methods by using an EM approach to fit different mixtures of
     multivariate missing data for, respectively, continuous (first package) or
-    categorical data (other two packages). `r pkg("RMixtCompIO")` is a very
+    categorical data (other two packages). `r pkg("RMixtCompIO")` is a
     complete library of mixture models that handles missing data and is based
     on the C++ library `MixtComp`. It can be used in combination with
-    `r pkg("RMixtCompUtilities")` that provides various graphical, getter, and
+    `r pkg("RMixtCompUtilities")`, which provides various graphical, getter, and
     utility functions.\
     Hierarchical Gaussian and probit models with missing covariate values are
     implemented in `r pkg("ppmSuite")`. `r pkg("PReMiuM")` implements
@@ -158,7 +158,7 @@ repository linked above.
     (function `hotdeck`) and a fractional version (using weights) is provided
     in `r pkg("FHDI")`. `r pkg("StatMatch")` also uses hot-deck imputation
     to impute surveys from an external dataset.\
-    Similarly, `r pkg("impimp")` uses the notion of "donor" to impute a set of
+    Similarly, `r pkg("impimp")` uses the notion of a "donor" to impute a set of
     possible values, termed "imprecise imputation".
 -   Imputation *based on random forest* is implemented in `r pkg("missForest")`
     with a faster version in `r pkg("missRanger")`.
@@ -202,7 +202,7 @@ imputations.
     `r pkg("NPBayesImputeCat")` also implements multiple imputation by joint
     modeling for categorical variables but using a Bayesian approach.
 -   `r pkg("mi")`, `r pkg("mice")`, and `r pkg("smcfcs")` implement *multiple
-    imputation by Chained Equations*. Other packages are based on or extends
+    imputation by Chained Equations*. Other packages are based on or extend
     `r pkg("mice")`, like `r pkg("miceFast")`, which provides an
     alternative implementation of mice imputation methods using object
     oriented style programming and C++, `r pkg("bootImpute")`, which performs
@@ -227,10 +227,10 @@ imputations.
 
 In addition, `r pkg("mitools")` provides a generic approach to handle multiple
 imputation in combination with any imputation method, `r pkg("NADIA")`
-provides a uniform interface to compare the performances of several imputation
+provides a uniform interface to compare the performance of several imputation
 algorithms, `r pkg("cobalt")` computes balance tables and plots for multiply
 imputed datasets, and `r pkg("SynthTools")` provides confidence intervals for
-multiple imputed datasets.
+multiply imputed datasets.
 
 [**Weighting methods**]{#weights}
 
@@ -277,7 +277,7 @@ multiple imputed datasets.
     (using different methods as knn and SVD) and in `r pkg("StempCens")`
     with a SAEM approach that approximates EM when the E-step does not have an
     analytic form.\
-    From an application point of view, `r pkg("gapfill")` is dedicated to the
+    From an application perspective, `r pkg("gapfill")` is dedicated to the
     imputation of satellite data observed at equally-spaced points in time and
     `r pkg("foster")` to the imputation of satellite data based on observed
     predictors. `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
@@ -300,8 +300,8 @@ multiple imputed datasets.
     `r pkg("robCompositions")` and `r pkg("zCompositions")` (various imputation
     methods for zeros, left-censored and missing data).
 -   *Rank models* with partially missing rankings are handled in
-    `r pkg("BayesMallows")` with Bayesian methods and in `r pkg("irrNA")` to
-    compute iter-rater reliability and concordance.
+    `r pkg("BayesMallows")` with Bayesian methods, and in `r pkg("irrNA")` to
+    compute inter-rater reliability and concordance.
 -   *Experimental design*: `r pkg("experiment")` handles missing values in
     experimental design such as randomized experiments with missing covariate
     and outcome data, and matched-pairs design with missing outcome.
