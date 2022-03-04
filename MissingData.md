@@ -104,7 +104,7 @@ repository linked above.
     `r pkg("RMixtCompUtilities")` that provides various graphical, getter, and
     utility functions.\
     Hierarchical Gaussian and probit models with missing covariate values are
-    implemented in `r pkg("ppmSuite")` . `r pkg("PReMiuM")` implements
+    implemented in `r pkg("ppmSuite")`. `r pkg("PReMiuM")` implements
     Dirichlet process mixture models (regression models linking the response to
     covariates through cluster membership) with missing covariate values.\
     `r pkg("imputeR")` is also using an EM based imputation framework that
@@ -360,7 +360,7 @@ multiple imputed datasets.
     and thus for missing data in SNP values.\
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values.
--   *Phylogeny*: Imputation of missing phylogeny data is implemented in
+-   *Phylogeny*: Imputation of missing data for phylogeny is implemented in
     `r pkg("Rphylopars")` with different evolutionary models. Simulation of
     incomplete phylogeny can be performed with `r pkg("TreeSim")`.
 -   *Genomics*: Imputation for dropout events (i.e., under-sampling of mRNA
