@@ -259,8 +259,7 @@ multiply imputed datasets.
     univariate and multivariate time series. `r pkg("BMTAR")` provides
     an estimation of the autoregressive threshold models with Gaussian noise
     using a Bayesian approach in the presence of missing data in multivariate
-    time series and `r pkg("MTS")` imputes missing values in multivariate time
-    series assuming known models. `r pkg("swgee")` implements an IPW approach
+    time series. `r pkg("swgee")` implements an IPW approach
     for longitudinal data with missing observations. `r pkg("tsrobprep")`
     implements imputation of missing values using a robust decomposition of the
     time series.\
