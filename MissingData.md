@@ -95,10 +95,10 @@ repository linked above.
     `cat` and `mix`), once the model parameters have been estimated.
     `r pkg("monomvn")` proposes similar methods for multivariate normal and
     Student distributions when the missingness pattern is monotonic.\
-    `r pkg("CensMFM")`, `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend
+    `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend
     these methods by using an EM approach to fit different mixtures of
-    multivariate missing data for, respectively, continuous (first package) or
-    categorical data (other two packages). `r pkg("RMixtCompIO")` is a
+    multivariate missing data for
+    categorical data. `r pkg("RMixtCompIO")` is a
     complete library of mixture models that handles missing data and is based
     on the C++ library `MixtComp`. It can be used in combination with
     `r pkg("RMixtCompUtilities")`, which provides various graphical, getter, and
