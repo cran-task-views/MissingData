@@ -214,7 +214,7 @@ imputations.
 -   `r pkg("rMIDAS")` implements multiple imputation based on *denoising
     auto-encoders*.
 -   *Multilevel imputation*: Multilevel multiple imputation is implemented in
-    `r pkg("hmi")`, `r pkg("jomo", priority = "core")`, `r pkg("mice")`,
+    `r pkg("jomo", priority = "core")`, `r pkg("mice")`,
     `r pkg("miceadds")`, `r pkg("micemd")`, `r pkg("mitml")`, and
     `r pkg("pan")`.
 -   `r pkg("Qtools")` and `r pkg("miWQS")` implement multiple imputation based
