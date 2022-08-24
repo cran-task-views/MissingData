@@ -136,7 +136,7 @@ repository linked above.
 
 -   The simplest method for missing data imputation is *imputation by mean* (or
     median, mode, \...). This approach is available in many packages among which
-    `r pkg("ForImp")` and `r pkg("Hmisc")` that contain various proposals for
+    `r pkg("Hmisc")` that contains various proposals for
     imputing with the same value all missing instances of a variable.
 -   *Generic packages*: The packages `r pkg("VIM")` and `r pkg("filling")`
     contain several popular methods for missing value imputation (including some
