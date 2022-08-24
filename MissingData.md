@@ -272,8 +272,7 @@ multiply imputed datasets.
     Interpolation of spatial data based on genetic distances is also
     available in `r pkg("phylin")`.
 -   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation
-    for spatio-temporal data is implemented in the packages `r pkg("cutoffR")`
-    (using different methods as knn and SVD) and in `r pkg("StempCens")`
+    for spatio-temporal data is implemented in the package `r pkg("StempCens")`
     with a SAEM approach that approximates EM when the E-step does not have an
     analytic form.\
     From an application perspective, `r pkg("gapfill")` is dedicated to the
