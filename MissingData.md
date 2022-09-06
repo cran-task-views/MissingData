@@ -222,8 +222,6 @@ imputations.
 -   `r pkg("lodi")` implements the *imputation of observed values below the
     limit of detection* (LOD) via censored likelihood multiple imputation
     (CLMI).
--   `r pkg("BaBooN")` implements a Bayesian bootstrap approach for *discrete
-    data* imputation that is based on Predictive Mean Matching (PMM).
 
 In addition, `r pkg("mitools")` provides a generic approach to handle multiple
 imputation in combination with any imputation method, `r pkg("NADIA")`
