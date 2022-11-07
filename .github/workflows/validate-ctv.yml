@@ -22,5 +22,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: tuxette/actions@main
-        with:
-          task-view: MissingData
