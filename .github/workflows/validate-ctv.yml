@@ -3,6 +3,7 @@ on:
     branches:
       - main
       - master
+      - test-action
     paths:
       - '.github/workflows/validate-ctv.yml'
       - 'MissingData.md'
@@ -20,6 +21,6 @@ jobs:
   validate-ctv:
     runs-on: ubuntu-latest
     steps:
-      - uses: ms609/actions/validate-ctv@main
+      - uses: tuxette/actions@main
         with:
           task-view: MissingData
