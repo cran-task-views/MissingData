@@ -3,10 +3,16 @@ on:
     branches:
       - main
       - master
+    paths:
+      - '.github/workflows/validate-ctv.yml'
+      - 'MissingData.md'
   pull_request:
     branches:
       - main
       - master
+  paths:
+      - '.github/workflows/validate-ctv.yml'
+      - 'MissingData.md'
 
 name: Validate task view
 
