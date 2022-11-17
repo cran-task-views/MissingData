@@ -10,7 +10,7 @@ on:
     branches:
       - main
       - master
-  paths:
+    paths:
       - '.github/workflows/validate-ctv.yml'
       - 'MissingData.md'
 
