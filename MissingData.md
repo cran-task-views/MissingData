@@ -361,7 +361,7 @@ multiply imputed datasets.
     incomplete phylogeny can be performed with `r pkg("TreeSim")`.
 -   *Genomics*: Imputation for dropout events (i.e., under-sampling of mRNA
     molecules) in single-cell RNA-Sequencing data is implemented
-    in `r pkg("DrImpute")`, `r pkg("Rmagic")`, `r pkg("SAVER")`, and
+    in `r pkg("DrImpute")`, `r pkg("SAVER")`, and
     `r pkg("iCellR")`, and is based, respectively, on clustering of cells,
     Markov affinity graph, an empirical Bayes approach, and k-nearest neighbors.
     The first three packages are used and combined in `r bioc("scRecover")` and
