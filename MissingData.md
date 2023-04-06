@@ -1,7 +1,7 @@
 ---
 name: MissingData
 topic: Missing Data
-maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, and Nathalie Vialaneix (r-miss-tastic team)
+maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
 version: 2022-08-24
 source: https://github.com/cran-task-views/MissingData/
