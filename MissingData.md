@@ -350,9 +350,7 @@ multiply imputed datasets.
     `r pkg("qgtools")` includes linear mixed models and resampling techniques
     for quantitative genetics analyses in the presence of missing data. EM
     algorithm is used to compute genetic statistics for population in the
-    presence of missing SNP in `r pkg("StAMPP")`. `r pkg("SCAT")` implements a
-    conditional association test that adjusts for heterogeneity in SNP coverage
-    and thus for missing data in SNP values.\
+    presence of missing SNP in `r pkg("StAMPP")`. \
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values.
 -   *Phylogeny*: Imputation of missing data for phylogeny is implemented in
