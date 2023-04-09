@@ -274,9 +274,8 @@ multiply imputed datasets.
     with a SAEM approach that approximates EM when the E-step does not have an
     analytic form.\
     From an application perspective, `r pkg("gapfill")` is dedicated to the
-    imputation of satellite data observed at equally-spaced points in time and
-    `r pkg("foster")` to the imputation of satellite data based on observed
-    predictors. `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
+    imputation of satellite data observed at equally-spaced points in time.
+    `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
     data using generalized hidden Markov models (including multiple imputation
     for missing data).
 -   *Survival data*: Multiple imputation for the estimation of cumulative
