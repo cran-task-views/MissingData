@@ -227,8 +227,9 @@ In addition, `r pkg("mitools")` provides a generic approach to handle multiple
 imputation in combination with any imputation method, `r pkg("NADIA")`
 provides a uniform interface to compare the performance of several imputation
 algorithms, `r pkg("cobalt")` computes balance tables and plots for multiply
-imputed datasets, and `r pkg("SynthTools")` provides confidence intervals for
-multiply imputed datasets.
+imputed datasets, `r pkg("SynthTools")` provides confidence intervals for
+multiply imputed datasets, and `r pkg("miceafter")` allows different types of
+statistical analyses and pooling after multiple imputation.
 
 [**Weighting methods**]{#weights}
 
