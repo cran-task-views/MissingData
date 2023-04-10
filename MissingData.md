@@ -237,7 +237,7 @@ statistical analyses and pooling after multiple imputation.
 
 -   *Computation of weights* for observed data to account for unobserved
     data by *Inverse Probability Weighting (IPW)* is implemented in
-    `r pkg("ipw")` and `r pkg("iWeigReg"). IPW is also used for quantile
+    `r pkg("ipw")` and `r pkg("iWeigReg")`. IPW is also used for quantile
     estimations and boxplots in
     `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
