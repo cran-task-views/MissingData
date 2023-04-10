@@ -164,7 +164,9 @@ repository linked above.
     with a faster version in `r pkg("missRanger")`.
 -   *Other regression based imputations* are implemented in `r pkg("VIM")`
     (linear regression based imputation in the function `regressionImp`).
-    `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM.
+    `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM and
+    `r pkg("SurrogateRegression")` uses bivariate regressions to perform 
+    estimation and inference on partially missing target outcomes.
 -   *Matrix completion* is implemented with iterative PCA/*SVD*-decomposition in
     the package `r pkg("missMDA", priority = "core")` for numerical, categorical
     and mixed data (including imputation of groups). *NIPALS* (also based on SVD
@@ -235,7 +237,8 @@ statistical analyses and pooling after multiple imputation.
 
 -   *Computation of weights* for observed data to account for unobserved
     data by *Inverse Probability Weighting (IPW)* is implemented in
-    `r pkg("ipw")`. IPW is also used for quantile estimations and boxplots in
+    `r pkg("ipw")` and `r pkg("iWeigReg"). IPW is also used for quantile
+    estimations and boxplots in
     `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
     with missing outcome* is implemented in `r pkg("CRTgeeDR")`.
