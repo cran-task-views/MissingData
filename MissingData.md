@@ -189,6 +189,8 @@ repository linked above.
 -   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
+-   Imputation *based on self-organizing maps* is provided in 
+    `r pkg("SOMbrero")`.
 
 [**Multiple imputation**]{#multiple}
 
