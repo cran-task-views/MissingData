@@ -285,7 +285,9 @@ statistical analyses and pooling after multiple imputation.
     data using generalized hidden Markov models (including multiple imputation
     for missing data).
 -   *Survival data*: Multiple imputation for the estimation of cumulative
-    incidence functions is implemented in `r pkg("kmi")`.
+    incidence functions is implemented in `r pkg("kmi")` and multiple imutation
+    for survival data with missing covariates is implemented in 
+    `r pkg("NNMIS")`.
 -   *Distance matrices*: Imputation for Euclidean distance matrix is implemented
     in `r pkg("edmcr")`, using different optimization approaches.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
