@@ -95,14 +95,12 @@ repository linked above.
     `cat` and `mix`), once the model parameters have been estimated.
     `r pkg("monomvn")` proposes similar methods for multivariate normal and
     Student distributions when the missingness pattern is monotonic.\
-    `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend
-    these methods by using an EM approach to fit different mixtures of
-    multivariate missing data for
-    categorical data. `r pkg("RMixtCompIO")` is a
-    complete library of mixture models that handles missing data and is based
-    on the C++ library `MixtComp`. It can be used in combination with
-    `r pkg("RMixtCompUtilities")`, which provides various graphical, getter, and
-    utility functions.\
+    `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend these methods by using 
+    an EM approach to fit different mixtures of multivariate missing data for
+    categorical data. `r pkg("RMixtCompIO")` is a complete library of mixture 
+    models that handles missing data and is based on the C++ library `MixtComp`.
+    It can be used in combination with `r pkg("RMixtCompUtilities")`, which 
+    provides various graphical, getters, and utility functions.\
     Hierarchical Gaussian and probit models with missing covariate values are
     implemented in `r pkg("ppmSuite")`. `r pkg("PReMiuM")` implements
     Dirichlet process mixture models (regression models linking the response to
@@ -124,7 +122,10 @@ repository linked above.
     The package also provides imputation using the posterior mean.
 -   *Missing values in generalized linear models* can be handled with package
     `r pkg("mdmb")` for various families. `r pkg("JointAI")` implements
-    Bayesian approaches for generalized linear mixed models.
+    Bayesian approaches for generalized linear mixed models and `r pkg("bild")`
+    implements logistic regression with mixed effects for binary longitudinal
+    data allowing missing values and `r pkg("brlrmr")` proposes a method to 
+    reduce bias in estimating logistic regressions with missing response.
 -   *Missing data in item response models* (including Rasch models and
     extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`,
     `r pkg("eRm")`, and `r pkg("ltm")` for univariate or multivariate responses.
@@ -213,6 +214,16 @@ imputations.
     bootstrap based imputations and analyses of these imputations, and
     `r pkg("miceRanger")` and `r pkg("CALIBERrfimpute")`, which both perform
     multiple imputation by chained equations using random forests.
+-   *Dealing with multiply imputed datasets*: `r pkg("mitools")` provides a 
+    generic approach to handle multiple imputation in combination with any
+    imputation method, `r pkg("cobalt")` computes balance tables and plots for 
+    multiply imputed datasets, `r pkg("SynthTools")` provides confidence 
+    intervals for multiply imputed datasets, `r pkg("miceafter")` allows
+    different types of statistical analyses and pooling after multiple 
+    imputation, `r pkg("basecamp")` fit models from multiply imputed datasets 
+    in a generic way, and `r pkg("bucky")` automatically computes summary 
+    information for estimates computed on multiply imputed data sets in a social
+    sciences context.
 -   `r pkg("missMDA")` implements multiple imputation based on *SVD methods*.
 -   `r pkg("hot.deck")` implements *hot-deck*-based multiple imputation.
 -   `r pkg("rMIDAS")` implements multiple imputation based on *denoising
@@ -232,8 +243,9 @@ imputation in combination with any imputation method, `r pkg("NADIA")`
 provides a uniform interface to compare the performance of several imputation
 algorithms, `r pkg("cobalt")` computes balance tables and plots for multiply
 imputed datasets, `r pkg("SynthTools")` provides confidence intervals for
-multiply imputed datasets, and `r pkg("miceafter")` allows different types of
-statistical analyses and pooling after multiple imputation.
+multiply imputed datasets, `r pkg("miceafter")` allows different types of
+statistical analyses and pooling after multiple imputation, and 
+`r pkg("basecamp")` fit models from multiply imputed datasets in a generic way.
 
 [**Weighting methods**]{#weights}
 
@@ -266,7 +278,8 @@ statistical analyses and pooling after multiple imputation.
     time series. `r pkg("swgee")` implements an IPW approach
     for longitudinal data with missing observations. `r pkg("tsrobprep")`
     implements imputation of missing values using a robust decomposition of the
-    time series.\
+    time series. `r pkg("brokenstick")` handles missing at random data in 
+    irregular time series with a brokenstick approach.\
     For more specific time series, `r pkg("cold")` fits longitudinal count  
     models from data with missing values.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
@@ -346,6 +359,9 @@ statistical analyses and pooling after multiple imputation.
 -   *ROC estimation* in the presence of missing values is available in
     `r pkg("bcROCsurface")` for ROC surface and in `r pkg("BLOQ")` for left
     censored data.
+-   *Mediation analysis* in the presence of missing values is implemented in 
+    `r pkg("bmem")` and `r pkg("bmemLavaan")`, the latter designed to handle 
+    non-normal data.
 
 [**Specific application fields**]{#applications}
 
@@ -374,11 +390,9 @@ statistical analyses and pooling after multiple imputation.
     single-cell data, such as scATAC-Seq or CITE-Seq.\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network
     inference with an auxiliary dataset.
--   *Chemometrics*: Various functions to analyze the missing value mechanism and
-    to impute missing values (using multiple imputation) in LC-MS/MS spectra is
-    available in `r pkg("imp4p")` for protein quantification. More specifically,
-    `r pkg("wrProteo")` provide multiple replacement of missing values by low
-    random values in quantitative proteomics data.\
+-   *Chemometrics*: `r pkg("imp4p")`, `r pkg("wrProteo")`, and `r pkg("aLFQ")`
+    use imputation for protein quantification from LC-MS/MS spectra. The first
+    two use multiple imputation and can work under an MNAR mechanism.\
     Imputation of data under detection limit for NIR spectra is provided in
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
