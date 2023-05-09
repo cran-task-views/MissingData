@@ -218,7 +218,11 @@ imputations.
     multiply imputed datasets, `r pkg("SynthTools")` provides confidence 
     intervals for multiply imputed datasets, `r pkg("miceafter")` allows
     different types of statistical analyses and pooling after multiple 
-    imputation, `r pkg("basecamp")` fit models from multiply imputed datasets 
+    imputation.\
+    In addition, `r pkg("mitools")` provides a generic approach to handle 
+    multiple imputation in combination with any imputation method, 
+    `r pkg("cobalt")` computes balance tables and plots for multiply imputed 
+    datasets, `r pkg("basecamb")` fits models from multiply imputed datasets 
     in a generic way, and `r pkg("bucky")` automatically computes summary 
     information for estimates computed on multiply imputed data sets in a social
     sciences context.
@@ -235,15 +239,8 @@ imputations.
 -   `r pkg("lodi")` implements the *imputation of observed values below the
     limit of detection* (LOD) via censored likelihood multiple imputation
     (CLMI).
-
-In addition, `r pkg("mitools")` provides a generic approach to handle multiple
-imputation in combination with any imputation method, `r pkg("NADIA")`
-provides a uniform interface to compare the performance of several imputation
-algorithms, `r pkg("cobalt")` computes balance tables and plots for multiply
-imputed datasets, `r pkg("SynthTools")` provides confidence intervals for
-multiply imputed datasets, `r pkg("miceafter")` allows different types of
-statistical analyses and pooling after multiple imputation, and 
-`r pkg("basecamp")` fit models from multiply imputed datasets in a generic way.
+-   *Evaluation*: `r pkg("NADIA")` provides a uniform interface to compare the 
+    performance of several imputation algorithms.
 
 [**Weighting methods**]{#weights}
 
