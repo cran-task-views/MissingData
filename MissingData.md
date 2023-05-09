@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2022-08-24
+version: 2023-05-09
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -102,9 +102,7 @@ repository linked above.
     It can be used in combination with `r pkg("RMixtCompUtilities")`, which 
     provides various graphical, getters, and utility functions.\
     Hierarchical Gaussian and probit models with missing covariate values are
-    implemented in `r pkg("ppmSuite")`. `r pkg("PReMiuM")` implements
-    Dirichlet process mixture models (regression models linking the response to
-    covariates through cluster membership) with missing covariate values.\
+    implemented in `r pkg("ppmSuite")`.\
     `r pkg("imputeR")` is also using an EM based imputation framework that
     offers several different algorithms, including Lasso, tree-based models or
     PCA. In addition, `r pkg("TestDataImputation")` implements imputation based
