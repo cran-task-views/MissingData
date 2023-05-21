@@ -48,13 +48,15 @@ repository linked above.
 -   *Manipulation of missing data* is implemented in the packages
     `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`,
     `r pkg("mde")` (also providing basic functions to explore missingness
-    patterns), and `r pkg("tidyr")` (which abides by
-    [tidyverse](https://tidyverse.org) principles). In addition,
+    patterns), `r pkg("tidyr")` (which abides by
+    [tidyverse](https://tidyverse.org) principles), and `r pkg("declared")`. In addition,
     `r pkg("memisc")` provides definable missing values, along with
     infrastructure for the management of survey data and variable labels.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`,
-    `r pkg("dlookr")` and `r pkg("naniar", priority = "core")`.
+    `r pkg("dlookr")`, and `r pkg("naniar", priority = "core")`. 
+    `r pkg("daqapo")` is a generic data quality toolbox that can also be used to
+    identify missing data.
 -   *Graphics that describe distributions and patterns of missing data*
     are implemented in `r pkg("VIM", priority = "core")` (which has a Graphical
     User Interface, VIMGUI, currently archived on CRAN) and `r pkg("naniar")`
@@ -195,6 +197,8 @@ repository linked above.
     copula for mixed data types.
 -   Imputation *based on self-organizing maps* is provided in 
     `r pkg("SOMbrero")`.
+-   Imputation *based on validation rules (deductive methods)* is implemented in
+    `r pkg("deductive")`.
 
 [**Multiple imputation**]{#multiple}
 
@@ -400,7 +404,10 @@ imputations.
     and analysis of clinical trials in a Bayesian framework that allows for
     handling and imputation of missing data. `r pkg("sanon")` implements a
     method for analysis of randomized clinical trials with strata that can
-    handle MCAR data.\
+    handle MCAR data. `r pkg("didimputation")` implements treatment effect 
+    estimation and pre-trend testing in diff-in-diff designs with an imputation 
+    approach. `r pkg("diyar") implement record linkage and epidemiological case
+    definitions while addressing missing data across linkage stages.\
     More specifically, 
     `r pkg("InformativeCensoring")` implements multiple imputation for
     informative censoring. `r pkg("pseval")` evaluates principal surrogates in
