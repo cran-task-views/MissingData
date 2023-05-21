@@ -186,7 +186,9 @@ repository linked above.
     and `r pkg("tensorBF")` (for 3-way tensor data).
     *Low rank based imputation* is provided in
     `r pkg("softImpute", priority = "core")`, which contains several
-    methods for iterative matrix completion. This method is also available in
+    methods for iterative matrix completion. `r pkg("eimpute")` implements 
+    an efficient imputation methods based on low rank approximation of large
+    matrices. Low rank imputation methods are also available in
     the very general package `r pkg("rsparse")`, which contains various tools
     for sparse matrices. Variants based on low rank assumptions are available
     in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` and
@@ -285,7 +287,10 @@ imputations.
     time series. `r pkg("brokenstick")` handles missing at random data in 
     irregular time series with a brokenstick approach.\
     For more specific time series, `r pkg("cold")` fits longitudinal count  
-    models from data with missing values.
+    models from data with missing values.\
+    Estimation of extremal indexes in time series is implemented in 
+    `r pkg("exdex")` with K-gaps and D-gaps models that can accommodate with 
+    missing values.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted
@@ -406,7 +411,7 @@ imputations.
     method for analysis of randomized clinical trials with strata that can
     handle MCAR data. `r pkg("didimputation")` implements treatment effect 
     estimation and pre-trend testing in diff-in-diff designs with an imputation 
-    approach. `r pkg("diyar") implement record linkage and epidemiological case
+    approach. `r pkg("diyar")` implements record linkage and epidemiological case
     definitions while addressing missing data across linkage stages.\
     More specifically, 
     `r pkg("InformativeCensoring")` implements multiple imputation for
@@ -456,7 +461,9 @@ imputations.
     package that contains tools for survey statistics and that can handle
     multiply imputed datasets. More specifically, `r pkg("fastLink")` provides
     a Fellegi-Sunter probabilistic record linkage that allows for missing data
-    and the inclusion of auxiliary information.\
+    and the inclusion of auxiliary information. `r pkg("eatRep")` implements 
+    replication methods in complex survey designs comprising multiple imputed 
+    variables.\
     `r pkg("convergEU")` can process data from Eurostat data and impute missing
     values to monitor convergence between EU countries. `r pkg("eechidna")` has
     similar features for Australian election and public census datasets.
