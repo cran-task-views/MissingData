@@ -94,8 +94,9 @@ repository linked above.
     `cat` and `mix`), once the model parameters have been estimated.
     `r pkg("monomvn")` proposes similar methods for multivariate normal and
     Student distributions when the missingness pattern is monotonic.\
-    `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend these methods by using 
-    an EM approach to fit different mixtures of multivariate missing data for
+    `r pkg("CensMFM")`, `r pkg("imputeMulti")`, and `r pkg("MMDai")` extend 
+    these methods by using an EM approach to fit different mixtures of 
+    multivariate missing data for numeric or 
     categorical data. `r pkg("RMixtCompIO")` is a complete library of mixture 
     models that handles missing data and is based on the C++ library `MixtComp`.
     It can be used in combination with `r pkg("RMixtCompUtilities")`, which 
@@ -123,7 +124,10 @@ repository linked above.
     `r pkg("mdmb")` for various families. `r pkg("JointAI")` implements
     Bayesian approaches for generalized linear mixed models and `r pkg("bild")`
     implements logistic regression with mixed effects for binary longitudinal
-    data allowing missing values and `r pkg("brlrmr")` proposes a method to 
+    data allowing missing values. `r pkg("ClusPred")` also handles missing 
+    values in mixed model with a fixed group effect, when the group variable is 
+    missing.\
+    `r pkg("brlrmr")` proposes a method to 
     reduce bias in estimating logistic regressions with missing response.
 -   *Missing data in item response models* (including Rasch models and
     extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`,
@@ -358,6 +362,7 @@ imputations.
 -   *Mediation analysis* in the presence of missing values is implemented in 
     `r pkg("bmem")` and `r pkg("bmemLavaan")`, the latter designed to handle 
     non-normal data.
+-   *Composite Indicator* can be imputed with the package `r pkg("COINr")`.
 
 [**Specific application fields**]{#applications}
 
@@ -407,13 +412,19 @@ imputations.
 -   *Health*: `r pkg("missingHE")` implements models for health economic
     evaluations with missing outcome data. `r pkg("accelmissing")` provides
     multiple imputation with the zero-inflated Poisson lognormal model for
-    missing count values in accelerometer data.
+    missing count values in accelerometer data. `r pkg("CGManalyzer")` provides
+    tools for the analysis of continuous glucose monitoring that can handle 
+    missing data.
 -   *Morphometry*:  `r pkg("LOST")` can be used to simulate missing morphometric
     data randomly, with taxonomic bias and with anatomical biases.
 -   *Environment*: `r pkg("AeRobiology")` imputes missing data in
     aerobiological datasets imported from aerobiological public databases.
+    `r pkg("climatol")` implements functions for missing data filling of 
+    climatological series. 
     `r pkg("QUALYPSO")` can handle missing data and provides unbiased estimates
     of climate change responses for incomplete ensembles of climate projections.
+-   *Social sciences*: `r pkg("coefficientalpha")` computes coefficients Alpha,
+    social, behavioral and education sciences, in the presence of missing data.
 -   *Causal inference*: Various methods for causal inference with missing data
     are implemented in `r pkg("targeted")`, using augmented IPW estimators.
     Causal inference with interactive fixed-effect models is available in
@@ -427,8 +438,10 @@ imputations.
     for causal inference with missing values and high dimension.
 -   *Finance*: `r pkg("imputeFin")` handles imputation of missing values in
     financial time series using AR models or random walk.
--   *Scoring*: Basic methods (mean, median, mode, \...) for imputing missing
+-   *Finance*: Basic methods (mean, median, mode, \...) for imputing missing
     data in scoring datasets are proposed in `r pkg("scorecardModelUtils")`.
+    `r pkg("creditmodel")` can handle missing values treatment for credit 
+    modeling.
 -   *Preference models*: Missing data in preference models are handled
     with a composite link approach that allows for MCAR and MNAR patterns to be
     accounted for in `r pkg("prefmod")`.
