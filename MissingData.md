@@ -49,9 +49,12 @@ repository linked above.
     `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`,
     `r pkg("mde")` (also providing basic functions to explore missingness
     patterns), `r pkg("tidyr")` (which abides by
-    [tidyverse](https://tidyverse.org) principles), and `r pkg("declared")`. In addition,
-    `r pkg("memisc")` provides definable missing values, along with
-    infrastructure for the management of survey data and variable labels.
+    [tidyverse](https://tidyverse.org) principles), and `r pkg("declared")`. In 
+    addition, `r pkg("memisc")` provides definable missing values, along with
+    infrastructure for the management of survey data and variable labels. More
+    specifically, `r pkg("fauxnaif")` converts given values to `NA` and 
+    `r pkg("fillr")` fill missing values in vectors according to simple 
+    predefined rules.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`,
     `r pkg("dlookr")`, and `r pkg("naniar", priority = "core")`. 
@@ -212,7 +215,9 @@ imputations.
     imputes assuming a Multivariate Gaussian distribution. In addition,
     [AmeliaView](https://cran.r-project.org/web/packages/Amelia/vignettes/ameliaview.html)
     is a GUI for `r pkg("Amelia")`, available from the
-    [Amelia web page](https://gking.harvard.edu/amelia).\
+    [Amelia web page](https://gking.harvard.edu/amelia). 
+    `r pkg("FastImputation")` provides a fast approximation of the imputation 
+    process used in `r pkg("Amelia")`.\
     `r pkg("NPBayesImputeCat")` also implements multiple imputation by joint
     modeling for categorical variables but using a Bayesian approach.
 -   `r pkg("mi")`, `r pkg("mice")`, and `r pkg("smcfcs")` implement *multiple
@@ -338,17 +343,19 @@ imputations.
 -   *Regression and classification*: many different supervised methods can
     accommodate the presence of missing values. `r pkg("randomForest")`,
     `r pkg("grf")`, and `r pkg("StratifiedRF")` handle missing values in
-    predictors in various random forest based methods. `r pkg("misaem")`
+    predictors in various random forest based methods.\
+    `r pkg("misaem")`
     handles missing data in linear and logistic regression and allows for model
     selection. `r pkg("psfmi")` also provides a framework for model selection
-    for various linear models in multiply imputed datasets.
+    for various linear models in multiply imputed datasets and `r pkg("flare")` 
+    accommodates missing values in some models related to Lasso regression.\
     `r pkg("naivebayes")` provides an efficient implementation of the naive
     Bayes classifier in the presence of missing data. `r pkg("plsRbeta")`
     implements PLS for beta regression models with missing data in the
     predictors. `r pkg("lqr")` provides quantile regression estimates based on
     various distributions in the presence of missing values and censored data.
     `r pkg("eigenmodel")` handles missing values in regression models for
-    symmetric relational data.
+    symmetric relational data. 
 -   *Clustering*: `r pkg("biclustermd")` handles missing data in biclustering.
     `r pkg("RMixtComp")`, `r pkg("MGMM")`, and `r pkg("mixture")` fit various
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
@@ -384,7 +391,8 @@ imputations.
     `r pkg("qgtools")` includes linear mixed models and resampling techniques
     for quantitative genetics analyses in the presence of missing data. EM
     algorithm is used to compute genetic statistics for population in the
-    presence of missing SNP in `r pkg("StAMPP")`. \
+    presence of missing SNP in `r pkg("StAMPP")` and to fit 
+    genotype-to-phenotype models in `r pkg("FamEvent")`. \
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values.
 -   *Phylogeny*: Imputation of missing data for phylogeny is implemented in
