@@ -59,7 +59,9 @@ repository linked above.
     packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`,
     `r pkg("dlookr")`, and `r pkg("naniar", priority = "core")`. 
     `r pkg("daqapo")` is a generic data quality toolbox that can also be used to
-    identify missing data.
+    identify missing data. More specifically, `r pkg("ggmice")` produces plots
+    for the `r pkg("mice")` imputation workflow and can be used for missing data
+    exploration and evaluation of imputation quality.
 -   *Graphics that describe distributions and patterns of missing data*
     are implemented in `r pkg("VIM", priority = "core")` (which has a Graphical
     User Interface, VIMGUI, currently archived on CRAN) and `r pkg("naniar")`
@@ -250,6 +252,8 @@ imputations.
     `r pkg("jomo", priority = "core")`, `r pkg("mice")`,
     `r pkg("miceadds")`, `r pkg("micemd")`, `r pkg("mitml")`, and
     `r pkg("pan")`.
+-   `r pkg("gerbil")` implements multiple imputation using latent joint 
+    multivariate normal models.
 -   `r pkg("Qtools")` and `r pkg("miWQS")` implement multiple imputation based
     on *quantile regression*.
 -   `r pkg("lodi")` implements the *imputation of observed values below the
@@ -359,7 +363,9 @@ imputations.
 -   *Clustering*: `r pkg("biclustermd")` handles missing data in biclustering.
     `r pkg("RMixtComp")`, `r pkg("MGMM")`, and `r pkg("mixture")` fit various
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
-    with missing values in k-means clustering.
+    with missing values in k-means clustering. `r pkg("gbmt")` performs 
+    clustering to identify similar trajectories in multivariate longitudinal 
+    data containing missing values.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")` and `r pkg("MKinfer")`, the latter is based on multiple
     imputed datasets. Reliability of tests for data with missing values is
@@ -480,6 +486,8 @@ imputations.
     interdisciplinarity of scientific publications) with data containing
     uncategorized references. `r pkg("metagear")` provides hot-deck imputation
     in bibliographic data for systematic reviews and meta-analysis.
+-   *Agriculture*: `r pkg("geneticae")` implements imputation techniques for
+    multi-environment agronomic trials.
 
 
 
