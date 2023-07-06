@@ -397,8 +397,7 @@ imputations.
     handling and imputation of missing data. `r pkg("sanon")` implements a
     method for analysis of randomized clinical trials with strata that can
     handle MCAR data.\
-    More specifically, `r pkg("idem")` implements a procedure for comparing
-    treatments in clinical trials with missed visits or premature withdrawal.
+    More specifically, 
     `r pkg("InformativeCensoring")` implements multiple imputation for
     informative censoring. `r pkg("pseval")` evaluates principal surrogates in
     a single clinical trial in the presence of missing counterfactual surrogate
