@@ -62,9 +62,8 @@ repository linked above.
 -   *Tests of the MAR assumption (versus the MCAR assumption)*: Little's test
     for the MCAR assumption is implemented in `r pkg("misty")`. Other approaches
     are also available elsewhere: `r pkg("RBtest")` proposes a regression based
-    approach to test for missing data mechanisms and `r pkg("samon")` performs
-    sensitivity analysis in clinical trials to check the relevance of the MAR
-    assumption. In addition, `r pkg("isni")` tests sensitivity to the
+    approach to test for missing data mechanisms. 
+    In addition, `r pkg("isni")` tests sensitivity to the
     ignorability assumption by computing the index of local sensitivity to
     nonignorability.
 -   *Evaluation*: `r pkg("missCompare")` and `r pkg("missMethods")` offer an
