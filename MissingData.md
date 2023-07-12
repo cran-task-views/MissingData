@@ -367,7 +367,8 @@ imputations.
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
     with missing values in k-means clustering. `r pkg("gbmt")` performs 
     clustering to identify similar trajectories in multivariate longitudinal 
-    data containing missing values.
+    data containing missing values. `r pkg("LUCIDus")` performed clustering from
+    multiple omics when some omics are missing.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")`, `r pkg("IncomPair")`, and `r pkg("MKinfer")`, the 
     latter is based on multiple
@@ -388,6 +389,8 @@ imputations.
     `r pkg("bmem")` and `r pkg("bmemLavaan")`, the latter designed to handle 
     non-normal data.
 -   *Composite Indicator* can be imputed with the package `r pkg("COINr")`.
+-   *Fuzzy logic*: `r pkg("lfl")`contains basic fuzzy-related algebraic 
+    functions capable of handling missing values for fuzzy logic.
 
 [**Specific application fields**]{#applications}
 
@@ -422,7 +425,8 @@ imputations.
     and `r pkg("aLFQ")` use imputation for protein quantification from LC-MS/MS     
     spectra. The first
     two use multiple imputation and the first three can work under an MNAR
-    mechanism.\
+    mechanism. Imputation for metabolomics data is implemented in 
+    `r pkg("lilikoi")`.\
     Imputation of data under detection limit for NIR spectra is provided in
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
