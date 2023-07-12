@@ -300,6 +300,8 @@ imputations.
     Estimation of extremal indexes in time series is implemented in 
     `r pkg("exdex")` with K-gaps and D-gaps models that can accommodate with 
     missing values.
+-   *Markov models*: `r pkg("hhsmm")` includes various methods for hidden hybrid
+    Markov and semi-Markov models that can accomodate missing data.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted
@@ -398,7 +400,8 @@ imputations.
     for quantitative genetics analyses in the presence of missing data. EM
     algorithm is used to compute genetic statistics for population in the
     presence of missing SNP in `r pkg("StAMPP")` and to fit 
-    genotype-to-phenotype models in `r pkg("FamEvent")`. \
+    genotype-to-phenotype models in `r pkg("FamEvent")`, `r pkg("hapassoc")`,
+    and `r pkg("Haplin")`.\
     Finally, `r pkg("FILEST")` is used to simulate SNP datasets with outlying
     individuals and missing values.
 -   *Phylogeny*: Imputation of missing data for phylogeny is implemented in
