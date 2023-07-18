@@ -423,12 +423,12 @@ imputations.
     single-cell data, such as scATAC-Seq or CITE-Seq.\
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network
     inference with an auxiliary dataset.
--   *Chemometrics*: `r pkg("imp4p")`, `r pkg("wrProteo")`, `r pkg("imputeLCMD")`
-    and `r pkg("aLFQ")` use imputation for protein quantification from LC-MS/MS     
-    spectra. The first
-    two use multiple imputation and the first three can work under an MNAR
-    mechanism. Imputation for metabolomics data is implemented in 
-    `r pkg("lilikoi")`.\
+-   *Chemometrics*: `r pkg("imp4p")`, `r pkg("wrProteo")`, `r pkg("mi4p")`,
+    `r pkg("imputeLCMD")` and `r pkg("aLFQ")` use imputation for protein 
+    quantification from LC-MS/MS data. The first three use multiple imputation 
+    and `r pkg("imp4p")`, `r pkg("wrProteo")`, and `r pkg("imputeLCMD")` can 
+    work under an MNAR mechanism. Imputation for quantified metabolomics data is
+    implemented in `r pkg("lilikoi")` with a k-NN approach.\
     Imputation of data under detection limit for NIR spectra is provided in
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
