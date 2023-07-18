@@ -375,8 +375,10 @@ imputations.
     imputed datasets. Reliability of tests for data with missing values is
     assessed with a Bayesian approach in `r pkg("brxx")`.
 -   *Meta-analysis*: `r pkg("metavcov")` offers a collection of functions,
-    including multiple imputations for missing data, for multivariate
-    meta-analyses. More specifically, imputation for *meta-analyses* of binary
+    including multiple imputations for missing data, in multivariate
+    meta-analyses. `r pkg("metansue")` can perform meta-analysis with some 
+    missing (unreported) effects. 
+    More specifically, imputation for *meta-analyses* of binary
     outcomes is provided in `r pkg("metasens")` and `r pkg("NMADiagT")` provides
     a Bayesian analysis using network meta-analysis of dose response studies
     in which MNAR missing values are accounted for.
