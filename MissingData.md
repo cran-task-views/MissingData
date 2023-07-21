@@ -202,6 +202,10 @@ repository linked above.
     in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` and
     `r pkg("CMF")` (for ensemble matrix completion), and in `r pkg("ROptSpace")`
     (with a computationally efficient approach).
+-   Imputation for *categorical variables* is proposed in `r pkg("NIMAA")` based
+    on data mining and simple rules. `r pkg("OTrecod")` can also impute 
+    categorical variables by using information shared by two databases and a 
+    method based on Optimal Transport.
 -   Imputation *based on copula* is implemented in `r pkg("CoImp")` with a
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
@@ -233,6 +237,8 @@ imputations.
     bootstrap based imputations and analyses of these imputations, and
     `r pkg("miceRanger")` and `r pkg("CALIBERrfimpute")`, which both perform
     multiple imputation by chained equations using random forests.
+-   *Multiple imputation based on Markov models* is proposed in 
+`r pkg("niaidMI")`.
 -   *Dealing with multiply imputed datasets*: `r pkg("mitools")` provides a 
     generic approach to handle multiple imputation in combination with any
     imputation method, `r pkg("cobalt")` computes balance tables and plots for 
@@ -269,8 +275,10 @@ imputations.
 
 -   *Computation of weights* for observed data to account for unobserved
     data by *Inverse Probability Weighting (IPW)* is implemented in
-    `r pkg("ipw")` and `r pkg("iWeigReg")`. IPW is also used for quantile
-    estimations and boxplots in
+    `r pkg("ipw")` and `r pkg("iWeigReg")`. `r pkg("nawtilus")` also proposes
+    IPW computation but utilizing estimating equations suitable for a specific
+    pre-specified parameter of interest.
+-   IPW is also for *quantile estimations and boxplots* in
     `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
     with missing outcome* is implemented in `r pkg("CRTgeeDR")`.
