@@ -56,7 +56,8 @@ repository linked above.
     `r pkg("fillr")` fill missing values in vectors according to simple 
     predefined rules.
 -   *Missing data patterns* can be identified and explored using the
-    packages `r pkg("mi")`, `r pkg("wrangle")`, `r pkg("DescTools")`,
+    packages `r pkg("mi")` (and its GUI `r pkg("migui")`), `r pkg("wrangle")`, 
+    `r pkg("DescTools")`,
     `r pkg("dlookr")`, and `r pkg("naniar", priority = "core")`. 
     `r pkg("daqapo")` is a generic data quality toolbox that can also be used to
     identify missing data. More specifically, `r pkg("ggmice")` produces plots
@@ -90,8 +91,8 @@ repository linked above.
 [**Likelihood based approaches**]{#likelihood}
 
 -   *Methods based on the Expectation Maximization (EM) algorithm* are
-    implemented in `r pkg("norm")` (using the function `em.norm` for
-    multivariate Gaussian data), `r pkg("norm2")` (using the function `emNorm`),
+    implemented in `r pkg("norm")`, `r pkg("norm2")`, and `r pkg("mvnmle")` for
+    multivariate normal datasets,
     in `r pkg("cat")` (function `em.cat` for multivariate categorical data), in
     `r pkg("mix")` (function `em.mix` for multivariate mixed categorical and
     continuous data). These packages also implement *Bayesian approaches* (with
@@ -142,6 +143,8 @@ repository linked above.
     `r pkg("LNIRT")` also addresses these models but allows missing values to
     be specified as "missing-by-design" and `r pkg("MLCIRTwithin")` includes
     latent-class models.
+-   *Missing values in outcome of regression models* is handled in 
+    `r pkg("mreg")`.
 
 [**Single imputation**]{#single}
 
@@ -203,7 +206,7 @@ repository linked above.
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
 -   Imputation *based on self-organizing maps* is provided in 
-    `r pkg("SOMbrero")`.
+    `r pkg("SOMbrero")` and `r pkg("missSOM")`.
 -   Imputation *based on validation rules (deductive methods)* is implemented in
     `r pkg("deductive")`.
 
@@ -271,6 +274,7 @@ imputations.
     `r pkg("IPWboxplot")`.
 -   *Doubly Robust Inverse Probability Weighted Augmented GEE Estimator
     with missing outcome* is implemented in `r pkg("CRTgeeDR")`.
+-   *IPW for time-course missing data* is implemented in `r pkg("MIIPW")`.
 
 [**Specific types of data**]{#data}
 
@@ -363,12 +367,14 @@ imputations.
     `r pkg("eigenmodel")` handles missing values in regression models for
     symmetric relational data. 
 -   *Clustering*: `r pkg("biclustermd")` handles missing data in biclustering.
-    `r pkg("RMixtComp")`, `r pkg("MGMM")`, and `r pkg("mixture")` fit various
+    `r pkg("RMixtComp")`, `r pkg("MGMM")`, `r pkg("mixture")`, and 
+    `r pkg("MixtureMissing")` fit various
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
     with missing values in k-means clustering. `r pkg("gbmt")` performs 
     clustering to identify similar trajectories in multivariate longitudinal 
     data containing missing values. `r pkg("LUCIDus")` performed clustering from
-    multiple omics when some omics are missing.
+    multiple omics when some omics are missing. `r pkg("miclust")` handles 
+    multiple imputation in clustering.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")`, `r pkg("IncomPair")`, and `r pkg("MKinfer")`, the 
     latter is based on multiple
@@ -489,7 +495,7 @@ imputations.
     a Fellegi-Sunter probabilistic record linkage that allows for missing data
     and the inclusion of auxiliary information. `r pkg("eatRep")` implements 
     replication methods in complex survey designs comprising multiple imputed 
-    variables.\
+    variables, and `r pkg("modi")` provides multivariate outlier detection and
     `r pkg("convergEU")` can process data from Eurostat data and impute missing
     values to monitor convergence between EU countries. `r pkg("eechidna")` has
     similar features for Australian election and public census datasets.
