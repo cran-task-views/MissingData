@@ -70,7 +70,8 @@ repository linked above.
 -   *Tests of the MAR assumption (versus the MCAR assumption)*: Little's test
     for the MCAR assumption is implemented in `r pkg("misty")`. Other approaches
     are also available elsewhere: `r pkg("RBtest")` proposes a regression based
-    approach to test for missing data mechanisms. 
+    approach to test for missing data mechanisms and `r pkg("PKLMtest")`
+    implements a KL-based test for MCAR.\
     In addition, `r pkg("isni")` tests sensitivity to the
     ignorability assumption by computing the index of local sensitivity to
     nonignorability.
@@ -403,10 +404,14 @@ imputations.
     censored data.
 -   *Mediation analysis* in the presence of missing values is implemented in 
     `r pkg("bmem")` and `r pkg("bmemLavaan")`, the latter designed to handle 
-    non-normal data.
+    non-normal data. `r pkg("paths")` uses an imputation method for the 
+    estimation of path specific effects in causal mediation analysis.
 -   *Composite Indicator* can be imputed with the package `r pkg("COINr")`.
 -   *Fuzzy logic*: `r pkg("lfl")`contains basic fuzzy-related algebraic 
     functions capable of handling missing values for fuzzy logic.
+-   *ODE*: An implementation of the parameter cascade method for estimating 
+    ordinary differential equation models with missing or complete observations
+    is provided in the package `r pkg("pCODE")`.
 
 [**Specific application fields**]{#applications}
 
