@@ -471,7 +471,8 @@ imputations.
     multiple imputation with the zero-inflated Poisson lognormal model for
     missing count values in accelerometer data. `r pkg("CGManalyzer")` provides
     tools for the analysis of continuous glucose monitoring that can handle 
-    missing data.
+    missing data. `r pkg("qpNCA")` implements imputation for noncomportmental
+    pharmacokinetic longitudinal data mostly using interpolation methods.
 -   *Morphometry*:  `r pkg("LOST")` can be used to simulate missing morphometric
     data randomly, with taxonomic bias and with anatomical biases.
 -   *Environment*: `r pkg("AeRobiology")` imputes missing data in
