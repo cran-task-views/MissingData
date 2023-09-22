@@ -54,7 +54,9 @@ repository linked above.
     infrastructure for the management of survey data and variable labels. More
     specifically, `r pkg("fauxnaif")` converts given values to `NA` and 
     `r pkg("fillr")` fill missing values in vectors according to simple 
-    predefined rules.
+    predefined rules.\
+    `r pkg("roperators")` provides string arithmetic, reassignment operators,
+    logical operators that handle missing values.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")` (and its GUI `r pkg("migui")`), `r pkg("wrangle")`, 
     `r pkg("DescTools")`,
@@ -176,7 +178,8 @@ repository linked above.
     Similarly, `r pkg("impimp")` uses the notion of a "donor" to impute a set of
     possible values, termed "imprecise imputation".
 -   Imputation *based on random forest* is implemented in `r pkg("missForest")`
-    with a faster version in `r pkg("missRanger")`.
+    with a faster version in `r pkg("missRanger")`. `r pkg("Rforestry")` extend
+    this method with variants of the original random forest method.
 -   *Other regression based imputations* are implemented in `r pkg("VIM")`
     (linear regression based imputation in the function `regressionImp`).
     `r pkg("iai")` tunes optimal imputation based on knn, tree or SVM and
@@ -236,7 +239,8 @@ imputations.
     alternative implementation of mice imputation methods using object
     oriented style programming and C++, `r pkg("bootImpute")`, which performs
     bootstrap based imputations and analyses of these imputations, and
-    `r pkg("miceRanger")` and `r pkg("CALIBERrfimpute")`, which both perform
+    `r pkg("miceRanger")`, `r pkg("CALIBERrfimpute")`, and `r pkg("RfEmpImp")`,
+    which all perform
     multiple imputation by chained equations using random forests.
 -   *Multiple imputation based on Markov models* is proposed in 
 `r pkg("niaidMI")`.
@@ -318,7 +322,9 @@ imputations.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted
-    interpolation using a tidyverse data management.\
+    interpolation using a tidyverse data management. `r pkg("RcppCensSpatial")`
+    estimates parameters in linear spatial models with missing data using EM, 
+    SAEM, or MCEM.\
     Interpolation of spatial data based on genetic distances is also
     available in `r pkg("phylin")`.
 -   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation
@@ -342,7 +348,10 @@ imputations.
     `r pkg("bnstruct")` provides an extension of various methods for Bayesian
     network inference from data with missing values. Oriented toward inference
     of species community networks, `r pkg("eicm")` uses an extension of
-    binomial GLM that handles missing values.
+    binomial GLM that handles missing values and `r pkg("robber")` is based on
+    stochastic block models and also handles missing values. `r pkg("rnmamod")` 
+    includes functions to explore network meta-analysis with missing participant
+    outcome data in clinical trials.
 -   *Imputation for contingency tables* is implemented in `r pkg("lori")` that
     can also be used for the analysis of contingency tables with missing data.
 -   *Imputation for compositional data (CODA)* is implemented in
@@ -487,7 +496,9 @@ imputations.
     are implemented in `r pkg("targeted")`, using augmented IPW estimators.
     Causal inference with interactive fixed-effect models is available in
     `r pkg("gsynth")`, with missing values handled by matrix completion, and in
-    `r pkg("dosearch")`, via extension of do-calculus to missing data.
+    `r pkg("dosearch")`, via extension of do-calculus to missing data. 
+    `r pkg("R6causal")` implements R6 class for structural causal models where
+    the missing data mechanism can be specified.
     `r pkg("MatchThem")` matches multiply imputed datasets using several
     matching methods, and provides users with tools to estimate causal effects
     in each imputed dataset. `r pkg("grf")` offers treatment effect estimation
