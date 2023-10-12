@@ -332,7 +332,9 @@ imputations.
     with a SAEM approach that approximates EM when the E-step does not have an
     analytic form.\
     From an application perspective, `r pkg("gapfill")` is dedicated to the
-    imputation of satellite data observed at equally-spaced points in time.
+    imputation of satellite data observed at equally-spaced points in time and
+    `r pkg("stfit")` uses Functional Principal Analysis by Conditional 
+    Estimation to impute missing pixels in satellite data.
     `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
     data using generalized hidden Markov models (including multiple imputation
     for missing data).
@@ -429,7 +431,9 @@ imputations.
     `r pkg("QTLRel")` (using information on flanking SNPs), in
     `r bioc("snpStats")` (using a nearest neighbor approach), in
     `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
-    model based on allele intensities and/or flanking SNPs).\
+    model based on allele intensities and/or flanking SNPs). In addition, 
+    `r pkg("SNPassoc")` and `r pkg("SNPfiltR")` offer functions to explore 
+    missing SNPs.\
     `r pkg("qgtools")` includes linear mixed models and resampling techniques
     for quantitative genetics analyses in the presence of missing data. EM
     algorithm is used to compute genetic statistics for population in the
