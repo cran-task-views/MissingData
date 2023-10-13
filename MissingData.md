@@ -459,8 +459,15 @@ imputations.
     `r pkg("imputeLCMD")` and `r pkg("aLFQ")` use imputation for protein 
     quantification from LC-MS/MS data. The first three use multiple imputation 
     and `r pkg("imp4p")`, `r pkg("wrProteo")`, and `r pkg("imputeLCMD")` can 
-    work under an MNAR mechanism. Imputation for quantified metabolomics data is
-    implemented in `r pkg("lilikoi")` with a k-NN approach.\
+    work under an MNAR mechanism. Other packages implementing imputations for
+    MS proteomics data are available on bioconductor, including 
+    `r bioc("msImpute")` (MAR and MNAR mechanisms) and `r bioc("ProteoMM")`. 
+    `r bioc("proteDA")` performs differential analysis on the same type of data
+    but implementing a probabilistic dropout model to handle missingness.\
+    Imputation for quantified metabolomics data is implemented in 
+    `r pkg("lilikoi")` with a k-NN approach and in `r bioc("MAI")` with a two
+    step approach where the first step aims at identifying the missingness 
+    mechanism.\
     Imputation of data under detection limit for NIR spectra is provided in
     `r pkg("NIRStat")` for standard analyses of NIR time series.
 -   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
