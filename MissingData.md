@@ -311,7 +311,9 @@ imputations.
     for longitudinal data with missing observations. `r pkg("tsrobprep")`
     implements imputation of missing values using a robust decomposition of the
     time series. `r pkg("brokenstick")` handles missing at random data in 
-    irregular time series with a brokenstick approach.\
+    irregular time series with a brokenstick approach. `r pkg("TRMF")` uses
+    temporally regularized matrix factorizations to impute values in 
+    high-dimensional time series.\
     For more specific time series, `r pkg("cold")` fits longitudinal count  
     models from data with missing values.\
     Estimation of extremal indexes in time series is implemented in 
@@ -408,6 +410,8 @@ imputations.
     outcomes is provided in `r pkg("metasens")` and `r pkg("NMADiagT")` provides
     a Bayesian analysis using network meta-analysis of dose response studies
     in which MNAR missing values are accounted for.
+-   *Sensitivity analysis* and confidence intervals with non-ignorable 
+    missingness patterns are handled in `r pkg("ui")`.
 -   *Outlier detection* (and robust analysis) in the presence of missing values
     is implemented in `r pkg("GSE")` and `r pkg("rrcovNA")`.
 -   *ROC estimation* in the presence of missing values is available in
