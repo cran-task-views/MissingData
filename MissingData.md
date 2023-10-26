@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2023-10-13
+version: 2023-10-26
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -94,7 +94,7 @@ repository linked above.
 [**Likelihood based approaches**]{#likelihood}
 
 -   *Methods based on the Expectation Maximization (EM) algorithm* are
-    implemented in `r pkg("norm")`, `r pkg("norm2")`, and `r pkg("mvnmle")` for
+    implemented in `r pkg("norm")` and `r pkg("mvnmle")` for
     multivariate normal datasets,
     in `r pkg("cat")` (function `em.cat` for multivariate categorical data), in
     `r pkg("mix")` (function `em.mix` for multivariate mixed categorical and
