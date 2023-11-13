@@ -533,8 +533,7 @@ imputations.
     replication methods in complex survey designs comprising multiple imputed 
     variables, and `r pkg("modi")` provides multivariate outlier detection and
     `r pkg("convergEU")` can process data from Eurostat data and impute missing
-    values to monitor convergence between EU countries. `r pkg("eechidna")` has
-    similar features for Australian election and public census datasets.
+    values to monitor convergence between EU countries. 
 -   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
