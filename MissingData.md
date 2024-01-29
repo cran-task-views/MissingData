@@ -59,8 +59,7 @@ repository linked above.
     logical operators that handle missing values.
 -   *Missing data patterns* can be identified and explored using the
     packages `r pkg("mi")` (and its GUI `r pkg("migui")`), `r pkg("wrangle")`, 
-    `r pkg("DescTools")`,
-    `r pkg("dlookr")`, and `r pkg("naniar", priority = "core")`. 
+    `r pkg("DescTools")`, and `r pkg("naniar", priority = "core")`. 
     `r pkg("daqapo")` is a generic data quality toolbox that can also be used to
     identify missing data. More specifically, `r pkg("ggmice")` produces plots
     for the `r pkg("mice")` imputation workflow and can be used for missing data
