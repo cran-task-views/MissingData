@@ -370,7 +370,7 @@ imputations.
     accommodate the presence of missing values. `r pkg("randomForest")`,
     `r pkg("grf")`, and `r pkg("StratifiedRF")` handle missing values in
     predictors in various random forest based methods.\
-    `r pkg("towerAnNA")` handles missing values in predictions without 
+    `r pkg("toweranNA")` handles missing values in predictions without 
     imputation in linear model, GLM and KNN based regressions. `r pkg("misaem")`
     handles missing data in linear and logistic regression and allows for model
     selection. `r pkg("psfmi")` also provides a framework for model selection
