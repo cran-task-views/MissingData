@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2024-01-29
+version: 2024-04-29
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -301,8 +301,7 @@ imputations.
     time series based on the fast `data.table` framework.\
     More specific methods are implemented in other packages: imputation of time
     series based on Dynamic Time Warping is implemented in the family of
-    packages `r pkg("DTWBI")`, `r pkg("DTWUMI")`, and `r pkg("FSMUMI")` for
-    univariate and multivariate time series. `r pkg("BMTAR")` provides
+    packages `r pkg("DTWBI")`, and `r pkg("DTWUMI")`. `r pkg("BMTAR")` provides
     an estimation of the autoregressive threshold models with Gaussian noise
     using a Bayesian approach in the presence of missing data in multivariate
     time series. `r pkg("swgee")` implements an IPW approach
@@ -433,9 +432,7 @@ imputations.
     model based on allele intensities and/or flanking SNPs). In addition, 
     `r pkg("SNPassoc")` and `r pkg("SNPfiltR")` offer functions to explore 
     missing SNPs.\
-    `r pkg("qgtools")` includes linear mixed models and resampling techniques
-    for quantitative genetics analyses in the presence of missing data. EM
-    algorithm is used to compute genetic statistics for population in the
+    EM algorithm is used to compute genetic statistics for population in the
     presence of missing SNP in `r pkg("StAMPP")` and to fit 
     genotype-to-phenotype models in `r pkg("FamEvent")`, `r pkg("hapassoc")`,
     and `r pkg("Haplin")`.\
