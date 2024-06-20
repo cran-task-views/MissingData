@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2024-04-29
+version: 2024-06-20
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -251,11 +251,9 @@ imputations.
     different types of statistical analyses and pooling after multiple 
     imputation.\
     In addition, `r pkg("mitools")` provides a generic approach to handle 
-    multiple imputation in combination with any imputation method, 
+    multiple imputation in combination with any imputation method and
     `r pkg("cobalt")` computes balance tables and plots for multiply imputed 
-    datasets, and `r pkg("bucky")` automatically computes summary 
-    information for estimates computed on multiply imputed data sets in a social
-    sciences context.
+    datasets.
 -   `r pkg("missMDA")` implements multiple imputation based on *SVD methods*.
 -   `r pkg("hot.deck")` implements *hot-deck*-based multiple imputation.
 -   `r pkg("rMIDAS")` implements multiple imputation based on *denoising
