@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2024-06-20
+version: 2024-10-70
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -269,8 +269,6 @@ imputations.
 -   `r pkg("lodi")` implements the *imputation of observed values below the
     limit of detection* (LOD) via censored likelihood multiple imputation
     (CLMI).
--   *Evaluation*: `r pkg("NADIA")` provides a uniform interface to compare the 
-    performance of several imputation algorithms.
 
 [**Weighting methods**]{#weights}
 
