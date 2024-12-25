@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2024-10-70
+version: 2024-12-25
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -333,8 +333,6 @@ imputations.
     `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
     data using generalized hidden Markov models (including multiple imputation
     for missing data).
--   *Distance matrices*: Imputation for Euclidean distance matrix is implemented
-    in `r pkg("edmcr")`, using different optimization approaches.
 -   *Graphs/networks*: `r pkg("missSBM")` imputes missing edges in Stochastic
     Block models, `r pkg("cglasso")` implements an extension of the Graphical
     Lasso inference from censored and missing value measurements, and
