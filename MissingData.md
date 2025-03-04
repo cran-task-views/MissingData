@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2024-12-25
+version: 2025-03-04
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -376,7 +376,9 @@ imputations.
     various distributions in the presence of missing values and censored data.
     `r pkg("eigenmodel")` handles missing values in regression models for
     symmetric relational data. 
--   *Clustering*: `r pkg("biclustermd")` handles missing data in biclustering.
+-   *Clustering*: `r pkg("clusterMI")` proposes several methods and diagnostics 
+    to handle missing data in clustering in a multiple imputation framework. 
+    `r pkg("biclustermd")` handles missing data in biclustering.
     `r pkg("RMixtComp")`, `r pkg("MGMM")`, `r pkg("mixture")`, and 
     `r pkg("MixtureMissing")` fit various
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
