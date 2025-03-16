@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2025-03-04
+version: 2025-03-16
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -49,9 +49,9 @@ repository linked above.
     `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`,
     `r pkg("mde")` (also providing basic functions to explore missingness
     patterns), `r pkg("tidyr")` (which abides by
-    [tidyverse](https://tidyverse.org) principles), and `r pkg("declared")`. In 
-    addition, `r pkg("memisc")` provides definable missing values, along with
-    infrastructure for the management of survey data and variable labels. More
+    [tidyverse](https://tidyverse.org) principles), `r pkg("memisc")`, and 
+    `r pkg("declared")`. The latter is also able to compute weighted summaries
+    including the different types of missing values. More
     specifically, `r pkg("fauxnaif")` converts given values to `NA` and 
     `r pkg("fillr")` fill missing values in vectors according to simple 
     predefined rules.\
