@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2025-03-16
+version: 2025-05-12
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -264,7 +264,7 @@ imputations.
     `r pkg("pan")`.
 -   `r pkg("gerbil")` implements multiple imputation using latent joint 
     multivariate normal models.
--   `r pkg("Qtools")` and `r pkg("miWQS")` implement multiple imputation based
+-   `r pkg("Qtools")` implements multiple imputation based
     on *quantile regression*.
 -   `r pkg("lodi")` implements the *imputation of observed values below the
     limit of detection* (LOD) via censored likelihood multiple imputation
