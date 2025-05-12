@@ -461,10 +461,8 @@ imputations.
     mechanism.\
     Imputation of data under detection limit for NIR spectra is provided in
     `r pkg("NIRStat")` for standard analyses of NIR time series.
--   *Epidemiology*: `r pkg("bayesCT")` implements various methods for simulation
-    and analysis of clinical trials in a Bayesian framework that allows for
-    handling and imputation of missing data. `r pkg("sanon")` implements a
-    method for analysis of randomized clinical trials with strata that can
+-   *Epidemiology*: `r pkg("sanon")` implements a
+    method for the analysis of randomized clinical trials with strata that can
     handle MCAR data. `r pkg("didimputation")` implements treatment effect 
     estimation and pre-trend testing in diff-in-diff designs with an imputation 
     approach. `r pkg("diyar")` implements record linkage and epidemiological case
