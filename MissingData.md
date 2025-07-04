@@ -32,7 +32,7 @@ topics:
 -   [Specific application fields](#applications)
 
 In addition to the present task view, this [reference website on missing
-data](https://rmisstastic.netlify.com/) might also be helpful. Complementary
+data](https://rmisstastic.netlify.app/) might also be helpful. Complementary
 information might also be found in `r view("TimeSeries")`,
 `r view("SpatioTemporal")`, `r view("Survival")`, and
 `r view("OfficialStatistics")`. Note that most packages covering temporal, and
