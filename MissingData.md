@@ -202,7 +202,7 @@ repository linked above.
     matrices. Low rank imputation methods are also available in
     the very general package `r pkg("rsparse")`, which contains various tools
     for sparse matrices. Variants based on low rank assumptions are available
-    in `r pkg("denoiseR")`, in `r pkg("mimi")`, in `r pkg("ECLRMC")` and
+    in `r pkg("mimi")`, in `r pkg("ECLRMC")` and
     `r pkg("CMF")` (for ensemble matrix completion), and in `r pkg("ROptSpace")`
     (with a computationally efficient approach).
 -   Imputation for *categorical variables* is proposed in `r pkg("NIMAA")` based
