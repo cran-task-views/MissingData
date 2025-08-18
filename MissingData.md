@@ -395,7 +395,7 @@ imputations.
     meta-analyses. `r pkg("metansue")` can perform meta-analysis with some 
     missing (unreported) effects. 
     More specifically, imputation for *meta-analyses* of binary
-    outcomes is provided in `r pkg("metasens")` and `r pkg("NMADiagT")` provides
+    outcomes is provided in `r pkg("metasens")` provide
     a Bayesian analysis using network meta-analysis of dose response studies
     in which MNAR missing values are accounted for.
 -   *Sensitivity analysis* and confidence intervals with non-ignorable 
