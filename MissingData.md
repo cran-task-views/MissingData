@@ -297,10 +297,8 @@ imputations.
     time series based on the fast `data.table` framework.\
     More specific methods are implemented in other packages: imputation of time
     series based on Dynamic Time Warping is implemented in the family of
-    packages `r pkg("DTWBI")`, and `r pkg("DTWUMI")`. `r pkg("BMTAR")` provides
-    an estimation of the autoregressive threshold models with Gaussian noise
-    using a Bayesian approach in the presence of missing data in multivariate
-    time series. `r pkg("swgee")` implements an IPW approach
+    packages `r pkg("DTWBI")`, and `r pkg("DTWUMI")`. 
+    `r pkg("swgee")` implements an IPW approach
     for longitudinal data with missing observations. `r pkg("tsrobprep")`
     implements imputation of missing values using a robust decomposition of the
     time series. `r pkg("brokenstick")` handles missing at random data in 
