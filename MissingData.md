@@ -3,7 +3,7 @@ name: MissingData
 topic: Missing Data
 maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix
 email: r-miss-tastic@clementine.wf
-version: 2025-08-18
+version: 2025-09-05
 source: https://github.com/cran-task-views/MissingData/
 ---
 
@@ -302,9 +302,7 @@ imputations.
     for longitudinal data with missing observations. `r pkg("tsrobprep")`
     implements imputation of missing values using a robust decomposition of the
     time series. `r pkg("brokenstick")` handles missing at random data in 
-    irregular time series with a brokenstick approach. `r pkg("TRMF")` uses
-    temporally regularized matrix factorizations to impute values in 
-    high-dimensional time series.\
+    irregular time series with a brokenstick approach.\
     For more specific time series, `r pkg("cold")` fits longitudinal count  
     models from data with missing values.\
     Estimation of extremal indexes in time series is implemented in 
