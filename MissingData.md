@@ -374,7 +374,6 @@ imputations.
     symmetric relational data. 
 -   *Clustering*: `r pkg("clusterMI")` proposes several methods and diagnostics 
     to handle missing data in clustering in a multiple imputation framework. 
-    `r pkg("biclustermd")` handles missing data in biclustering.
     `r pkg("RMixtComp")`, `r pkg("MGMM")`, `r pkg("mixture")`, and 
     `r pkg("MixtureMissing")` fit various
     mixture models in the presence of missing data. `r pkg("ClustImpute")` deals
