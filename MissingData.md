@@ -530,4 +530,4 @@ imputations.
 
 ### Links
 -   [Amelia II: A Program for Missing Data](https://gking.harvard.edu/amelia)
--   [R-miss-tastic: A resource website on missing data](https://rmisstastic.netlify.com/)
+-   [R-miss-tastic: A resource website on missing data](https://rmisstastic.netlify.app/)
