@@ -46,7 +46,7 @@ repository linked above.
 [**Exploration of missing data**]{#exploration}
 
 -   *Manipulation of missing data* is implemented in the packages
-    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, `r pkg("retroharmonize")`,
+    `r pkg("sjmisc")`, `r pkg("sjlabelled")`, 
     `r pkg("mde")` (also providing basic functions to explore missingness
     patterns), `r pkg("tidyr")` (which abides by
     [tidyverse](https://tidyverse.org) principles), `r pkg("memisc")`, and 
