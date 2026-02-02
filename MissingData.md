@@ -313,17 +313,14 @@ imputations.
 -   *Spatial data*: Imputation for spatial data is implemented in the package
     `r pkg("rtop")`, which performs geostatistical interpolation of irregular
     areal data, and in `r pkg("areal")`, which performs areal weighted
-    interpolation using a tidyverse data management. `r pkg("RcppCensSpatial")`
-    estimates parameters in linear spatial models with missing data using EM, 
-    SAEM, or MCEM.\
+    interpolation using a tidyverse data management. \
     Interpolation of spatial data based on genetic distances is also
     available in `r pkg("phylin")`.
 -   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation
     for spatio-temporal data is implemented in the package `r pkg("StempCens")`
     with a SAEM approach that approximates EM when the E-step does not have an
     analytic form.\
-    From an application perspective, `r pkg("gapfill")` is dedicated to the
-    imputation of satellite data observed at equally-spaced points in time and
+    From an application perspective, 
     `r pkg("stfit")` uses Functional Principal Analysis by Conditional 
     Estimation to impute missing pixels in satellite data.
     `r pkg("momentuHMM")` is dedicated to the analysis of telemetry
