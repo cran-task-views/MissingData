@@ -501,8 +501,6 @@ imputations.
     financial time series using AR models or random walk.
 -   *Finance*: Basic methods (mean, median, mode, \...) for imputing missing
     data in scoring datasets are proposed in `r pkg("scorecardModelUtils")`.
-    `r pkg("creditmodel")` can handle missing values treatment for credit 
-    modeling.
 -   *Preference models*: Missing data in preference models are handled
     with a composite link approach that allows for MCAR and MNAR patterns to be
     accounted for in `r pkg("prefmod")`.
