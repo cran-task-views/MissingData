@@ -417,7 +417,8 @@ imputations.
     `r pkg("QTLRel")` (using information on flanking SNPs), in
     `r bioc("snpStats")` (using a nearest neighbor approach), in
     `r pkg("HardyWeinberg")` (using multiple imputations with a multinomial
-    model based on allele intensities and/or flanking SNPs). \
+    model based on allele intensities and/or flanking SNPs). In addition, 
+    `r pkg("SNPassoc")` offers functions to explore missing SNPs.\
     EM algorithm is used to compute genetic statistics for population in the
     presence of missing SNP in `r pkg("StAMPP")` and to fit 
     genotype-to-phenotype models in `r pkg("FamEvent")`, `r pkg("hapassoc")`,
