@@ -136,9 +136,7 @@ repository linked above.
     implements logistic regression with mixed effects for binary longitudinal
     data allowing missing values. `r pkg("ClusPred")` also handles missing 
     values in mixed model with a fixed group effect, when the group variable is 
-    missing.\
-    `r pkg("brlrmr")` proposes a method to 
-    reduce bias in estimating logistic regressions with missing response.
+    missing.
 -   *Missing data in item response models* (including Rasch models and
     extensions) is implemented in `r pkg("TAM")`, `r pkg("mirt")`,
     `r pkg("eRm")`, and `r pkg("ltm")` for univariate or multivariate responses.
