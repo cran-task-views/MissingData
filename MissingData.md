@@ -264,9 +264,6 @@ imputations.
     multivariate normal models.
 -   `r pkg("Qtools")` implements multiple imputation based
     on *quantile regression*.
--   `r pkg("lodi")` implements the *imputation of observed values below the
-    limit of detection* (LOD) via censored likelihood multiple imputation
-    (CLMI).
 
 [**Weighting methods**]{#weights}
 
