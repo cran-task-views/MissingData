@@ -76,7 +76,7 @@ repository linked above.
     In addition, `r pkg("isni")` tests sensitivity to the
     ignorability assumption by computing the index of local sensitivity to
     nonignorability.
--   *Evaluation*: `r pkg("missCompare")` and `r pkg("missMethods")` offer an
+-   *Evaluation*: `r pkg("missMethods")` offer an
     entire framework to compare different imputation strategies (with
     diagnostics and visualizations). The package `r pkg("Iscores")` can also be
     useful to evaluate imputation quality using a KL-based scoring rule.\
