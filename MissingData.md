@@ -439,8 +439,7 @@ imputations.
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve RNA-seq network
     inference with an auxiliary dataset.
 -   *Chemometrics*: `r pkg("imp4p")`, `r pkg("wrProteo")`, `r pkg("mi4p")`,
-    `r pkg("imputeLCMD")` and `r pkg("aLFQ")` use imputation for protein 
-    quantification from LC-MS/MS data. The first three use multiple imputation 
+    `r pkg("imputeLCMD")`. The first three use multiple imputation 
     and `r pkg("imp4p")`, `r pkg("wrProteo")`, and `r pkg("imputeLCMD")` can 
     work under an MNAR mechanism. Other packages implementing imputations for
     MS proteomics data are available on bioconductor, including 
