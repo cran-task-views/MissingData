@@ -211,7 +211,7 @@ repository linked above.
     semi-parametric imputation procedure and in `r pkg("mdgc")` using Gaussian
     copula for mixed data types.
 -   Imputation *based on self-organizing maps* is provided in 
-    `r pkg("SOMbrero")` and `r pkg("missSOM")`.
+    `r pkg("SOMbrero")`.
 -   Imputation *based on validation rules (deductive methods)* is implemented in
     `r pkg("deductive")`.
 
